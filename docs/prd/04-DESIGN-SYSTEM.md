@@ -19,20 +19,23 @@ JPEG stills are **mood**. Tokens below are **law**.
 
 ---
 
-## 2. Color
+## 2. Color (Atelier Seoul Palette)
 
-| Token | Hex | Use |
+| Token | Hex | Role |
 |---|---|---|
-| `--paper` | `#F4EFE6` | Page background |
-| `--paper-warm` | `#EFE6D6` | Tip box fill |
-| `--ink` | `#161513` | Body, wordmark |
-| `--ink-soft` | `#5C574E` | Meta, footer |
-| `--rule` | `#D9D1C3` | Hairlines |
-| `--crimson` | `#B43A3A` | Accent, underline, Verified, primary button |
-| `--crimson-dark` | `#8E2C2C` | Hover |
-| `--brass` | `#A6844A` | Rare (seal ring). Do not use as text |
-| `--trap` | `#8E2C2C` | Tourist-trap “Yes” |
-| `--ok` | `#2F4A3C` | Tourist-trap “No”, cards accepted |
+| `--paper` | `#FAF7F2` | Page ground (warm hanji paper) |
+| `--paper-warm` | `#F0EBE1` | Arrival guide panel & checklist ground |
+| `--card-bg` | `#FFFFFF` | Editorial documentary card background |
+| `--ink` | `#141210` | Primary text, heavy rules, dark buttons |
+| `--charcoal` | `#23201D` | Card border hover, seal overlays |
+| `--ink-soft` | `#5E5953` | Meta, captions, secondary body |
+| `--rule` | `rgba(20,18,16,0.12)` | Hairline dividers |
+| `--rule-strong` | `rgba(20,18,16,0.32)` | Active dividers & text decorations |
+| `--lacquer` | `#A31C1C` | Lacquer Red: Verified seal, Ask theme, primary active accents |
+| `--amber` | `#B45309` | Amber Gold: Tips & The Desk theme, friend tipbox border |
+| `--chili` | `#881337` | Chili Burgundy: Eat & Drink theme, caution/trap alerts |
+| `--pine` | `#0F4C42` | Pine Celadon: Places & Neighborhoods theme |
+| `--indigo` | `#1E3A8A` | Royal Indigo: Shop & Guide accents |
 
 Dark mode: **out of v1**. Do not add a toggle.
 

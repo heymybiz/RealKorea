@@ -36,43 +36,39 @@ export function QuestionCard({ question }: { question: PublicQuestion }) {
   const dek = answerDek(question);
 
   return (
-    <article className="border-ink bg-paper-warm group border-t-2 p-5 pt-4">
+    <article className="heritage-card flex flex-col justify-between border-t-2 border-t-[var(--lacquer)] p-5">
       <Link href={`/ask/${question.slug}`} className="block">
-        <p className="text-crimson text-xs tracking-[0.12em] uppercase">
-          {TOPIC_LABEL[question.topic]}
-        </p>
+        <div className="flex items-center justify-between">
+          <span className="fact-chip bg-[var(--lacquer-light)] text-[var(--lacquer)]">
+            {TOPIC_LABEL[question.topic]}
+          </span>
+          {question.answerVerified ? <VerifiedMark /> : null}
+        </div>
 
-        <h3 className="group-hover:text-crimson mt-2 text-lg leading-snug font-semibold transition-colors duration-[180ms] ease-out">
+        <h3 className="mt-3 text-[19px] leading-snug font-bold transition-colors group-hover:text-[var(--lacquer)]">
           {question.title}
         </h3>
 
         {dek ? (
-          <p className="text-ink-soft mt-2 line-clamp-2 text-[15px] leading-6">
+          <p className="mt-2 line-clamp-2 text-[14px] leading-6 text-[var(--ink-soft)]">
             {dek}
           </p>
         ) : null}
 
-        <div className="border-rule text-ink-soft mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 border-t pt-3 text-xs">
-          {answered ? (
-            <span className="tracking-[0.12em] uppercase">
-              Real Korea editor
-            </span>
-          ) : (
-            // PRD 02 §3.2 — never an empty void.
-            <span className="tracking-[0.12em] uppercase">Awaiting editor</span>
-          )}
+        <div className="rule-single mt-4 flex flex-wrap items-center justify-between gap-2 pt-3 text-xs">
+          <span className="furniture text-[10px] text-[var(--ink-soft)]">
+            {answered ? "Official Answered" : "Awaiting Editor"}
+          </span>
 
-          {question.answerVerified ? <VerifiedMark /> : null}
-
-          {question.comments.length > 0 ? (
-            <span className="inline-flex items-center gap-1">
-              <MessageSquare className="size-3.5" aria-hidden="true" />
-              {question.comments.length}
-              <span className="sr-only"> comments</span>
-            </span>
-          ) : null}
-
-          {question.sample ? <SampleLabel /> : null}
+          <div className="flex items-center gap-2">
+            {question.comments.length > 0 ? (
+              <span className="furniture inline-flex items-center gap-1 text-[10px] text-[var(--ink-soft)]">
+                <MessageSquare className="size-3" aria-hidden="true" />
+                {question.comments.length}
+              </span>
+            ) : null}
+            {question.sample ? <SampleLabel /> : null}
+          </div>
         </div>
       </Link>
     </article>

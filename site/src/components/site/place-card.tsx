@@ -31,37 +31,68 @@ export function PlaceCard({ place }: { place: Place }) {
   const firstPhoto = place.photos.at(0);
 
   return (
-    <article className="group">
-      <Link href={`/places/p/${place.slug}`} className="block">
-        {firstPhoto ? null : (
-          <MediaPlaceholder ratio="3/2" label="Photograph pending" />
-        )}
+    <article className="heritage-card flex flex-col justify-between border-t-2 border-t-[var(--chili)] p-5">
+      <div>
+        <Link href={`/places/p/${place.slug}`} className="group block overflow-hidden border border-[var(--rule)]">
+          {firstPhoto ? null : (
+            <MediaPlaceholder
+              ratio="3/2"
+              label={place.venueNameEn || "Venue Photo"}
+              className="transition-transform duration-500 group-hover:scale-105"
+            />
+          )}
+        </Link>
 
         <div className="pt-4">
-          <h3 className="group-hover:text-crimson text-[22px] leading-[1.2] font-semibold transition-colors duration-[180ms] ease-out">
-            {place.editorialTitle}
+          <div className="flex items-center justify-between">
+            <p className="furniture text-[10px] font-bold text-[var(--chili)]">
+              {place.neighborhoodSlug.toUpperCase()}
+            </p>
+            <PriceDots band={place.priceBand} />
+          </div>
+
+          <h3 className="mt-2 text-[21px] leading-[1.2] font-bold">
+            <Link
+              href={`/places/p/${place.slug}`}
+              className="transition-colors hover:text-[var(--chili)]"
+            >
+              {place.editorialTitle}
+            </Link>
           </h3>
 
-          <div className="text-ink-soft mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
-            <PriceDots band={place.priceBand} />
+          {place.venueNameEn ? (
+            <p className="mt-1 text-[13px] text-[var(--ink-soft)]">
+              {place.venueNameEn} {place.venueNameKo ? `(${place.venueNameKo})` : null}
+            </p>
+          ) : null}
 
-            {/* Only a confirmed trap is flagged. "unknown" says nothing. */}
-            {place.isTouristTrap === true ? (
-              <span className="text-trap tracking-[0.12em] uppercase">
-                Tourist trap
-              </span>
-            ) : null}
-
-            {place.isPartner ? (
-              <span className="text-crimson border-crimson border px-1.5 py-0.5 text-[11px] tracking-[0.12em] uppercase">
-                Partner
-              </span>
-            ) : null}
-
-            {place.sample ? <SampleLabel /> : null}
-          </div>
+          {place.whyLocal ? (
+            <p className="mt-2.5 text-[14px] leading-6 text-[var(--ink-soft)] line-clamp-2">
+              {place.whyLocal}
+            </p>
+          ) : null}
         </div>
-      </Link>
+      </div>
+
+      <div className="rule-single mt-5 flex flex-wrap items-center justify-between gap-2 pt-3">
+        <span className="furniture text-[10px] font-bold text-[var(--chili)]">
+          Fact stack &amp; map →
+        </span>
+
+        {place.isTouristTrap === true ? (
+          <span className="fact-chip bg-[var(--lacquer-light)] text-[var(--lacquer)]">
+            ⚠️ Trap Warning
+          </span>
+        ) : null}
+
+        {place.isPartner ? (
+          <span className="fact-chip bg-[var(--amber-light)] text-[var(--amber)]">
+            Partner
+          </span>
+        ) : null}
+
+        {place.sample ? <SampleLabel /> : null}
+      </div>
     </article>
   );
 }

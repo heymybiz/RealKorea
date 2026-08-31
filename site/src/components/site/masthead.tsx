@@ -46,12 +46,13 @@ export function Masthead() {
   }, [menuOpen]);
 
   return (
-    <header className="border-ink bg-paper border-b">
-      <div className="content-shell flex h-16 items-center justify-between gap-6">
+    <header className="sticky top-0 z-40 border-b border-[var(--rule)] bg-[var(--paper)]/95 backdrop-blur-md">
+      <div className="h-1 w-full bg-[var(--lacquer)]" />
+      <div className="content-shell flex h-18 items-center justify-between gap-6">
         <Wordmark />
 
         <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-8">
+          <ul className="flex items-center gap-2">
             {PRIMARY_NAV.map((item) => {
               const active = isActive(pathname, item.href);
 
@@ -61,11 +62,8 @@ export function Masthead() {
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "relative block py-2 text-xs tracking-[0.12em] uppercase transition-colors duration-[180ms] ease-out",
-                      "after:bg-crimson after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:transition-transform after:duration-[180ms] after:ease-out",
-                      active
-                        ? "text-ink after:scale-x-100"
-                        : "text-ink-soft hover:text-ink hover:after:scale-x-100",
+                      "nav-link",
+                      active && "text-[var(--lacquer)] after:scale-x-100",
                     )}
                   >
                     {item.label}

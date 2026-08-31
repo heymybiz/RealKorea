@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { Archivo, Playfair_Display, Source_Sans_3 } from "next/font/google";
 
 import { MotionProvider } from "@/components/motion-provider";
 import { SITE_NAME, SITE_PROMISE } from "@/lib/nav";
@@ -8,12 +8,17 @@ import { siteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 /**
- * PRD 04 §3 — editorial serif for display, humanist sans for body.
- * `adjustFontFallback` (on by default for Google fonts) keeps the metric
- * fallback close enough to protect CLS (NFR-002).
+ * Editorial Serif display, geometric furniture, humanist sans body.
  */
-const display = Fraunces({
+const display = Playfair_Display({
   variable: "--font-display-serif",
+  subsets: ["latin"],
+  display: "swap",
+  style: ["normal", "italic"],
+});
+
+const furniture = Archivo({
+  variable: "--font-furniture",
   subsets: ["latin"],
   display: "swap",
 });
@@ -55,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${body.variable} h-full`}
+      className={`${display.variable} ${furniture.variable} ${body.variable} h-full`}
       suppressHydrationWarning={false}
     >
       <body className="flex min-h-full flex-col">

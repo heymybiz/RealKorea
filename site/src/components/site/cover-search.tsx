@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { Search } from "lucide-react";
-
 import { SEARCH_SEEDS } from "@/lib/search-seeds";
 
 /**
@@ -11,47 +9,46 @@ import { SEARCH_SEEDS } from "@/lib/search-seeds";
  * primary action on the cover instead of another pale panel.
  */
 export function CoverSearch({
-  seedCount = 5,
+  seedCount = 4,
 }: {
   /** The cover shows a short list; `/ask` and `/search` show all nine. */
   seedCount?: number;
 }) {
   return (
-    <div className="mt-8">
-      <form action="/search" method="get" role="search" className="max-w-xl">
+    <div className="mt-10 max-w-xl">
+      <form action="/search" method="get" role="search">
         <label htmlFor="cover-search" className="sr-only">
           Search Real Korea
         </label>
 
-        <div className="border-ink bg-paper focus-within:border-crimson flex items-center border-2 transition-colors duration-[180ms] ease-out">
+        <div className="flex items-stretch border-2 border-[var(--ink)] bg-white shadow-sm transition-shadow focus-within:shadow-md">
           <input
             id="cover-search"
             name="q"
             type="search"
             autoComplete="off"
-            placeholder="Ask something tourists never get a straight answer to"
-            className="text-ink placeholder:text-ink-soft h-14 w-full bg-transparent px-4 text-[15px] outline-none"
+            placeholder="Ask something tourists never get a straight answer to..."
+            className="h-14 w-full bg-transparent px-5 text-[15px] text-[var(--ink)] outline-none placeholder:text-[var(--ink-soft)]/70"
           />
           <button
             type="submit"
-            className="bg-crimson hover:bg-crimson-dark inline-flex h-14 shrink-0 items-center gap-2 px-5 text-xs tracking-[0.12em] text-white uppercase transition-colors duration-[180ms] ease-out"
+            className="btn-action btn-ink-solid shrink-0"
           >
-            <Search className="size-4" aria-hidden="true" />
-            Search
+            <span>Search Desk →</span>
           </button>
         </div>
       </form>
 
-      <div className="mt-6 flex flex-wrap items-baseline gap-x-4 gap-y-2">
-        <p className="text-ink-soft text-xs tracking-[0.12em] uppercase">
-          People ask
-        </p>
+      <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
+        <span className="furniture text-[10px] text-[var(--amber)]">
+          Popular:
+        </span>
         <ul className="flex flex-wrap gap-x-4 gap-y-1">
           {SEARCH_SEEDS.slice(0, seedCount).map((seed) => (
             <li key={seed}>
               <Link
                 href={`/search?q=${encodeURIComponent(seed)}`}
-                className="text-ink hover:text-crimson decoration-ink/30 hover:decoration-crimson text-[15px] underline underline-offset-4 transition-colors duration-[180ms] ease-out"
+                className="text-[14px] text-[var(--ink-soft)] underline decoration-[var(--rule-strong)] underline-offset-4 transition-colors hover:text-[var(--lacquer)] hover:decoration-[var(--lacquer)]"
               >
                 {seed}
               </Link>
@@ -59,13 +56,6 @@ export function CoverSearch({
           ))}
         </ul>
       </div>
-
-      <Link
-        href="/ask"
-        className="border-ink text-ink hover:bg-ink mt-6 inline-flex items-center border-2 px-5 py-2.5 text-xs tracking-[0.12em] uppercase transition-colors duration-[180ms] ease-out hover:text-white"
-      >
-        Browse questions
-      </Link>
     </div>
   );
 }

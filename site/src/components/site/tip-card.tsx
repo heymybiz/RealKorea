@@ -27,39 +27,54 @@ export function TipCard({
   );
 
   return (
-    <article className="group">
-      <Link href={`/tips/${tip.slug}`} className="block">
-        {tip.image ? null : (
-          <MediaPlaceholder ratio="3/2" label="Photograph pending" />
-        )}
+    <article className="heritage-card flex flex-col justify-between border-t-2 border-t-[var(--amber)] p-5">
+      <div>
+        <Link href={`/tips/${tip.slug}`} className="group block overflow-hidden border border-[var(--rule)]">
+          {tip.image ? null : (
+            <MediaPlaceholder
+              ratio="3/2"
+              label="Photograph pending"
+              className="transition-transform duration-500 group-hover:scale-105"
+            />
+          )}
+        </Link>
 
         <div className="pt-4">
-          <p className="text-crimson text-xs tracking-[0.12em] uppercase">
-            {TOPIC_LABEL[tip.topic]}
-          </p>
-
-          <h3 className="group-hover:text-crimson mt-2 text-[22px] leading-[1.2] font-semibold transition-colors duration-[180ms] ease-out">
-            {tip.title}
-          </h3>
-
-          {tip.dek ? (
-            <p className="text-ink-soft mt-2 text-[15px] leading-6">
-              {tip.dek}
-            </p>
-          ) : null}
-
-          <div className="text-ink-soft mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
-            {/* Never rendered for scaffolding: samples carry no verification. */}
-            {tip.editorVerified ? <VerifiedMark label="Verified local" /> : null}
+          <div className="flex items-center justify-between">
+            <span className="fact-chip bg-[var(--amber-light)] text-[var(--amber)]">
+              {TOPIC_LABEL[tip.topic]}
+            </span>
             {neighborhood ? (
-              <span className="tracking-[0.12em] uppercase">
+              <span className="furniture text-[10px] text-[var(--ink-soft)]">
                 {neighborhood.nameEn}
               </span>
             ) : null}
-            {tip.sample ? <SampleLabel /> : null}
           </div>
+
+          <h3 className="mt-3 text-[21px] leading-[1.2] font-bold">
+            <Link
+              href={`/tips/${tip.slug}`}
+              className="transition-colors hover:text-[var(--amber)]"
+            >
+              {tip.title}
+            </Link>
+          </h3>
+
+          {tip.dek ? (
+            <p className="mt-2 text-[15px] leading-6 text-[var(--ink-soft)]">
+              {tip.dek}
+            </p>
+          ) : null}
         </div>
-      </Link>
+      </div>
+
+      <div className="rule-single mt-5 flex flex-wrap items-center justify-between gap-2 pt-3">
+        <span className="furniture text-[10px] font-bold text-[var(--amber)]">
+          Read answer →
+        </span>
+        {tip.editorVerified ? <VerifiedMark label="Verified local" /> : null}
+        {tip.sample ? <SampleLabel /> : null}
+      </div>
     </article>
   );
 }

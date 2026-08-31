@@ -1,6 +1,4 @@
 import Link from "next/link";
-
-import { Seal } from "@/components/site/seal";
 import {
   ARRIVE_NAV,
   FOOTER_NOTE,
@@ -42,17 +40,21 @@ function ColumnLinks({
 /** PRD 02 §2 — four columns on paper-warm. */
 export function Footer() {
   return (
-    <footer className="border-rule bg-paper-warm mt-auto border-t">
-      <div className="content-shell py-12">
+    <footer className="mt-auto border-t-2 border-[var(--ink)] bg-[#121110] text-white">
+      <div className="content-shell py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="text-ink flex items-center gap-2.5">
-              <span className="font-display text-lg leading-none font-semibold tracking-[0.06em] uppercase">
+            <div className="flex items-center gap-3">
+              <div className="flex size-8 items-center justify-center border border-white/40 bg-white/5 text-[12px] font-black text-white">
+                RK
+              </div>
+              <span className="font-display text-xl font-bold tracking-tight text-white uppercase">
                 {SITE_NAME}
               </span>
-              <Seal className="size-3.5 shrink-0" />
             </div>
-            <p className="text-ink-soft mt-4 text-[15px]">{SITE_PROMISE}</p>
+            <p className="furniture mt-3 text-[10px] text-white/60">
+              {SITE_PROMISE}
+            </p>
           </div>
 
           <div>
@@ -71,9 +73,14 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="border-rule text-ink-soft mt-10 border-t pt-6 text-[13px]">
-          {FOOTER_NOTE}
-        </p>
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-6">
+          <p className="furniture text-[10px] text-white/50">
+            {FOOTER_NOTE}
+          </p>
+          <p className="furniture text-[10px] text-white/40">
+            Editors live in Seoul · Verified 2026 · Local Desk Magazine
+          </p>
+        </div>
       </div>
     </footer>
   );

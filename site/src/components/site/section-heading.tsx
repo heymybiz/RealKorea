@@ -12,19 +12,38 @@ export function SectionHeading({
   kicker,
   title,
   action,
+  themeColor = "default",
 }: {
   kicker: string;
   title: string;
   action?: { href: string; label: string };
+  themeColor?: "default" | "amber" | "chili" | "pine" | "lacquer";
 }) {
+  const ruleClass = {
+    default: "rule-double",
+    amber: "rule-double-amber",
+    chili: "rule-double-chili",
+    pine: "rule-double-pine",
+    lacquer: "rule-double",
+  }[themeColor];
+
+  const kickerColor = {
+    default: "text-[var(--lacquer)]",
+    amber: "text-[var(--amber)]",
+    chili: "text-[var(--chili)]",
+    pine: "text-[var(--pine)]",
+    lacquer: "text-[var(--lacquer)]",
+  }[themeColor];
+
   return (
-    <div className="border-ink mb-8 border-t-2 pt-4">
-      <div className="flex flex-wrap items-end justify-between gap-4">
+    <div className="mb-10">
+      <div className={ruleClass} />
+      <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-crimson text-xs tracking-[0.12em] uppercase">
+          <p className={`furniture text-[11px] font-bold ${kickerColor}`}>
             {kicker}
           </p>
-          <h2 className="mt-2 text-2xl font-semibold sm:text-[32px]">
+          <h2 className="mt-2 text-3xl font-bold sm:text-[40px]">
             {title}
           </h2>
         </div>
@@ -32,7 +51,7 @@ export function SectionHeading({
         {action ? (
           <Link
             href={action.href}
-            className="text-ink hover:text-crimson border-ink hover:border-crimson border-b pb-0.5 text-xs tracking-[0.12em] uppercase transition-colors duration-[180ms] ease-out"
+            className="furniture inline-flex items-center gap-1 border-b-2 border-[var(--ink)] pb-1 text-[11px] text-[var(--ink)] transition-colors hover:border-[var(--lacquer)] hover:text-[var(--lacquer)]"
           >
             {action.label}
           </Link>
