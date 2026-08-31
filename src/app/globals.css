@@ -1,26 +1,149 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Dark mode is out of scope for v1 (PRD 04 §2: "Do not add a toggle").
+   The variant is kept so shadcn's `dark:` utilities stay inert: no `.dark`
+   ancestor is ever rendered, and no `.dark` token block is defined. */
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* PRD 04 §2 — palette. One accent only. */
+  --color-paper: var(--paper);
+  --color-paper-warm: var(--paper-warm);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-rule: var(--rule);
+  --color-crimson: var(--crimson);
+  --color-crimson-dark: var(--crimson-dark);
+  --color-brass: var(--brass);
+  --color-trap: var(--trap);
+  --color-ok: var(--ok);
+
+  /* PRD 04 §3 — type. Editorial serif display, humanist sans body. */
+  --font-sans: var(--font-body), "Apple SD Gothic Neo", "Malgun Gothic",
+    ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display-serif), ui-serif, Georgia, serif;
+  --font-serif: var(--font-display-serif), ui-serif, Georgia, serif;
+
+  /* PRD 04 §4 — layout */
+  --container-content: 1120px;
+
+  /* PRD 04 §4 — cards 16px max, prefer 8–12. Buttons use radius-sm. */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* shadcn token contract, remapped onto the PRD palette */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --paper: #f4efe6;
+  --paper-warm: #efe6d6;
+  --ink: #161513;
+  --ink-soft: #5c574e;
+  --rule: #d9d1c3;
+  --crimson: #b43a3a;
+  --crimson-dark: #8e2c2c;
+  --brass: #a6844a;
+  --trap: #8e2c2c;
+  --ok: #2f4a3c;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--crimson);
+  --primary-foreground: #ffffff;
+  --secondary: var(--paper-warm);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-warm);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--paper-warm);
+  --accent-foreground: var(--ink);
+  --destructive: var(--crimson-dark);
+  --border: var(--rule);
+  --input: var(--rule);
+  --ring: var(--crimson);
+  --radius: 8px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-size: 17px;
+    line-height: 28px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  /* PRD 04 §9 — focus rings: 2px crimson, offset */
+  :focus-visible {
+    outline: 2px solid var(--crimson);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--crimson);
+    color: #ffffff;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility content-shell {
+  width: 100%;
+  max-width: var(--container-content);
+  margin-inline: auto;
+  padding-inline: 24px;
+
+  @media (width >= 64rem) {
+    padding-inline: 48px;
+  }
+}
+
+/* PRD 04 §6 / NFR — respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

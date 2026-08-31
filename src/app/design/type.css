@@ -1,0 +1,169 @@
+/**
+ * Korean colour, at scale.
+ *
+ * The previous attempt failed for a specific reason: obangsaek was applied as
+ * chips and swatches, so it read as a decorative afterthought on a pale page. A
+ * colour system does not register until it owns area.
+ *
+ * So the traditional reference here is 조각보 jogakbo — the patchwork wrapping
+ * cloth. Jogakbo is the right model because it is already what we want: bold
+ * saturated fields, asymmetric panels, visible seams, and no ornament whatsoever.
+ * It is also the Korean craft that modern design keeps returning to, which is why
+ * it can be loud without being kitsch.
+ *
+ * Three rules keep it refined rather than busy:
+ *
+ * 1. One colour per panel. A panel is a whole section, never a card.
+ * 2. Flat colour only. No gradients, no shadows, no glow.
+ * 3. Empty space inside the colour. The bigger the field, the more air the type
+ *    gets. Loud colour plus tight spacing is a flyer; loud colour plus generous
+ *    spacing is a poster.
+ *
+ * Deliberately absent: hanbok icons, palace silhouettes, taegeuk motifs, brush
+ * script. Those are souvenir graphics, and PRD 04 §7 rules them out.
+ *
+ * CONTRAST, verified and enforced below rather than left to memory:
+ *   white on --k-red     ≈ 5.9:1   AA pass
+ *   white on --k-blue    ≈ 7.5:1   AA pass
+ *   white on --k-azure   ≈ 5.5:1   AA pass
+ *   ink   on --k-gold    ≈ 11:1    AA pass
+ *   white on --k-gold    ≈ 1.9:1   FAIL — gold always takes ink text
+ */
+
+.korea {
+  /* 오방정색 obangsaek, pushed to screen saturation. */
+  --k-red: #c8102e; /* 적 */
+  --k-blue: #0e5c4e; /* 청, blue-green as in dancheong */
+  --k-gold: #efb700; /* 황 */
+  --k-azure: #1e5fa8; /* 벽, an intermediate colour */
+  --k-ink: #14110f; /* 흑 */
+  --k-paper: #f7f4ec; /* 백 */
+
+  --display: var(--font-display-alt), ui-serif, Georgia, serif;
+  --furniture-face: var(--font-furniture), ui-sans-serif, system-ui, sans-serif;
+
+  background: var(--k-paper);
+  color: var(--k-ink);
+}
+
+.korea h1,
+.korea h2,
+.korea h3 {
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.korea h1 {
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 0.94;
+}
+
+.korea .furniture {
+  font-family: var(--furniture-face);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.korea .dek {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ------------------------------------------------------------------ panels */
+/* A panel is a section-sized colour field. Text colour comes with it, so a
+   mismatch that fails contrast is not expressible. */
+
+.korea .panel-red {
+  background: var(--k-red);
+  color: #ffffff;
+}
+.korea .panel-blue {
+  background: var(--k-blue);
+  color: #ffffff;
+}
+.korea .panel-azure {
+  background: var(--k-azure);
+  color: #ffffff;
+}
+.korea .panel-gold {
+  background: var(--k-gold);
+  color: var(--k-ink);
+}
+.korea .panel-ink {
+  background: var(--k-ink);
+  color: var(--k-paper);
+}
+.korea .panel-paper {
+  background: var(--k-paper);
+  color: var(--k-ink);
+}
+
+/* Muted rules and secondary text that adapt to whatever panel they sit on. */
+.korea .panel-red,
+.korea .panel-blue,
+.korea .panel-azure,
+.korea .panel-ink {
+  --hair: rgba(255, 255, 255, 0.28);
+  --quiet: rgba(255, 255, 255, 0.72);
+}
+
+.korea .panel-gold,
+.korea .panel-paper {
+  --hair: rgba(20, 17, 15, 0.22);
+  --quiet: rgba(20, 17, 15, 0.68);
+}
+
+.korea .hair {
+  border-color: var(--hair);
+}
+
+.korea .quiet {
+  color: var(--quiet);
+}
+
+/* ----------------------------------------------------------------- 색동 band */
+/* Saekdong: the striped sleeve bands. Used as the page signature, twice only. */
+
+.korea .saekdong {
+  height: 12px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--k-red) 0 18px,
+    var(--k-gold) 18px 36px,
+    var(--k-blue) 36px 54px,
+    var(--k-azure) 54px 72px,
+    var(--k-paper) 72px 80px,
+    var(--k-ink) 80px 98px
+  );
+}
+
+.korea .saekdong-rail {
+  width: 10px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--k-red) 0 18px,
+    var(--k-gold) 18px 36px,
+    var(--k-blue) 36px 54px,
+    var(--k-azure) 54px 72px,
+    var(--k-paper) 72px 80px,
+    var(--k-ink) 80px 98px
+  );
+}
+
+/* --------------------------------------------------------------- 조각보 grid */
+/* Seams are the paper showing through, the way jogakbo shows its stitching. */
+
+.korea .jogakbo {
+  display: grid;
+  gap: 3px;
+  background: var(--k-paper);
+}
+
+.korea .jogakbo > * {
+  min-height: 168px;
+}
