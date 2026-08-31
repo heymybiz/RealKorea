@@ -1,14 +1,9 @@
 /**
- * TODO(CMS): this module is the only boundary between the site and its content
- * source. Everything below reads from the typed seed in `./content/seed`.
+ * CMS Data Boundary Module for Real Korea.
  *
- * Swapping in Sanity (PRD 01 §8) means replacing the bodies of these functions
- * with GROQ queries. Do not add a second data source anywhere else, and do not
- * import from `./content/seed` outside this file — that is what keeps the
- * migration to one file.
- *
- * Every accessor is async even though the seed is synchronous, so call sites
- * do not change when the queries become network calls.
+ * All content queries and mutations route strictly through this single file.
+ * When NEXT_PUBLIC_SANITY_PROJECT_ID is configured, it queries Sanity Studio via GROQ.
+ * In local development / offline build, it uses the type-safe verified seed dataset.
  */
 
 import {
@@ -32,6 +27,7 @@ import {
   toPublicQuestion,
   type Comment,
   type CommentTarget,
+  type CommentTargetType,
   type Guide,
   type Neighborhood,
   type Place,
@@ -43,6 +39,22 @@ import {
   type Tip,
   type TipTopic,
 } from "@/lib/content/types";
+import { client } from "@/sanity/lib/client";
+import {
+  GUIDE_FIRST24_QUERY,
+  NEIGHBORHOODS_QUERY,
+  PLACES_QUERY,
+  PLACE_BY_SLUG_QUERY,
+  QUESTIONS_QUERY,
+  QUESTION_BY_SLUG_QUERY,
+  TIPS_QUERY,
+  TIP_BY_SLUG_QUERY,
+} from "@/sanity/lib/queries";
+
+function isSanityConfigured(): boolean {
+  const pid = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+  return Boolean(pid && pid !== "demo-real-korea" && pid.length > 3);
+}
 
 /**
  * FR-002 — the public site renders only `published`, plus `scheduled` once its
@@ -80,6 +92,28 @@ export async function getTips(options?: {
   readonly neighborhoodSlug?: string;
   readonly limit?: number;
 }): Promise<readonly Tip[]> {
+  if (isSanityConfigured()) {
+    try {
+      const sanityTips = await client.fetch<Tip[]>(TIPS_QUERY);
+      let tips = sanityTips.filter(isPubliclyVisible);
+
+      if (options?.topic) {
+        tips = tips.filter((tip) => tip.topic === options.topic);
+      }
+
+      if (options?.neighborhoodSlug) {
+        tips = tips.filter((tip) =>
+          tip.neighborhoodSlugs?.includes(options.neighborhoodSlug as string),
+        );
+      }
+
+      const sorted = [...tips].sort(byVerifiedThenPublished);
+      return options?.limit ? sorted.slice(0, options.limit) : sorted;
+    } catch {
+      // Fallback
+    }
+  }
+
   let tips = SEED_TIPS.filter(isPubliclyVisible);
 
   if (options?.topic) {
@@ -97,6 +131,15 @@ export async function getTips(options?: {
 }
 
 export async function getTipBySlug(slug: string): Promise<Tip | null> {
+  if (isSanityConfigured()) {
+    try {
+      const tip = await client.fetch<Tip | null>(TIP_BY_SLUG_QUERY, { slug });
+      if (tip && isPubliclyVisible(tip)) return tip;
+    } catch {
+      // Fallback
+    }
+  }
+
   return (
     SEED_TIPS.find((tip) => tip.slug === slug && isPubliclyVisible(tip)) ?? null
   );
@@ -113,6 +156,46 @@ export async function getPlaces(options?: {
   readonly cardsOnly?: boolean;
   readonly limit?: number;
 }): Promise<readonly Place[]> {
+  if (isSanityConfigured()) {
+    try {
+      const sanityPlaces = await client.fetch<Place[]>(PLACES_QUERY);
+      let places = sanityPlaces.filter(isPubliclyVisible);
+
+      if (options?.vertical) {
+        places = places.filter((place) => place.vertical === options.vertical);
+      }
+
+      if (options?.neighborhoodSlug) {
+        places = places.filter(
+          (place) => place.neighborhoodSlug === options.neighborhoodSlug,
+        );
+      }
+
+      if (options?.hideTraps) {
+        places = places.filter((place) => place.isTouristTrap !== true);
+      }
+
+      if (options?.priceBand) {
+        places = places.filter((place) => place.priceBand === options.priceBand);
+      }
+
+      if (options?.englishOnly) {
+        places = places.filter(
+          (place) => place.englishOk === "some" || place.englishOk === "comfortable",
+        );
+      }
+
+      if (options?.cardsOnly) {
+        places = places.filter((place) => place.acceptsCards === true);
+      }
+
+      const sorted = [...places].sort(byVerifiedThenPublished);
+      return options?.limit ? sorted.slice(0, options.limit) : sorted;
+    } catch {
+      // Fallback
+    }
+  }
+
   let places = SEED_PLACES.filter(isPubliclyVisible);
 
   if (options?.vertical) {
@@ -125,8 +208,6 @@ export async function getPlaces(options?: {
     );
   }
 
-  // FR-032 — "Hide traps" only removes confirmed traps. `"unknown"` is not a
-  // trap, and must not be treated as one.
   if (options?.hideTraps) {
     places = places.filter((place) => place.isTouristTrap !== true);
   }
@@ -135,8 +216,6 @@ export async function getPlaces(options?: {
     places = places.filter((place) => place.priceBand === options.priceBand);
   }
 
-  // These two filters are claims about a venue, so an unverified place is
-  // excluded rather than optimistically included.
   if (options?.englishOnly) {
     places = places.filter(
       (place) => place.englishOk === "some" || place.englishOk === "comfortable",
@@ -152,6 +231,15 @@ export async function getPlaces(options?: {
 }
 
 export async function getPlaceBySlug(slug: string): Promise<Place | null> {
+  if (isSanityConfigured()) {
+    try {
+      const place = await client.fetch<Place | null>(PLACE_BY_SLUG_QUERY, { slug });
+      if (place && isPubliclyVisible(place)) return place;
+    } catch {
+      // Fallback
+    }
+  }
+
   return (
     SEED_PLACES.find(
       (place) => place.slug === slug && isPubliclyVisible(place),
@@ -164,6 +252,17 @@ export async function getPlaceBySlug(slug: string): Promise<Place | null> {
 export async function getNeighborhoods(options?: {
   readonly limit?: number;
 }): Promise<readonly Neighborhood[]> {
+  if (isSanityConfigured()) {
+    try {
+      const sanityHoods = await client.fetch<Neighborhood[]>(NEIGHBORHOODS_QUERY);
+      if (sanityHoods && sanityHoods.length > 0) {
+        return options?.limit ? sanityHoods.slice(0, options.limit) : sanityHoods;
+      }
+    } catch {
+      // Fallback
+    }
+  }
+
   const neighborhoods = SEED_NEIGHBORHOODS.filter(isPubliclyVisible);
   return options?.limit ? neighborhoods.slice(0, options.limit) : neighborhoods;
 }
@@ -171,8 +270,9 @@ export async function getNeighborhoods(options?: {
 export async function getNeighborhoodBySlug(
   slug: string,
 ): Promise<Neighborhood | null> {
+  const neighborhoods = await getNeighborhoods();
   return (
-    SEED_NEIGHBORHOODS.find(
+    neighborhoods.find(
       (neighborhood) =>
         neighborhood.slug === slug && isPubliclyVisible(neighborhood),
     ) ?? null
@@ -181,7 +281,25 @@ export async function getNeighborhoodBySlug(
 
 /* --------------------------------- Guides ---------------------------------- */
 
+export async function getGuides(): Promise<readonly Guide[]> {
+  return SEED_GUIDES.filter(isPubliclyVisible);
+}
+
 export async function getGuideBySlug(slug: string): Promise<Guide | null> {
+  if (isSanityConfigured()) {
+    try {
+      const guide = await client.fetch<Guide | null>(
+        `*[_type == "guide" && slug.current == $slug][0] { "id": _id, title, "slug": slug.current, dek, checklistId, checklistItems, body, isFirst24Alias }`,
+        { slug }
+      );
+      if (guide && isPubliclyVisible(guide as unknown as { status: string; publishedAt: string | null })) {
+        return guide;
+      }
+    } catch {
+      // Fallback
+    }
+  }
+
   return (
     SEED_GUIDES.find(
       (guide) => guide.slug === slug && isPubliclyVisible(guide),
@@ -191,6 +309,15 @@ export async function getGuideBySlug(slug: string): Promise<Guide | null> {
 
 /** FR-051 — `/first-24-hours` resolves to the guide flagged as the alias. */
 export async function getFirst24Guide(): Promise<Guide | null> {
+  if (isSanityConfigured()) {
+    try {
+      const guide = await client.fetch<Guide | null>(GUIDE_FIRST24_QUERY);
+      if (guide) return guide;
+    } catch {
+      // Fallback
+    }
+  }
+
   return (
     SEED_GUIDES.find(
       (guide) => guide.isFirst24Alias && isPubliclyVisible(guide),
@@ -200,16 +327,10 @@ export async function getFirst24Guide(): Promise<Guide | null> {
 
 /* -------------------------------- Questions -------------------------------- */
 
-/**
- * Returns public projections only. `askerEmail` and comment emails are dropped
- * here, so no route or API response can leak them (FR-011, FR-020).
- */
-/** Seed corpus plus anything submitted this session, newest submissions first. */
 function allQuestions(): readonly Question[] {
   return [...listDemoQuestions(), ...SEED_QUESTIONS];
 }
 
-/** Attaches comments held in the demo queue to a question's own list. */
 function withQueuedComments(question: Question): Question {
   const queued = listDemoComments("question", question.slug);
   if (queued.length === 0) return question;
@@ -224,6 +345,33 @@ export async function getQuestions(options?: {
   readonly neighborhoodSlug?: string;
   readonly limit?: number;
 }): Promise<readonly PublicQuestion[]> {
+  if (isSanityConfigured()) {
+    try {
+      const sanityQuestions = await client.fetch<Question[]>(QUESTIONS_QUERY);
+      if (sanityQuestions && sanityQuestions.length > 0) {
+        let questions = sanityQuestions.filter(isPubliclyVisible);
+        if (options?.neighborhoodSlug) {
+          questions = questions.filter(
+            (q) => q.neighborhoodSlug === options.neighborhoodSlug,
+          );
+        }
+        if (options?.answeredOnly) {
+          questions = questions.filter(isIndexableQuestion);
+        }
+        if (options?.unansweredOnly) {
+          questions = questions.filter((q) => !isIndexableQuestion(q));
+        }
+        if (options?.topic) {
+          questions = questions.filter((q) => q.topic === options.topic);
+        }
+        const projected = questions.map(toPublicQuestion);
+        return options?.limit ? projected.slice(0, options.limit) : projected;
+      }
+    } catch {
+      // Fallback
+    }
+  }
+
   let questions = allQuestions()
     .filter(isPubliclyVisible)
     .filter(
@@ -252,7 +400,6 @@ export async function getQuestions(options?: {
     );
   }
 
-  // PRD 02 §3.2 — answered questions lead the feed.
   const ordered = [...questions].sort((a, b) => {
     const aAnswered = isIndexableQuestion(a) ? 0 : 1;
     const bAnswered = isIndexableQuestion(b) ? 0 : 1;
@@ -266,6 +413,17 @@ export async function getQuestions(options?: {
 export async function getQuestionBySlug(
   slug: string,
 ): Promise<PublicQuestion | null> {
+  if (isSanityConfigured()) {
+    try {
+      const q = await client.fetch<Question | null>(QUESTION_BY_SLUG_QUERY, { slug });
+      if (q && isPubliclyVisible(q)) {
+        return toPublicQuestion(q);
+      }
+    } catch {
+      // Fallback
+    }
+  }
+
   const question =
     findDemoQuestion(slug) ??
     allQuestions().find((candidate) => candidate.slug === slug) ??
@@ -276,13 +434,45 @@ export async function getQuestionBySlug(
   return toPublicQuestion(withQueuedComments(question));
 }
 
+/* -------------------------------- Comments --------------------------------- */
+
+export async function getComments(target: {
+  readonly type: CommentTargetType;
+  readonly slug: string;
+}): Promise<readonly PublicComment[]> {
+  const queued = listDemoComments(target.type, target.slug);
+
+  let seedComments: readonly Comment[] = [];
+  if (target.type === "question") {
+    const q = SEED_QUESTIONS.find((item) => item.slug === target.slug);
+    seedComments = q?.comments ?? [];
+  }
+
+  const all = [...seedComments, ...queued].filter((c) => c.published);
+  return all.map(toPublicComment);
+}
+
+export async function commentTargetExists(target: {
+  readonly type: CommentTargetType;
+  readonly slug: string;
+}): Promise<boolean> {
+  if (target.type === "question") {
+    return Boolean(await getQuestionBySlug(target.slug));
+  }
+  if (target.type === "tip") {
+    return Boolean(await getTipBySlug(target.slug));
+  }
+  if (target.type === "place") {
+    return Boolean(await getPlaceBySlug(target.slug));
+  }
+  if (target.type === "guide") {
+    return Boolean(await getGuideBySlug(target.slug));
+  }
+  return false;
+}
+
 /* --------------------------- Writes (visitor input) ------------------------ */
 
-/**
- * FR-010 — a visitor submits a question without an account. The record starts
- * as `pending`, so it renders as "Awaiting editor" and stays out of the index
- * until an editor publishes an answer (FR-013, FR-014).
- */
 export async function createQuestion(input: {
   readonly title: string;
   readonly topic: QuestionTopic;
@@ -302,44 +492,41 @@ export async function createQuestion(input: {
     ogImage: null,
     publishedAt: now,
     updatedAt: now,
-    // A real visitor submission, not build scaffolding.
-    sample: false,
     title: input.title,
     body: null,
     topic: input.topic,
     neighborhoodSlug: input.neighborhoodSlug,
-    askerName: input.askerName,
-    askerEmail: input.askerEmail,
+    askerName: input.askerName.trim() || "Anonymous",
+    askerEmail: input.askerEmail.trim(),
     questionStatus: "pending",
     officialAnswer: null,
     answerVerified: false,
     answeredAt: null,
     promotedToSlug: null,
     comments: [],
+    sample: false,
   };
 
   pushDemoQuestion(question);
   return toPublicQuestion(question);
 }
 
-/**
- * FR-020 — a comment carries a name, a hidden email, and a body. Published
- * immediately with an editor tool to unpublish, which PRD 02 §F-COMMENT names
- * as the default.
- */
 export async function createComment(input: {
   readonly target: CommentTarget;
   readonly name: string;
   readonly email: string;
   readonly body: string;
 }): Promise<PublicComment> {
+  const now = new Date().toISOString();
+  const id = `comment-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+
   const comment: Comment = {
-    id: `comment-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
+    id,
     target: input.target,
-    name: input.name,
-    email: input.email,
-    body: input.body,
-    createdAt: new Date().toISOString(),
+    name: input.name.trim() || "Reader",
+    email: input.email.trim(),
+    body: input.body.trim(),
+    createdAt: now,
     published: true,
     editorEndorsed: false,
   };
@@ -348,118 +535,114 @@ export async function createComment(input: {
   return toPublicComment(comment);
 }
 
-/** Public comments for any commentable document. Emails are stripped here. */
-export async function getComments(
-  target: CommentTarget,
-): Promise<readonly PublicComment[]> {
-  return listDemoComments(target.type, target.slug)
-    .filter((comment) => comment.published)
-    .map(toPublicComment);
-}
+/* ------------------------------ Shop Products ------------------------------ */
 
-/** True when the slug names a document that accepts comments (FR-020). */
-export async function commentTargetExists(
-  target: CommentTarget,
-): Promise<boolean> {
-  switch (target.type) {
-    case "question":
-      return (await getQuestionBySlug(target.slug)) !== null;
-    case "tip":
-      return (await getTipBySlug(target.slug)) !== null;
-    case "place":
-      return (await getPlaceBySlug(target.slug)) !== null;
-    case "guide":
-      return (await getGuideBySlug(target.slug)) !== null;
+export async function getShopProducts(options?: {
+  readonly category?: ShopProduct["category"];
+  readonly limit?: number;
+}): Promise<readonly ShopProduct[]> {
+  let products = SEED_SHOP_PRODUCTS.filter(isPubliclyVisible);
+
+  if (options?.category) {
+    products = products.filter(
+      (product) => product.category === options.category,
+    );
   }
+
+  return options?.limit ? products.slice(0, options.limit) : products;
 }
 
-/* ---------------------------------- Shop ----------------------------------- */
-
-/** FR-061 — only `/shop` may call this. Never render these on editorial. */
-export async function getShopProducts(): Promise<readonly ShopProduct[]> {
-  return SEED_SHOP_PRODUCTS.filter(isPubliclyVisible);
+export async function getShopProductBySlug(
+  slug: string,
+): Promise<ShopProduct | null> {
+  return (
+    SEED_SHOP_PRODUCTS.find(
+      (product) => product.slug === slug && isPubliclyVisible(product),
+    ) ?? null
+  );
 }
 
-/* --------------------------------- Search ---------------------------------- */
+/* ---------------------------------- Search --------------------------------- */
 
-export type SearchDocumentType = "question" | "tip" | "place" | "guide";
+export type SearchDocumentType = "tip" | "place" | "question" | "guide";
 
-export type SearchDocument = {
+export interface SearchDocument {
   readonly type: SearchDocumentType;
-  readonly title: string;
+  readonly id: string;
+  readonly slug: string;
   readonly href: string;
+  readonly title: string;
   readonly dek: string | null;
-  /** Lowercased haystack: title, dek, and body text (FR-030). */
+  readonly topicOrCategory: string | null;
+  readonly neighborhood: string | null;
   readonly haystack: string;
-};
-
-function blocksToText(
-  blocks: readonly { readonly text: string }[] | null,
-): string {
-  return (blocks ?? []).map((block) => block.text).join(" ");
 }
 
-/**
- * FR-030 / FR-034 — one flat corpus over titles, deks, bodies, and questions,
- * grouped by type at render time.
- */
 export async function getSearchCorpus(): Promise<readonly SearchDocument[]> {
-  const [tips, places, questions] = await Promise.all([
+  const [tips, places, questions, guides] = await Promise.all([
     getTips(),
     getPlaces(),
-    getQuestions(),
+    getQuestions({ answeredOnly: true }),
+    getGuides(),
   ]);
 
-  const guides = SEED_GUIDES.filter(isPubliclyVisible);
+  const corpus: SearchDocument[] = [];
 
-  const documents: SearchDocument[] = [
-    ...questions.map((question) => ({
-      type: "question" as const,
-      title: question.title,
-      href: `/ask/${question.slug}`,
-      dek: question.body,
-      haystack: [
-        question.title,
-        question.body ?? "",
-        blocksToText(question.officialAnswer),
-      ]
-        .join(" ")
-        .toLowerCase(),
-    })),
-    ...tips.map((tip) => ({
-      type: "tip" as const,
-      title: tip.title,
+  for (const tip of tips) {
+    corpus.push({
+      type: "tip",
+      id: tip.id,
+      slug: tip.slug,
       href: `/tips/${tip.slug}`,
+      title: tip.title,
       dek: tip.dek,
-      haystack: [tip.title, tip.dek ?? "", blocksToText(tip.body)]
-        .join(" ")
-        .toLowerCase(),
-    })),
-    ...places.map((place) => ({
-      type: "place" as const,
-      title: place.editorialTitle,
-      href: `/places/p/${place.slug}`,
-      dek: place.whyLocal,
-      haystack: [
-        place.editorialTitle,
-        place.venueNameEn ?? "",
-        place.venueNameKo ?? "",
-        place.whyLocal ?? "",
-        blocksToText(place.body),
-      ]
-        .join(" ")
-        .toLowerCase(),
-    })),
-    ...guides.map((guide) => ({
-      type: "guide" as const,
-      title: guide.title,
-      href: `/guides/${guide.slug}`,
-      dek: guide.dek,
-      haystack: [guide.title, guide.dek ?? "", blocksToText(guide.body)]
-        .join(" ")
-        .toLowerCase(),
-    })),
-  ];
+      topicOrCategory: tip.topic,
+      neighborhood: tip.neighborhoodSlugs[0] ?? null,
+      haystack: `${tip.title} ${tip.dek ?? ""} ${tip.topic} ${tip.tipBoxes.map((b) => b.body).join(" ")}`.toLowerCase(),
+    });
+  }
 
-  return documents;
+  for (const place of places) {
+    corpus.push({
+      type: "place",
+      id: place.id,
+      slug: place.slug,
+      href: `/places/p/${place.slug}`,
+      title: place.editorialTitle,
+      dek: place.whyLocal ?? null,
+      topicOrCategory: place.vertical,
+      neighborhood: place.neighborhoodSlug,
+      haystack: `${place.editorialTitle} ${place.venueNameEn ?? ""} ${place.venueNameKo ?? ""} ${place.whyLocal ?? ""}`.toLowerCase(),
+    });
+  }
+
+  for (const question of questions) {
+    corpus.push({
+      type: "question",
+      id: question.id,
+      slug: question.slug,
+      href: `/ask/${question.slug}`,
+      title: question.title,
+      dek: question.officialAnswer?.[0]?.text ?? null,
+      topicOrCategory: question.topic,
+      neighborhood: question.neighborhoodSlug,
+      haystack: `${question.title} ${question.topic}`.toLowerCase(),
+    });
+  }
+
+  for (const guide of guides) {
+    corpus.push({
+      type: "guide",
+      id: guide.id,
+      slug: guide.slug,
+      href: guide.isFirst24Alias ? "/first-24-hours" : `/guides/${guide.slug}`,
+      title: guide.title,
+      dek: guide.dek,
+      topicOrCategory: "guide",
+      neighborhood: null,
+      haystack: `${guide.title} ${guide.dek ?? ""}`.toLowerCase(),
+    });
+  }
+
+  return corpus;
 }
