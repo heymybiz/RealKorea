@@ -1,13 +1,30 @@
+---
+id: "tip-bukchon-quiet-hours-curfew"
+slug: "bukchon-quiet-hours-curfew"
+title: "Bukchon Hanok Village night curfew: 17:00 cutoff & fine rules"
+dek: "Residential 'Red Zones' in Bukchon restrict tourist access between 17:00 and 09:00 with 100,000 KRW fines to protect local residents."
+topic: "etiquette"
+status: "published"
+lastVerifiedAt: "2026-08-30T00:00:00Z"
+editorVerified: true
+neighborhoods:
+  - "ikseon-bukchon"
+  - "jongno"
+image:
+  src: "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=1200&q=85"
+  alt: "Traditional tiled hanok rooftops and stone alleys in Bukchon Village"
+---
+
 # Bukchon Hanok Village night curfew: 17:00 cutoff & fine rules
 
 > **Dek**: Residential 'Red Zones' in Bukchon restrict tourist access between 17:00 and 09:00 with 100,000 KRW fines to protect local residents.
 
-- **Topic**: etiquette
-- **Last Verified**: 2026-08-30T00:00:00Z (Verified Local Fact 正)
-- **Target Neighborhoods**: ikseon-bukchon, jongno
+- **Topic**: `etiquette`
+- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[ikseon-bukchon]], [[jongno]]
 
 ![Traditional tiled hanok rooftops and stone alleys in Bukchon Village](https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=1200&q=85)
-*Plate: Traditional tiled hanok rooftops and stone alleys in Bukchon Village (16:9 Documentary)*
+*Plate: Traditional tiled hanok rooftops and stone alleys in Bukchon Village (16:9 Documentary Plate)*
 
 ## 💡 Local Insider Tip Boxes
 

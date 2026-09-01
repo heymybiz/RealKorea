@@ -1,3 +1,15 @@
+---
+id: "guide-subway-mastery"
+slug: "seoul-subway-mastery"
+title: "Seoul Subway Mastery: Transfers, Colors, and Underground Shortcuts"
+dek: "How to navigate 23 lines and 700 stations across the capital without getting lost in 2-kilometer underground labyrinth tunnels."
+status: "published"
+isFirst24Alias: false
+hero:
+  src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85"
+  alt: "Seoul modern subway train pulling into brightly lit platform"
+---
+
 # Seoul Subway Mastery: Transfers, Colors, and Underground Shortcuts
 
 > **Dek**: How to navigate 23 lines and 700 stations across the capital without getting lost in 2-kilometer underground labyrinth tunnels.

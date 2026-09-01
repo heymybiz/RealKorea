@@ -1,13 +1,31 @@
+---
+id: "tip-convenience-store-atm-withdrawal"
+slug: "convenience-store-atm-withdrawal"
+title: "Convenience store ATM fees vs. bank Global ATMs"
+dek: "Standalone convenience store cash machines charge steep third-party access fees. Major bank branches offer fee-free Global ATM transactions."
+topic: "money"
+status: "published"
+lastVerifiedAt: "2026-08-30T00:00:00Z"
+editorVerified: true
+neighborhoods:
+  - "hongdae-yeonnam"
+  - "jongno"
+  - "gangnam-sinsa"
+image:
+  src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85"
+  alt: "Bank ATM kiosk lobby in downtown Seoul"
+---
+
 # Convenience store ATM fees vs. bank Global ATMs
 
 > **Dek**: Standalone convenience store cash machines charge steep third-party access fees. Major bank branches offer fee-free Global ATM transactions.
 
-- **Topic**: money
-- **Last Verified**: 2026-08-30T00:00:00Z (Verified Local Fact 正)
-- **Target Neighborhoods**: hongdae-yeonnam, jongno, gangnam-sinsa
+- **Topic**: `money`
+- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[hongdae-yeonnam]], [[jongno]], [[gangnam-sinsa]]
 
 ![Bank ATM kiosk lobby in downtown Seoul](https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85)
-*Plate: Bank ATM kiosk lobby in downtown Seoul (16:9 Documentary)*
+*Plate: Bank ATM kiosk lobby in downtown Seoul (16:9 Documentary Plate)*
 
 ## 💡 Local Insider Tip Boxes
 

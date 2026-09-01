@@ -1,13 +1,30 @@
+---
+id: "tip-tmoney-vs-climate-card"
+slug: "tmoney-vs-climate-card"
+title: "T-money vs. Climate Card: Which transit pass do you actually need?"
+dek: "The tourist Climate Card saves money only if you swipe four or more times every single day. Most 3–5 day visitors lose money on it."
+topic: "transit"
+status: "published"
+lastVerifiedAt: "2026-08-30T00:00:00Z"
+editorVerified: true
+neighborhoods:
+  - "jongno"
+  - "myeongdong"
+image:
+  src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85"
+  alt: "Seoul subway station platform transit card turnstiles"
+---
+
 # T-money vs. Climate Card: Which transit pass do you actually need?
 
 > **Dek**: The tourist Climate Card saves money only if you swipe four or more times every single day. Most 3–5 day visitors lose money on it.
 
-- **Topic**: transit
-- **Last Verified**: 2026-08-30T00:00:00Z (Verified Local Fact 正)
-- **Target Neighborhoods**: jongno, myeongdong
+- **Topic**: `transit`
+- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[jongno]], [[myeongdong]]
 
 ![Seoul subway station platform transit card turnstiles](https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85)
-*Plate: Seoul subway station platform transit card turnstiles (16:9 Documentary)*
+*Plate: Seoul subway station platform transit card turnstiles (16:9 Documentary Plate)*
 
 ## 💡 Local Insider Tip Boxes
 

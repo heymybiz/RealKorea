@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "sync:obsidian": "node scripts/sync-obsidian.js",
+    "export:obsidian": "node scripts/export-obsidian.js"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

@@ -1,13 +1,31 @@
+---
+id: "tip-tap-water-arisu-safety"
+slug: "tap-water-arisu-safety"
+title: "Can you drink tap water in Seoul? The Arisu reality vs. old pipe risks"
+dek: "Seoul municipal water (Arisu) is 100% safe at the plant. The problem is the 30-year-old galvanized pipes inside older villas and hanoks."
+topic: "survival"
+status: "published"
+lastVerifiedAt: "2026-08-30T00:00:00Z"
+editorVerified: true
+neighborhoods:
+  - "jongno"
+  - "euljiro"
+  - "hongdae-yeonnam"
+image:
+  src: "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=1200&q=85"
+  alt: "Clean drinking water pouring into a clear glass in a modern Seoul cafe"
+---
+
 # Can you drink tap water in Seoul? The Arisu reality vs. old pipe risks
 
 > **Dek**: Seoul municipal water (Arisu) is 100% safe at the plant. The problem is the 30-year-old galvanized pipes inside older villas and hanoks.
 
-- **Topic**: survival
-- **Last Verified**: 2026-08-30T00:00:00Z (Verified Local Fact 正)
-- **Target Neighborhoods**: jongno, euljiro, hongdae-yeonnam
+- **Topic**: `survival`
+- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[jongno]], [[euljiro]], [[hongdae-yeonnam]]
 
 ![Clean drinking water pouring into a clear glass in a modern Seoul cafe](https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=1200&q=85)
-*Plate: Clean drinking water pouring into a clear glass in a modern Seoul cafe (16:9 Documentary)*
+*Plate: Clean drinking water pouring into a clear glass in a modern Seoul cafe (16:9 Documentary Plate)*
 
 ## 💡 Local Insider Tip Boxes
 

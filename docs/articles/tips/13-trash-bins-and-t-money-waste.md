@@ -1,13 +1,31 @@
+---
+id: "tip-trash-bins-and-t-money-waste"
+slug: "trash-bins-and-t-money-waste"
+title: "Where are the trash bins in Seoul? The Pay-Per-Bag reality"
+dek: "Seoul sidewalks have almost zero public trash cans due to 1995 volume-rate waste laws. Here is where you can legally dispose of litter."
+topic: "survival"
+status: "published"
+lastVerifiedAt: "2026-08-30T00:00:00Z"
+editorVerified: true
+neighborhoods:
+  - "myeongdong"
+  - "hongdae-yeonnam"
+  - "jongno"
+image:
+  src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85"
+  alt: "Pristine pedestrian sidewalk street corner in downtown Seoul"
+---
+
 # Where are the trash bins in Seoul? The Pay-Per-Bag reality
 
 > **Dek**: Seoul sidewalks have almost zero public trash cans due to 1995 volume-rate waste laws. Here is where you can legally dispose of litter.
 
-- **Topic**: survival
-- **Last Verified**: 2026-08-30T00:00:00Z (Verified Local Fact 正)
-- **Target Neighborhoods**: myeongdong, hongdae-yeonnam, jongno
+- **Topic**: `survival`
+- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[myeongdong]], [[hongdae-yeonnam]], [[jongno]]
 
 ![Pristine pedestrian sidewalk street corner in downtown Seoul](https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85)
-*Plate: Pristine pedestrian sidewalk street corner in downtown Seoul (16:9 Documentary)*
+*Plate: Pristine pedestrian sidewalk street corner in downtown Seoul (16:9 Documentary Plate)*
 
 ## 💡 Local Insider Tip Boxes
 

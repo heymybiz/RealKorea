@@ -1,13 +1,31 @@
+---
+id: "tip-jimjilbang-sauna-sleepover"
+slug: "jimjilbang-sauna-sleepover"
+title: "Seoul Jimjilbang sleepover: Lockers, sauna etiquette & overnight rules"
+dek: "Overnight Korean bathhouses offer heated ondol floor sleeping for ~16,000 KRW. Here is the exact protocol to avoid cultural confusion."
+topic: "survival"
+status: "published"
+lastVerifiedAt: "2026-08-30T00:00:00Z"
+editorVerified: true
+neighborhoods:
+  - "jongno"
+  - "hongdae-yeonnam"
+  - "gangnam-sinsa"
+image:
+  src: "https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?auto=format&fit=crop&w=1200&q=85"
+  alt: "Heated wooden pine sauna interior in a traditional Korean bathhouse"
+---
+
 # Seoul Jimjilbang sleepover: Lockers, sauna etiquette & overnight rules
 
 > **Dek**: Overnight Korean bathhouses offer heated ondol floor sleeping for ~16,000 KRW. Here is the exact protocol to avoid cultural confusion.
 
-- **Topic**: survival
-- **Last Verified**: 2026-08-30T00:00:00Z (Verified Local Fact 正)
-- **Target Neighborhoods**: jongno, hongdae-yeonnam, gangnam-sinsa
+- **Topic**: `survival`
+- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[jongno]], [[hongdae-yeonnam]], [[gangnam-sinsa]]
 
 ![Heated wooden pine sauna interior in a traditional Korean bathhouse](https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?auto=format&fit=crop&w=1200&q=85)
-*Plate: Heated wooden pine sauna interior in a traditional Korean bathhouse (16:9 Documentary)*
+*Plate: Heated wooden pine sauna interior in a traditional Korean bathhouse (16:9 Documentary Plate)*
 
 ## 💡 Local Insider Tip Boxes
 

@@ -1,13 +1,30 @@
+---
+id: "tip-naver-map-english-setup"
+slug: "naver-map-english-setup"
+title: "Why Google Maps fails in Korea (and how to set up Naver Map in English)"
+dek: "National security laws restrict Google's walking directions. Naver Map and KakaoMap are non-negotiable survival tools in Seoul."
+topic: "survival"
+status: "published"
+lastVerifiedAt: "2026-08-30T00:00:00Z"
+editorVerified: true
+neighborhoods:
+  - "jongno"
+  - "euljiro"
+image:
+  src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85"
+  alt: "Pedestrians navigating Seoul downtown alleys using mobile maps"
+---
+
 # Why Google Maps fails in Korea (and how to set up Naver Map in English)
 
 > **Dek**: National security laws restrict Google's walking directions. Naver Map and KakaoMap are non-negotiable survival tools in Seoul.
 
-- **Topic**: survival
-- **Last Verified**: 2026-08-30T00:00:00Z (Verified Local Fact 正)
-- **Target Neighborhoods**: jongno, euljiro
+- **Topic**: `survival`
+- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[jongno]], [[euljiro]]
 
 ![Pedestrians navigating Seoul downtown alleys using mobile maps](https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85)
-*Plate: Pedestrians navigating Seoul downtown alleys using mobile maps (16:9 Documentary)*
+*Plate: Pedestrians navigating Seoul downtown alleys using mobile maps (16:9 Documentary Plate)*
 
 ## 💡 Local Insider Tip Boxes
 
