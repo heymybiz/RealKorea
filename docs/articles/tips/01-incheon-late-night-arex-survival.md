@@ -7,21 +7,20 @@ topic: "arrival"
 status: "published"
 lastVerifiedAt: "2026-08-30T00:00:00Z"
 editorVerified: true
+type: "tip"
 neighborhoods:
   - "icn-songdo"
   - "jongno"
-image:
-  src: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85"
-  alt: "Incheon International Airport Terminal 1 at Night"
 ---
 
 # Landing past 23:30 at Incheon: Express AREX is closed — here is your late-night protocol.
 
 > **Dek**: The orange Express train stops at 22:48, and the blue All-Stop train locks its gates at 23:56. If your wheels touch down after 23:00, stop running for the train—here is what local Seoulites do instead.
 
-- **Topic**: `arrival`
-- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
-- **Connected Hubs**: [[icn-songdo]], [[jongno]]
+### 🌐 Knowledge Mesh Links
+- **Core Topic**: [[arrival]]
+- **Neighborhood Hubs**: [[icn-songdo]], [[jongno]]
+- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
 
 ![Incheon International Airport Terminal 1 at Night](https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85)
 *Plate: Incheon International Airport Terminal 1 at Night (16:9 Documentary Plate)*

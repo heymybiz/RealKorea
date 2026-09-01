@@ -7,21 +7,20 @@ topic: "transit"
 status: "published"
 lastVerifiedAt: "2026-08-30T00:00:00Z"
 editorVerified: true
+type: "tip"
 neighborhoods:
   - "hongdae-yeonnam"
   - "gangnam-sinsa"
-image:
-  src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85"
-  alt: "Seoul taxi driving along brightly lit city boulevard at night"
 ---
 
 # Calling Kakao T without a Korean credit card
 
 > **Dek**: Select 'General Request' and choose 'Pay to driver directly' to summon regular taxis and swipe your foreign Visa/Mastercard in person.
 
-- **Topic**: `transit`
-- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
-- **Connected Hubs**: [[hongdae-yeonnam]], [[gangnam-sinsa]]
+### 🌐 Knowledge Mesh Links
+- **Core Topic**: [[transit]]
+- **Neighborhood Hubs**: [[hongdae-yeonnam]], [[gangnam-sinsa]]
+- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
 
 ![Seoul taxi driving along brightly lit city boulevard at night](https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85)
 *Plate: Seoul taxi driving along brightly lit city boulevard at night (16:9 Documentary Plate)*

@@ -3,16 +3,16 @@ id: "guide-late-night-survival"
 slug: "late-night-survival-seoul"
 title: "Post-Midnight Survival: Late Night Buses, 24h Gukbap, and Jimjilbangs"
 dek: "When the subway shuts at 00:30: how to hail a midnight taxi, ride N-buses, and eat hot meals at 03:00 AM."
+type: "guide"
 status: "published"
-isFirst24Alias: false
-hero:
-  src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85"
-  alt: "Late night neon lit alleyways in Euljiro Seoul"
 ---
 
 # Post-Midnight Survival: Late Night Buses, 24h Gukbap, and Jimjilbangs
 
 > **Dek**: When the subway shuts at 00:30: how to hail a midnight taxi, ride N-buses, and eat hot meals at 03:00 AM.
+
+### 🌐 Connected Topic Pillars
+- [[arrival]], [[transit]], [[money]], [[survival]]
 
 ![Late night neon lit alleyways in Euljiro Seoul](https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85)
 *Plate: Late night neon lit alleyways in Euljiro Seoul*

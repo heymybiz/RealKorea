@@ -7,22 +7,21 @@ topic: "money"
 status: "published"
 lastVerifiedAt: "2026-08-30T00:00:00Z"
 editorVerified: true
+type: "tip"
 neighborhoods:
   - "hongdae-yeonnam"
   - "jongno"
   - "gangnam-sinsa"
-image:
-  src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85"
-  alt: "Bank ATM kiosk lobby in downtown Seoul"
 ---
 
 # Convenience store ATM fees vs. bank Global ATMs
 
 > **Dek**: Standalone convenience store cash machines charge steep third-party access fees. Major bank branches offer fee-free Global ATM transactions.
 
-- **Topic**: `money`
-- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
-- **Connected Hubs**: [[hongdae-yeonnam]], [[jongno]], [[gangnam-sinsa]]
+### 🌐 Knowledge Mesh Links
+- **Core Topic**: [[money]]
+- **Neighborhood Hubs**: [[hongdae-yeonnam]], [[jongno]], [[gangnam-sinsa]]
+- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
 
 ![Bank ATM kiosk lobby in downtown Seoul](https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85)
 *Plate: Bank ATM kiosk lobby in downtown Seoul (16:9 Documentary Plate)*

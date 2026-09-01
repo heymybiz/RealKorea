@@ -7,22 +7,21 @@ topic: "transit"
 status: "published"
 lastVerifiedAt: "2026-08-30T00:00:00Z"
 editorVerified: true
+type: "tip"
 neighborhoods:
   - "jongno"
   - "gangnam-sinsa"
   - "hongdae-yeonnam"
-image:
-  src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85"
-  alt: "Blue and Green city buses stopped along central Seoul transit avenue"
 ---
 
 # Seoul City buses decoded: Colors, fares & the tag-off penalty rule
 
 > **Dek**: Blue, Green, Red, and Yellow buses serve different distances. Always tap your T-money card when exiting to avoid double-fare penalties.
 
-- **Topic**: `transit`
-- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
-- **Connected Hubs**: [[jongno]], [[gangnam-sinsa]], [[hongdae-yeonnam]]
+### 🌐 Knowledge Mesh Links
+- **Core Topic**: [[transit]]
+- **Neighborhood Hubs**: [[jongno]], [[gangnam-sinsa]], [[hongdae-yeonnam]]
+- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
 
 ![Blue and Green city buses stopped along central Seoul transit avenue](https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85)
 *Plate: Blue and Green city buses stopped along central Seoul transit avenue (16:9 Documentary Plate)*

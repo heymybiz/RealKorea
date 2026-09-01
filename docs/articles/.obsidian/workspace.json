@@ -18,6 +18,22 @@
             }
           }
         ]
+      },
+      {
+        "id": "1ae06dba108bccf1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39c9a6f4d72163ad",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "새 탭"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -181,6 +197,33 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "0e763b23b599cbf6",
-  "lastOpenFiles": []
+  "active": "2f99087bd460dbf7",
+  "lastOpenFiles": [
+    "places/myeongdong-street-food-trap.md",
+    "places/center-coffee-seongsu.md",
+    "places/sunhee-bindaetteok-gwangjang.md",
+    "places/dongwon-jip-euljiro.md",
+    "neighborhoods/icn-songdo.md",
+    "neighborhoods/paju.md",
+    "neighborhoods/suwon.md",
+    "neighborhoods/jamsil.md",
+    "neighborhoods/gangnam-sinsa.md",
+    "neighborhoods/seongsu.md",
+    "neighborhoods/euljiro.md",
+    "neighborhoods/itaewon-hannam.md",
+    "neighborhoods/hongdae-yeonnam.md",
+    "neighborhoods/myeongdong.md",
+    "neighborhoods/ikseon-bukchon.md",
+    "neighborhoods/jongno.md",
+    "topics/traps.md",
+    "topics/survival.md",
+    "topics/etiquette.md",
+    "topics/money.md",
+    "topics/transit.md",
+    "topics/arrival.md",
+    "무제.md",
+    "places",
+    "topics",
+    "neighborhoods"
+  ]
 }

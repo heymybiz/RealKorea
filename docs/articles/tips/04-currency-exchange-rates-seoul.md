@@ -7,21 +7,20 @@ topic: "money"
 status: "published"
 lastVerifiedAt: "2026-08-30T00:00:00Z"
 editorVerified: true
+type: "tip"
 neighborhoods:
   - "myeongdong"
   - "icn-songdo"
-image:
-  src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85"
-  alt: "Currency exchange counter signs in Myeongdong Seoul"
 ---
 
 # Never exchange cash at Incheon Airport counters
 
 > **Dek**: Airport banks charge 8–12% spread markups. Private licensed booths in Myeongdong trade within 0.3% of the interbank rate.
 
-- **Topic**: `money`
-- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
-- **Connected Hubs**: [[myeongdong]], [[icn-songdo]]
+### 🌐 Knowledge Mesh Links
+- **Core Topic**: [[money]]
+- **Neighborhood Hubs**: [[myeongdong]], [[icn-songdo]]
+- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
 
 ![Currency exchange counter signs in Myeongdong Seoul](https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85)
 *Plate: Currency exchange counter signs in Myeongdong Seoul (16:9 Documentary Plate)*

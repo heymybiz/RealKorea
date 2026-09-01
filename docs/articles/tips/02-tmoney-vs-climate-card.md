@@ -7,21 +7,20 @@ topic: "transit"
 status: "published"
 lastVerifiedAt: "2026-08-30T00:00:00Z"
 editorVerified: true
+type: "tip"
 neighborhoods:
   - "jongno"
   - "myeongdong"
-image:
-  src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85"
-  alt: "Seoul subway station platform transit card turnstiles"
 ---
 
 # T-money vs. Climate Card: Which transit pass do you actually need?
 
 > **Dek**: The tourist Climate Card saves money only if you swipe four or more times every single day. Most 3–5 day visitors lose money on it.
 
-- **Topic**: `transit`
-- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
-- **Connected Hubs**: [[jongno]], [[myeongdong]]
+### 🌐 Knowledge Mesh Links
+- **Core Topic**: [[transit]]
+- **Neighborhood Hubs**: [[jongno]], [[myeongdong]]
+- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
 
 ![Seoul subway station platform transit card turnstiles](https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85)
 *Plate: Seoul subway station platform transit card turnstiles (16:9 Documentary Plate)*

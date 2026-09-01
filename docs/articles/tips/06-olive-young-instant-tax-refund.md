@@ -7,21 +7,20 @@ topic: "money"
 status: "published"
 lastVerifiedAt: "2026-08-30T00:00:00Z"
 editorVerified: true
+type: "tip"
 neighborhoods:
   - "myeongdong"
   - "hongdae-yeonnam"
-image:
-  src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85"
-  alt: "Olive Young cosmetics store interior aisle shelves in Seoul"
 ---
 
 # Olive Young Tax Refund: Instant checkout discount vs Airport customs
 
 > **Dek**: Show your physical passport at the register for purchases over 15,000 KRW to get an immediate 7–8% VAT deduction on the spot.
 
-- **Topic**: `money`
-- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
-- **Connected Hubs**: [[myeongdong]], [[hongdae-yeonnam]]
+### 🌐 Knowledge Mesh Links
+- **Core Topic**: [[money]]
+- **Neighborhood Hubs**: [[myeongdong]], [[hongdae-yeonnam]]
+- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
 
 ![Olive Young cosmetics store interior aisle shelves in Seoul](https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85)
 *Plate: Olive Young cosmetics store interior aisle shelves in Seoul (16:9 Documentary Plate)*

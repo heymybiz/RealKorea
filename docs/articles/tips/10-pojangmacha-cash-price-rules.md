@@ -7,21 +7,20 @@ topic: "etiquette"
 status: "published"
 lastVerifiedAt: "2026-08-30T00:00:00Z"
 editorVerified: true
+type: "tip"
 neighborhoods:
   - "jongno"
   - "euljiro"
-image:
-  src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85"
-  alt: "Glowing orange pojangmacha tent street stalls at night in Jongno"
 ---
 
 # Jongno Pojangmacha street tents: Cash rules & price reality
 
 > **Dek**: Iconic orange street tent bars in Jongno 3-ga and Euljiro are cash or bank-transfer only. Prices run 15,000–25,000 KRW per main dish.
 
-- **Topic**: `etiquette`
-- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
-- **Connected Hubs**: [[jongno]], [[euljiro]]
+### 🌐 Knowledge Mesh Links
+- **Core Topic**: [[etiquette]]
+- **Neighborhood Hubs**: [[jongno]], [[euljiro]]
+- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
 
 ![Glowing orange pojangmacha tent street stalls at night in Jongno](https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85)
 *Plate: Glowing orange pojangmacha tent street stalls at night in Jongno (16:9 Documentary Plate)*

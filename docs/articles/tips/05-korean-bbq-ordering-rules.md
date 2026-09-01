@@ -7,21 +7,20 @@ topic: "etiquette"
 status: "published"
 lastVerifiedAt: "2026-08-30T00:00:00Z"
 editorVerified: true
+type: "tip"
 neighborhoods:
   - "euljiro"
   - "gangnam-sinsa"
-image:
-  src: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85"
-  alt: "Pork belly grilling over oak charcoal with metal banchan dishes"
 ---
 
 # K-BBQ Etiquette: Why ordering 1 portion of pork belly is forbidden
 
 > **Dek**: Charcoal grill houses require a minimum 2-person initial meat order even if you are dining alone. Here is how the table etiquette works.
 
-- **Topic**: `etiquette`
-- **Last Verified**: `2026-08-30T00:00:00Z` (Verified Local Fact 正)
-- **Connected Hubs**: [[euljiro]], [[gangnam-sinsa]]
+### 🌐 Knowledge Mesh Links
+- **Core Topic**: [[etiquette]]
+- **Neighborhood Hubs**: [[euljiro]], [[gangnam-sinsa]]
+- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
 
 ![Pork belly grilling over oak charcoal with metal banchan dishes](https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85)
 *Plate: Pork belly grilling over oak charcoal with metal banchan dishes (16:9 Documentary Plate)*
