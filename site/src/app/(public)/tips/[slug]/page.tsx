@@ -94,30 +94,40 @@ export default async function TipPage({
   const lastVerified = formatMonthYear(tip.lastVerifiedAt);
 
   return (
-    <article className="content-shell py-16">
-      <p className="text-crimson text-xs tracking-[0.12em] uppercase">
-        {TOPIC_LABEL[tip.topic]}
-      </p>
+    <article className="content-shell py-12 lg:py-16">
+      <div className="flex items-center gap-2">
+        <span className="fact-chip bg-[var(--amber-light)] text-[var(--amber)]">
+          {TOPIC_LABEL[tip.topic]}
+        </span>
+        <span className="text-[var(--rule-strong)]">/</span>
+        <span className="furniture text-[11px] text-[var(--ink-soft)]">
+          The Desk Intel
+        </span>
+      </div>
 
-      <h1 className="mt-4 max-w-3xl text-[32px] leading-[1.1] font-semibold sm:text-[44px]">
+      <h1 className="mt-4 max-w-4xl text-[34px] leading-[1.08] font-bold sm:text-[46px] lg:text-[52px]">
         {tip.title}
       </h1>
 
       {tip.dek ? (
-        <p className="text-ink-soft mt-5 max-w-2xl text-lg">{tip.dek}</p>
+        <p className="font-display mt-5 max-w-3xl text-[20px] leading-8 italic text-[var(--ink-soft)]">
+          “{tip.dek}”
+        </p>
       ) : null}
 
-      {/* FR-003 — the verification state is always visible on a Tip. */}
-      <div className="border-rule text-ink-soft mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 border-b pb-6 text-xs">
+      {/* Verification & Metadata Strip */}
+      <div className="my-6 flex flex-wrap items-center gap-x-4 gap-y-2 border-y border-[var(--rule)] py-3.5 text-xs">
         {lastVerified ? (
-          <span className="tracking-[0.12em] uppercase">
-            Last verified{" "}
+          <span className="furniture text-[10px] text-[var(--ink-soft)]">
+            Verified{" "}
             <time dateTime={toDateTimeAttribute(tip.lastVerifiedAt)}>
               {lastVerified}
             </time>
           </span>
         ) : (
-          <span className="tracking-[0.12em] uppercase">Not verified yet</span>
+          <span className="furniture text-[10px] text-[var(--ink-soft)]">
+            Draft Intel
+          </span>
         )}
 
         {tip.editorVerified ? <VerifiedMark label="Verified local" /> : null}
@@ -126,19 +136,47 @@ export default async function TipPage({
           <Link
             key={neighborhood.id}
             href={`/places/${neighborhood.slug}`}
-            className="hover:text-crimson tracking-[0.12em] uppercase transition-colors duration-[180ms] ease-out"
+            className="furniture text-[10px] text-[var(--pine)] transition-colors hover:underline"
           >
-            {neighborhood.nameEn}
+            {neighborhood.nameEn} ({neighborhood.nameKo})
           </Link>
         ))}
 
         {tip.sample ? <SampleLabel /> : null}
       </div>
 
-      <Prose blocks={tip.body} />
+      {/* Documentary Hero Photograph */}
+      {tip.image ? (
+        <div className="my-8">
+          <div className="relative aspect-[16/9] w-full overflow-hidden border border-[var(--rule)] bg-[#1a1715] shadow-lg">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={tip.image.src}
+              alt={tip.image.alt}
+              className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+            <div className="absolute right-4 bottom-4 flex items-center gap-2.5 border border-white/30 bg-[var(--charcoal)]/90 px-3.5 py-2 text-white backdrop-blur-md shadow-md">
+              <span className="flex size-5 items-center justify-center bg-[var(--lacquer)] text-[10px] font-black">
+                正
+              </span>
+              <p className="furniture text-[10px] text-white/90">
+                Documentary Plate: Incheon Airport Night Protocol
+              </p>
+            </div>
+          </div>
+          <p className="furniture mt-2.5 text-right text-[10px] text-[var(--ink-soft)]">
+            Photography: {tip.image.alt}
+          </p>
+        </div>
+      ) : null}
 
-      {/* PRD 03 §3.1 requires at least one tip box on a finished Tip. */}
+      {/* Quick Friend Advice (TipBox) Highlight */}
       <TipBoxes tipBoxes={tip.tipBoxes} />
+
+      {/* Editorial Body Breakdown */}
+      <div className="mt-8 border-t border-[var(--rule)] pt-8">
+        <Prose blocks={tip.body} />
+      </div>
 
       {questions.length > 0 ? (
         <section className="border-rule mt-12 border-t pt-8">

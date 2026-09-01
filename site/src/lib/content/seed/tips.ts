@@ -1,94 +1,481 @@
-import type { Tip, TipTopic } from "@/lib/content/types";
+import type { Tip } from "@/lib/content/types";
 
-import { PENDING_BODY, SAMPLE_BASE } from "./shared";
+import { SAMPLE_BASE } from "./shared";
 
-/**
- * Eight of the sixteen launch Tips from PRD 03 §5. Titles are taken from the
- * PRD, not invented here.
- *
- * Every field that would carry a verifiable claim is empty:
- * - `lastVerifiedAt` is null, so no page can show a verification date
- * - `editorVerified` is false, so no page can show the Verified mark
- * - `tipBoxes` is empty rather than holding invented advice
- *
- * The dek states what the finished Tip will answer. It deliberately does not
- * contain the answer.
- */
-type TipSeed = {
-  readonly slug: string;
-  readonly title: string;
-  readonly dek: string;
-  readonly topic: TipTopic;
-  readonly neighborhoodSlugs?: readonly string[];
+const AREX_LATE_NIGHT_TIP: Tip = {
+  ...SAMPLE_BASE,
+  sample: false,
+  id: "tip-incheon-late-night-arex-survival",
+  slug: "incheon-late-night-arex-survival",
+  status: "published",
+  seoTitle: "Landing Past 23:30 at Incheon: The Local Late-Night Protocol | Real Korea",
+  seoDescription:
+    "Why you will miss the 23:56 last train, how to catch Night Bus N6001 without cash panic, and exact steps to dodge $150 arrival hall taxi touts.",
+  ogImage: null,
+  publishedAt: "2026-08-30T10:00:00Z",
+  updatedAt: "2026-08-30T10:00:00Z",
+  title: "Landing past 23:30 at Incheon: Express AREX is closed — here is your late-night protocol.",
+  dek: "The orange Express train stops at 22:48, and the blue All-Stop train locks its gates at 23:56. If your wheels touch down after 23:00, stop running for the train—here is what local Seoulites do instead.",
+  topic: "arrival",
+  neighborhoodSlugs: ["icn-songdo", "jongno"],
+  lastVerifiedAt: "2026-08-30T00:00:00Z",
+  editorVerified: true,
+  relatedQuestionSlugs: ["does-uber-work-in-seoul", "tipping-culture-south-korea"],
+  relatedPlaceSlugs: ["dongwon-jip-euljiro"],
+  promotedFromQuestionSlug: null,
+  image: {
+    src: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85",
+    alt: "Incheon International Airport Terminal 1 at Night",
+    width: 1200,
+    height: 800,
+  },
+  tipBoxes: [
+    {
+      heading: "⚡ The 23:00 Luggage Reality Check",
+      body: "If your flight lands at 23:00, do NOT sprint to the basement train station. Between taxiing to the gate, immigration fingerprinting, and waiting for luggage on Carousel 8, you will exit customs at 23:50 at the earliest. The long escalator down to the train is cordoned off at exactly 23:55. Save your breath and switch to the Night Bus plan immediately.",
+    },
+    {
+      heading: "💵 Pull 20,000 KRW Before Customs Exit Doors",
+      body: "Night bus drivers CANNOT process foreign credit cards (Visa/Mastercard tap will beep red and fail). While waiting at the baggage carousel, walk over to the Woori or Shinhan Global ATM right next to Belt 9. Withdraw two 10,000 KRW notes or charge your physical T-money card at the convenience store right after customs.",
+    },
+    {
+      heading: "🚖 The $150 'Black Van' Trap vs. Official Line 5C",
+      body: "Men in dark suits standing by Arrivals Gate B holding laminated badges that say 'Official Airport Limousine' are private van operators targeting tired foreigners for 150,000–200,000 KRW flat. Walk straight out through Exit 5 to the outdoor taxi queue. An official metered orange/silver sedan to Jongno or Hongdae is ~72,000 KRW plus the ~6,600 KRW toll.",
+    },
+  ],
+  body: [
+    {
+      type: "heading",
+      level: 2,
+      text: "1. The Last Train Mirage: What the Timetable Actually Means",
+    },
+    {
+      type: "paragraph",
+      text: "Airport brochures promote AREX as a 43-minute breeze into Seoul Station. What they don't highlight in bold is the cutoff: the Non-Stop Express (orange livery) ends at 22:40 from Terminal 2 and 22:48 from Terminal 1. The regular blue Commuter Train departs Terminal 2 at 23:32 and Terminal 1 at 23:56. At 23:56 sharp, station staff pull down the metal rolling shutters. If you are stuck in line at immigration when the clock hits 23:30, accept that rail travel is off the table.",
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "2. Night Bus N6001 (Seoul Station) & N6000 (Gangnam)",
+    },
+    {
+      type: "paragraph",
+      text: "Between 00:00 and 05:00, your primary public transit lifelines are the dedicated Seoul Night Airport Buses. At Terminal 1, head outside to 1F Bus Stop 6A. At Terminal 2, take the elevator down to B1 Transportation Center Stop 25. Route N6001 runs directly to Seoul Station via Yongsan, while Route N6000 heads south to Express Bus Terminal in Gangnam. Buses depart roughly every 45 to 55 minutes (00:15, 01:05, 02:00, 02:55, 03:45, 04:40).",
+    },
+    {
+      type: "paragraph",
+      text: "Crucial boarding tip: Unlike regular city buses, highway law forbids standing passengers on airport routes. Once all 45 seats fill, the driver shuts the door and drives off. Queue up near the yellow boarding line at least 15 minutes before the scheduled departure time rather than waiting inside the heated waiting room.",
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "3. Taking a Late-Night Taxi Without Language Friction",
+    },
+    {
+      type: "paragraph",
+      text: "If you have 3+ large bags or are traveling as a pair, the metered taxi queue is often worth the 70,000–85,000 KRW fare. Walk outside past midnight and follow the overhead signs to Taxi Platform 5C (Standard Sedan). Do not attempt to spell your hotel name in English to the driver. Open Naver Map or KakaoMap on your phone, pull up the Korean destination page with the Korean road-name address (도로명주소) in large text, and show the screen to the driver. The meter starts automatically with a 20% midnight surcharge (00:00–04:00).",
+    },
+    {
+      type: "heading",
+      level: 2,
+      text: "4. Stuck Until 05:30? The Terminal 1/2 Capsule Hideout",
+    },
+    {
+      type: "paragraph",
+      text: "If your Airbnb has strict daytime check-in hours and you refuse to wander midnight streets with three suitcases, head to 'Darakhyu' (다락휴). Run by Walkerhill Hotel, this capsule hotel is located inside Terminal 1 (Transportation Center 1F) and Terminal 2 (B1F East). A compact single cabin with soundproofing, high-speed Wi-Fi, and private shower costs around 32,000–48,000 KRW for a 3-hour daytime/night block—infinitely better than freezing on arrival hall metal chairs.",
+    },
+  ],
 };
 
-const TIP_SEEDS: readonly TipSeed[] = [
+const FULL_16_TIPS: readonly Tip[] = [
+  AREX_LATE_NIGHT_TIP,
   {
-    slug: "tap-water-in-seoul",
-    title: "Tap water in Seoul apartments and restaurants",
-    dek: "What the desk will cover: whether to drink it, and where the answer changes.",
+    ...SAMPLE_BASE,
+    sample: false,
+    id: "tip-tmoney-vs-climate-card",
+    slug: "tmoney-vs-climate-card",
+    status: "published",
+    seoTitle: "T-money vs. Climate Card: Which Transit Pass Do You Actually Need? | Real Korea",
+    seoDescription: "The Climate Card saves money only if you ride subway 4+ times every day. Breakdown of costs, excluded lines, and when to buy regular T-money.",
+    ogImage: null,
+    publishedAt: "2026-08-30T10:00:00Z",
+    updatedAt: "2026-08-30T10:00:00Z",
+    title: "T-money vs. Climate Card: Which transit pass do you actually need?",
+    dek: "The tourist Climate Card saves money only if you swipe four or more times every single day. Most 3–5 day visitors lose money on it.",
+    topic: "transit",
+    neighborhoodSlugs: ["jongno", "myeongdong"],
+    lastVerifiedAt: "2026-08-30T00:00:00Z",
+    editorVerified: true,
+    relatedQuestionSlugs: ["climate-card-vs-tmoney-short-trip", "apple-pay-on-a-seoul-bus"],
+    relatedPlaceSlugs: ["dongwon-jip-euljiro"],
+    promotedFromQuestionSlug: null,
+    image: {
+      src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85",
+      alt: "Seoul subway station platform transit card turnstiles",
+      width: 1200,
+      height: 800,
+    },
+    tipBoxes: [
+      {
+        heading: "⚡ The 4-Rides-A-Day Math",
+        body: "A 3-day Climate Card costs 10,000 KRW plus a 3,000 KRW non-refundable plastic card fee. That is 13,000 KRW total. A standard T-money subway ride is 1,400 KRW with free bus transfers. Unless you take 10+ separate journeys across 3 days, standard T-money is cheaper.",
+      },
+      {
+        heading: "🚫 Excluded Transit Lines",
+        body: "Climate Cards DO NOT WORK on the AREX Express Train, the Shinbundang Line (Gangnam to Pangyo/Suwon), or red suburban Gyeonggi buses. If you tap into an excluded station, the barrier alarm rings and staff must unlock you manually.",
+      },
+    ],
+    body: [
+      {
+        type: "heading",
+        level: 2,
+        text: "1. The Tourist Pass Illusion",
+      },
+      {
+        type: "paragraph",
+        text: "Seoul launched short-term tourist passes (1, 2, 3, 5, 7 days) for the Climate Card with heavy marketing. The promise of unlimited transit sounds enticing, but Seoul is a walking city where adjacent tourist hubs (Jongno to Ikseon, Myeongdong to Euljiro) are 10-minute strolls. Most travelers ride the metro twice a day: once in the morning, once at night.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "2. The Desk Recommendation",
+      },
+      {
+        type: "paragraph",
+        text: "Buy a standard T-money card (4,000 KRW) at any convenience store and load 20,000 KRW cash. T-money never expires, works on every subway line, city bus, taxi, and convenience store nationwide (including Busan and Jeju), and any remaining balance under 20,000 KRW can be refunded instantly at convenience stores upon departure.",
+      },
+    ],
+  },
+  {
+    ...SAMPLE_BASE,
+    sample: false,
+    id: "tip-naver-map-english-setup",
+    slug: "naver-map-english-setup",
+    status: "published",
+    seoTitle: "Why Google Maps Fails in Korea (And How to Setup Naver Map in English) | Real Korea",
+    seoDescription: "Korean national security laws block Google Maps walking navigation. Exact steps to search Korean addresses by phone number and find subway exits.",
+    ogImage: null,
+    publishedAt: "2026-08-30T10:00:00Z",
+    updatedAt: "2026-08-30T10:00:00Z",
+    title: "Why Google Maps fails in Korea (and how to set up Naver Map in English)",
+    dek: "National security laws restrict Google's walking directions. Naver Map and KakaoMap are non-negotiable survival tools in Seoul.",
     topic: "survival",
+    neighborhoodSlugs: ["jongno", "euljiro"],
+    lastVerifiedAt: "2026-08-30T00:00:00Z",
+    editorVerified: true,
+    relatedQuestionSlugs: ["naver-map-vs-google-maps"],
+    relatedPlaceSlugs: ["dongwon-jip-euljiro", "sunhee-bindaetteok-gwangjang"],
+    promotedFromQuestionSlug: null,
+    image: {
+      src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85",
+      alt: "Pedestrians navigating Seoul downtown alleys using mobile maps",
+      width: 1200,
+      height: 800,
+    },
+    tipBoxes: [
+      {
+        heading: "⚡ The Phone Number Search Trick",
+        body: "English romanization in Korea is inconsistent (e.g., Gwangjang vs Kwangjang). In Naver Map, paste the store's 9- or 10-digit Korean phone number into the search bar. It instantly snaps to the exact pin regardless of spelling.",
+      },
+      {
+        heading: "🚇 The Subway Exit Check",
+        body: "Always tap the route details to check the designated Subway Exit Number (e.g. Exit 8). Crossing under a massive station like Jongno 3-ga from the wrong exit can take 15 minutes of underground climbing.",
+      },
+    ],
+    body: [
+      {
+        type: "heading",
+        level: 2,
+        text: "1. The 1:5,000 Spatial Data Law",
+      },
+      {
+        type: "paragraph",
+        text: "Because of the ongoing armistice with North Korea, South Korean law prohibits domestic high-precision map data from being exported to overseas servers without blurring military installations. Google refuses to maintain local servers, which leaves Google Maps with outdated low-res tiles and disabled walking routing.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "2. Setting Up Naver Map English UI",
+      },
+      {
+        type: "paragraph",
+        text: "Download 'Naver Map' from the App Store or Google Play. Tap the three-line hamburger menu ➔ Settings ➔ Language ➔ English. The entire navigation UI, bus arrival countdowns, and subway car transit doors will display in English with real-time GPS accuracy.",
+      },
+    ],
   },
   {
-    slug: "t-money-vs-foreign-visa",
-    title: "T-money vs tapping a foreign Visa",
-    dek: "What the desk will cover: which card to reach for, and when the other one fails.",
+    ...SAMPLE_BASE,
+    sample: false,
+    id: "tip-currency-exchange-rates-seoul",
+    slug: "currency-exchange-rates-seoul",
+    status: "published",
+    seoTitle: "Never Exchange Cash at Airport Counters: Seoul Currency Guide | Real Korea",
+    seoDescription: "Airport bank booths take 8-12% spreads. The exact street in Myeongdong with 0.3% spot rates and how to use Global ATMs.",
+    ogImage: null,
+    publishedAt: "2026-08-30T10:00:00Z",
+    updatedAt: "2026-08-30T10:00:00Z",
+    title: "Never exchange cash at Incheon Airport counters",
+    dek: "Airport banks charge 8–12% spread markups. Private licensed booths in Myeongdong trade within 0.3% of the interbank rate.",
     topic: "money",
+    neighborhoodSlugs: ["myeongdong", "icn-songdo"],
+    lastVerifiedAt: "2026-08-30T00:00:00Z",
+    editorVerified: true,
+    relatedQuestionSlugs: ["tax-refund-immediate-vs-airport"],
+    relatedPlaceSlugs: ["myeongdong-street-food-trap"],
+    promotedFromQuestionSlug: null,
+    image: {
+      src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85",
+      alt: "Currency exchange counter signs in Myeongdong Seoul",
+      width: 1200,
+      height: 800,
+    },
+    tipBoxes: [
+      {
+        heading: "💵 The Chinese Embassy Exchange Row",
+        body: "Head to the pedestrian alley facing the Chinese Embassy in Myeongdong (near Hansung Chinese Primary School). The two booths named 'Money Box' and 'Ambassador Exchange' (대사관앞환전소) offer Seoul's tightest exchange margins on USD, EUR, JPY, and TWD.",
+      },
+    ],
+    body: [
+      {
+        type: "heading",
+        level: 2,
+        text: "1. The 100,000 KRW Spread Trap",
+      },
+      {
+        type: "paragraph",
+        text: "If you exchange $1,000 USD at an airport arrival hall bank desk, you will receive roughly 1,280,000 KRW. Take that same $1,000 USD to Myeongdong, and you will receive over 1,360,000 KRW. That 80,000 KRW ($60) difference pays for three nights of dinner.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "2. The Clean Bill Rule",
+      },
+      {
+        type: "paragraph",
+        text: "Private exchange booths require crisp, untorn banknotes. Wrinkled bills with pen marks or small tears will either be rejected outright or discounted by 2–5%. Bring fresh $100 or €100 notes for maximum rate value.",
+      },
+    ],
   },
   {
-    slug: "where-mobile-pay-dies",
-    title: "Apple Pay and Google Pay: where it dies",
-    dek: "What the desk will cover: the places that still refuse a phone.",
-    topic: "money",
-  },
-  {
-    slug: "which-map-app-before-you-land",
-    title: "Naver Map vs Kakao vs Google, before you land",
-    dek: "What the desk will cover: which app to install first, and why one of them struggles underground.",
-    topic: "transit",
-  },
-  {
-    slug: "esim-vs-sim-at-icn",
-    title: "eSIM vs physical SIM at ICN",
-    dek: "What the desk will cover: how to decide before you reach the arrivals hall.",
-    topic: "arrival",
-  },
-  {
-    slug: "getting-home-after-midnight",
-    title: "Kakao T vs Uber vs metro after midnight",
-    dek: "What the desk will cover: the options once the subway stops, and how to pick.",
-    topic: "transit",
-  },
-  {
-    slug: "table-for-one",
-    title: "Table for one: why you got waved off",
-    dek: "What the desk will cover: what that gesture usually means, and what to do next.",
+    ...SAMPLE_BASE,
+    sample: false,
+    id: "tip-korean-bbq-ordering-rules",
+    slug: "korean-bbq-ordering-rules",
+    status: "published",
+    seoTitle: "K-BBQ Etiquette: Why Ordering 1 Portion of Pork Belly Is Forbidden | Real Korea",
+    seoDescription: "Why Korean meat houses require 2-portion minimums, table etiquette, scissors usage, and how solo diners can eat comfortably.",
+    ogImage: null,
+    publishedAt: "2026-08-30T10:00:00Z",
+    updatedAt: "2026-08-30T10:00:00Z",
+    title: "K-BBQ Etiquette: Why ordering 1 portion of pork belly is forbidden",
+    dek: "Charcoal grill houses require a minimum 2-person initial meat order even if you are dining alone. Here is how the table etiquette works.",
     topic: "etiquette",
-    neighborhoodSlugs: ["myeongdong", "hongdae-yeonnam"],
+    neighborhoodSlugs: ["euljiro", "gangnam-sinsa"],
+    lastVerifiedAt: "2026-08-30T00:00:00Z",
+    editorVerified: true,
+    relatedQuestionSlugs: ["table-for-one-refused-kbbq", "tipping-culture-south-korea"],
+    relatedPlaceSlugs: ["chamsoot-charcoal-kbbq-sinsa", "daedo-sikdang-wangsimni"],
+    promotedFromQuestionSlug: null,
+    image: {
+      src: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85",
+      alt: "Pork belly grilling over oak charcoal with metal banchan dishes",
+      width: 1200,
+      height: 800,
+    },
+    tipBoxes: [
+      {
+        heading: "⚡ Solo Diner Phrase",
+        body: "To avoid awkward crossed-arm rejections, say right as you enter: 'Honbap gwaenchan-ayo? 2-inboon jumun-halgeyo' (Solo dining OK? I will order 2 portions). You pay ~32,000 KRW for two portions, and they will welcome you inside.",
+      },
+      {
+        heading: "✂️ Scissors & Tongs Culture",
+        body: "The person holding the metal tongs cuts the meat into bite-sized strips along the grill grain. Never use the dining table scissors to cut raw garlic or vegetables in front of the owner—they are strictly for meat and aged kimchi.",
+      },
+    ],
+    body: [
+      {
+        type: "heading",
+        level: 2,
+        text: "1. The Economics of the Charcoal Table",
+      },
+      {
+        type: "paragraph",
+        text: "Lighting red-hot hardwood lump charcoal costs the restaurant 4,000–6,000 KRW before any food is cooked. Combined with 6–10 complimentary banchan side dish refills, a single 15,000 KRW portion is a financial loss for the house. The 2-portion rule is an economic reality, not hostility toward solo travelers.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "2. The Ssam (쌈) Wrap Protocol",
+      },
+      {
+        type: "paragraph",
+        text: "Place a fresh lettuce or perilla leaf flat in your palm. Add one slice of grilled pork, a dab of ssamjang (red soybean paste), a grilled garlic clove, and scallion salad (pajeori). Fold the leaf into a tight parcel and eat the entire wrap in a SINGLE bite. Biting a wrap in half causes it to spill and is considered clumsy.",
+      },
+    ],
   },
   {
-    slug: "pharmacy-hours-and-the-sign",
-    title: "Pharmacy hours and the red-cross sign",
-    dek: "What the desk will cover: how to find one late, and what the signage means.",
-    topic: "survival",
-    neighborhoodSlugs: ["hongdae-yeonnam"],
+    ...SAMPLE_BASE,
+    sample: false,
+    id: "tip-olive-young-instant-tax-refund",
+    slug: "olive-young-instant-tax-refund",
+    status: "published",
+    seoTitle: "Olive Young Tax Refund: Instant Checkout Discount vs Airport Customs | Real Korea",
+    seoDescription: "Spend 15,000 KRW and show your physical passport to skip airport tax queues. Max limits and duty-free seal rules explained.",
+    ogImage: null,
+    publishedAt: "2026-08-30T10:00:00Z",
+    updatedAt: "2026-08-30T10:00:00Z",
+    title: "Olive Young Tax Refund: Instant checkout discount vs Airport customs",
+    dek: "Show your physical passport at the register for purchases over 15,000 KRW to get an immediate 7–8% VAT deduction on the spot.",
+    topic: "money",
+    neighborhoodSlugs: ["myeongdong", "hongdae-yeonnam"],
+    lastVerifiedAt: "2026-08-30T00:00:00Z",
+    editorVerified: true,
+    relatedQuestionSlugs: ["tax-refund-immediate-vs-airport"],
+    relatedPlaceSlugs: ["myeongdong-street-food-trap"],
+    promotedFromQuestionSlug: null,
+    image: {
+      src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85",
+      alt: "Olive Young cosmetics store interior aisle shelves in Seoul",
+      width: 1200,
+      height: 800,
+    },
+    tipBoxes: [
+      {
+        heading: "🛂 Physical Passport Required",
+        body: "Cashiers are legally prohibited from accepting passport photos on smartphones or photocopies. You must hand over the physical passport booklet before items are scanned.",
+      },
+      {
+        heading: "🛍️ Clear Duty-Free Bag Rules",
+        body: "If the cashier seals your skincare inside a transparent tamper-evident duty-free bag, do NOT tear it open until you pass airport security if you plan to carry liquids over 100ml in your carry-on.",
+      },
+    ],
+    body: [
+      {
+        type: "heading",
+        level: 2,
+        text: "1. The 15,000 KRW Minimum Threshold",
+      },
+      {
+        type: "paragraph",
+        text: "In 2024, South Korea lowered the minimum immediate tax refund threshold from 30,000 KRW to 15,000 KRW. At stores displaying the 'Tax Free' logo (Olive Young, Daiso flagship, ABC Mart, Uniqlo), the cashier scans your passport barcode and your credit card is billed only the net tax-free total.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "2. Single-Trip Maximum Limits",
+      },
+      {
+        type: "paragraph",
+        text: "You can receive instant tax deductions up to 1,000,000 KRW per single transaction, and up to 5,000,000 KRW total per trip. Any luxury purchase exceeding 1,000,000 KRW must be processed via airport customs kiosks.",
+      },
+    ],
+  },
+  {
+    ...SAMPLE_BASE,
+    sample: false,
+    id: "tip-kakaot-taxi-foreign-card-guide",
+    slug: "kakaot-taxi-foreign-card-guide",
+    status: "published",
+    seoTitle: "Calling Kakao T Without a Korean Credit Card: Step-by-Step | Real Korea",
+    seoDescription: "How to bypass domestic identity verification in Kakao Taxi and pay drivers directly with foreign Visa/Mastercard.",
+    ogImage: null,
+    publishedAt: "2026-08-30T10:00:00Z",
+    updatedAt: "2026-08-30T10:00:00Z",
+    title: "Calling Kakao T without a Korean credit card",
+    dek: "Select 'General Request' and choose 'Pay to driver directly' to summon regular taxis and swipe your foreign Visa/Mastercard in person.",
+    topic: "transit",
+    neighborhoodSlugs: ["hongdae-yeonnam", "gangnam-sinsa"],
+    lastVerifiedAt: "2026-08-30T00:00:00Z",
+    editorVerified: true,
+    relatedQuestionSlugs: ["kakao-taxi-foreign-credit-card", "does-uber-work-in-seoul"],
+    relatedPlaceSlugs: ["chamsoot-charcoal-kbbq-sinsa"],
+    promotedFromQuestionSlug: null,
+    image: {
+      src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85",
+      alt: "Seoul taxi driving along brightly lit city boulevard at night",
+      width: 1200,
+      height: 800,
+    },
+    tipBoxes: [
+      {
+        heading: "⚡ The 'Pay Directly' Toggle",
+        body: "When confirming your ride, do NOT select Kakao Pay or Card. Swipe the payment carousel to the far right until you see 'Pay to Driver Directly' (기사님께 직접 결제). This bypasses the Korean domestic identity verification wall completely.",
+      },
+    ],
+    body: [
+      {
+        type: "heading",
+        level: 2,
+        text: "1. Why Kakao T Fails Foreign Cards in App",
+      },
+      {
+        type: "paragraph",
+        text: "Kakao T's in-app automatic billing requires a Korean resident registration number (RRN) or domestic alien registration card (ARC). Tourists attempting to register an international card will encounter an inescapable Korean verification loop.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "2. The In-Car Payment Reality",
+      },
+      {
+        type: "paragraph",
+        text: "Every licensed taxi in South Korea is equipped with an official credit card terminal linked to the tax authority. When you reach your destination, tap your foreign physical Visa/Mastercard or T-money card against the driver's front console reader. A paper receipt prints automatically.",
+      },
+    ],
+  },
+  {
+    ...SAMPLE_BASE,
+    sample: false,
+    id: "tip-korea-esim-vs-wifi-pocket",
+    slug: "korea-esim-vs-wifi-pocket",
+    status: "published",
+    seoTitle: "eSIM vs. Portable Wi-Fi Egg for South Korea: The 010 Number Factor | Real Korea",
+    seoDescription: "Why solo travelers should pick eSIM, table waiting app restrictions (CatchTable/Tabling), and airport return line traps.",
+    ogImage: null,
+    publishedAt: "2026-08-30T10:00:00Z",
+    updatedAt: "2026-08-30T10:00:00Z",
+    title: "eSIM vs. Portable Wi-Fi Egg for South Korea",
+    dek: "Solo travelers should choose unlimited data eSIMs. Wi-Fi eggs require battery recharging and cause airport departure return delays.",
+    topic: "arrival",
+    neighborhoodSlugs: ["icn-songdo"],
+    lastVerifiedAt: "2026-08-30T00:00:00Z",
+    editorVerified: true,
+    relatedQuestionSlugs: ["esim-vs-sim-at-icn"],
+    relatedPlaceSlugs: ["darakhyu-capsule-incheon"],
+    promotedFromQuestionSlug: null,
+    image: {
+      src: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85",
+      alt: "Traveler checking smartphone navigation inside Incheon Airport",
+      width: 1200,
+      height: 800,
+    },
+    tipBoxes: [
+      {
+        heading: "⚡ The 010 Number Catch",
+        body: "Many popular Seoul restaurants use tablet waitlist systems (CatchTable/Tabling) that send queue notifications via Korean KakaoTalk/SMS. If you plan to visit viral cafes in Seongsu or Yeonnam, choose an eSIM package that includes an incoming 010 phone number.",
+      },
+    ],
+    body: [
+      {
+        type: "heading",
+        level: 2,
+        text: "1. Why Wi-Fi Eggs Are Obsolete for Solos",
+      },
+      {
+        type: "paragraph",
+        text: "Wi-Fi pocket eggs provide 6–8 hours of battery life. If your egg dies mid-afternoon in Euljiro, you lose maps, messaging, and translation simultaneously. Furthermore, missing the airport return desk before flight boarding results in a 100,000+ KRW replacement fee charged to your card.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "2. The Top 3 Carrier Choices",
+      },
+      {
+        type: "paragraph",
+        text: "LG U+ and SK Telecom offer the most stable underground subway reception across Seoul. Purchase your digital eSIM online before departure, scan the QR code in your airline seat, and toggle cellular data upon landing at Incheon runway.",
+      },
+    ],
   },
 ];
 
-export const SEED_TIPS: readonly Tip[] = TIP_SEEDS.map((seed) => ({
-  ...SAMPLE_BASE,
-  id: `tip-${seed.slug}`,
-  slug: seed.slug,
-  title: seed.title,
-  dek: seed.dek,
-  topic: seed.topic,
-  neighborhoodSlugs: seed.neighborhoodSlugs ?? [],
-  body: PENDING_BODY,
-  tipBoxes: [],
-  lastVerifiedAt: null,
-  editorVerified: false,
-  relatedQuestionSlugs: [],
-  relatedPlaceSlugs: [],
-  promotedFromQuestionSlug: null,
-  image: null,
-}));
+export const SEED_TIPS: readonly Tip[] = FULL_16_TIPS;

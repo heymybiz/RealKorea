@@ -6,15 +6,15 @@ import type { TipBox as TipBoxData } from "@/lib/content/types";
  */
 export function TipBox({ tipBox }: { tipBox: TipBoxData }) {
   return (
-    <aside className="bg-paper-warm border-crimson my-8 border-l-[3px] px-5 py-4">
-      {tipBox.heading ? (
-        <p className="text-ink text-xs tracking-[0.12em] uppercase">
-          {tipBox.heading}
-        </p>
-      ) : (
-        <p className="text-crimson text-xs tracking-[0.12em] uppercase">Tip</p>
-      )}
-      <p className="text-ink mt-2 text-[15px] leading-6">{tipBox.body}</p>
+    <aside className="my-8 border-l-4 border-[var(--amber)] bg-[#fef9ee] p-5 shadow-xs transition-shadow hover:shadow-md">
+      <div className="flex items-center gap-2">
+        <span className="furniture text-[11px] font-bold text-[var(--amber)]">
+          {tipBox.heading ? tipBox.heading : "⚡ Direct Friend Advice"}
+        </span>
+      </div>
+      <p className="mt-2.5 text-[15px] leading-7 text-[var(--ink)]">
+        {tipBox.body}
+      </p>
     </aside>
   );
 }

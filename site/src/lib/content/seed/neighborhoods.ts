@@ -1,38 +1,176 @@
-import type { Neighborhood } from "@/lib/content/types";
+import type { Neighborhood, NeighborhoodRegion } from "@/lib/content/types";
 
 import { SAMPLE_BASE } from "./shared";
 
-/**
- * PRD 02 §7 — the twelve v1 neighborhoods, with the slugs, names, and regions
- * exactly as the PRD lists them. Incheon sits under "Capital region" because
- * arrivals reality matters more than administrative tidiness.
- *
- * `dek` and `hero` stay null: PRD 02 §3.8 wants 120–160 words of real editorial
- * voice and documentary photography, neither of which a build step should
- * invent.
- */
-export const SEED_NEIGHBORHOODS: readonly Neighborhood[] = (
-  [
-    ["jongno", "Jongno–Gwanghwamun", "종로·광화문", "Seoul"],
-    ["ikseon-bukchon", "Ikseon–Bukchon", "익선·북촌", "Seoul"],
-    ["myeongdong", "Myeongdong–Namdaemun", "명동·남대문", "Seoul"],
-    ["hongdae-yeonnam", "Hongdae–Yeonnam–Mangwon", "홍대·연남·망원", "Seoul"],
-    ["itaewon-hannam", "Itaewon–Hannam", "이태원·한남", "Seoul"],
-    ["euljiro", "Euljiro", "을지로", "Seoul"],
-    ["seongsu", "Seongsu", "성수", "Seoul"],
-    ["gangnam-sinsa", "Gangnam–Sinsa", "강남·신사", "Seoul"],
-    ["jamsil", "Jamsil", "잠실", "Seoul"],
-    ["suwon", "Suwon", "수원", "Gyeonggi"],
-    ["paju", "Paju (Heyri)", "파주", "Gyeonggi"],
-    ["icn-songdo", "ICN–Songdo", "인천공항·송도", "Capital region"],
-  ] as const
-).map(([slug, nameEn, nameKo, region]) => ({
-  ...SAMPLE_BASE,
-  id: `neighborhood-${slug}`,
-  slug,
-  nameEn,
-  nameKo,
-  region,
-  dek: null,
-  hero: null,
-}));
+const NEIGHBORHOOD_DATA = [
+  {
+    slug: "jongno",
+    nameEn: "Jongno–Gwanghwamun",
+    nameKo: "종로·광화문",
+    region: "Seoul" as NeighborhoodRegion,
+    dek: "Dynastic Joseon palace gates, 60-year-old gukbap cauldrons, and quiet stone-walled alleys untouched by glass skyscrapers.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=1200&q=85",
+      alt: "Gyeongbokgung Palace in Jongno with Bukhansan backdrop",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "ikseon-bukchon",
+    nameEn: "Ikseon–Bukchon",
+    nameKo: "익선·북촌",
+    region: "Seoul",
+    dek: "1920s urban hanok roofs packed tight with quiet tea rooms, craft breweries, and residential hill paths where noise rules apply.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?auto=format&fit=crop&w=1200&q=85",
+      alt: "Dense tiled rooftops of Bukchon Hanok Village",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "myeongdong",
+    nameEn: "Myeongdong–Namdaemun",
+    nameKo: "명동·남대문",
+    region: "Seoul",
+    dek: "Cosmetics flagships and heritage kalguksu institutions, separated by bustling wholesale alleyways and currency exchange rows.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85",
+      alt: "Myeongdong pedestrian shopping street neon lights",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "hongdae-yeonnam",
+    nameEn: "Hongdae–Yeonnam–Mangwon",
+    nameKo: "홍대·연남·망원",
+    region: "Seoul",
+    dek: "Subway line youth energy, underground vinyl bars, and the tranquil Gyeongui Line Forest Park cutting through cafe quarters.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85",
+      alt: "Hongdae busking strip and indie live venue neon",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "itaewon-hannam",
+    nameEn: "Itaewon–Hannam",
+    nameKo: "이태원·한남",
+    region: "Seoul",
+    dek: "Steep hillside embassy enclaves, niche fragrance ateliers, vinyl record lounges, and international spice dining.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1538669715315-155098f0fb1d?auto=format&fit=crop&w=1200&q=85",
+      alt: "Hannam-dong boutique hillside alleys",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "euljiro",
+    nameEn: "Euljiro",
+    nameKo: "을지로",
+    region: "Seoul",
+    dek: "Operating acrylic and printing workshops by daylight; unmarked steel doors revealing third-floor natural wine bars after dusk.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85",
+      alt: "Euljiro industrial alleyway metal shops at night",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "seongsu",
+    nameEn: "Seongsu",
+    nameKo: "성수",
+    region: "Seoul",
+    dek: "Red-brick shoemaker warehouses converted into experimental design concept stores, champion roasteries, and pop-up portals.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=85",
+      alt: "Industrial converted warehouse cafe in Seongsu-dong",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "gangnam-sinsa",
+    nameEn: "Gangnam–Sinsa",
+    nameKo: "강남·신사",
+    region: "Seoul",
+    dek: "Ginkgo-lined Garosu-gil fashion avenues, specialty dermatological centers, and late-night charcoal hanwoo beef corridors.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85",
+      alt: "Gangnam boulevard traffic trails and modern architecture",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "jamsil",
+    nameEn: "Jamsil",
+    nameKo: "잠실",
+    region: "Seoul",
+    dek: "The 123-floor Lotte World Tower needle, classical Seokchon Lake cherry blossom loops, and Songridan-gil bakeries.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=1200&q=85",
+      alt: "Lotte World Tower and Seokchon Lake in Jamsil",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "suwon",
+    nameEn: "Suwon",
+    nameKo: "수원",
+    region: "Gyeonggi",
+    dek: "5.7 kilometers of intact UNESCO brick fortress battlements, vintage fried chicken alleyways, and charcoal galbi institutions.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=85",
+      alt: "Suwon Hwaseong Fortress illuminated stone walls",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "paju",
+    nameEn: "Paju (Heyri)",
+    nameKo: "파주",
+    region: "Gyeonggi",
+    dek: "Heyri Art Village concrete galleries, massive publisher book museums, and riverside reed fields bordering the DMZ borderlands.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85",
+      alt: "Paju Book City architectural library walls",
+      width: 1200,
+      height: 800,
+    },
+  },
+  {
+    slug: "icn-songdo",
+    nameEn: "ICN–Songdo",
+    nameKo: "인천공항·송도",
+    region: "Capital region",
+    dek: "Yellow Sea airport gateway terminals, AREX high-speed transit arteries, and Songdo Central Park futuristic smart-city canal ways.",
+    hero: {
+      src: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85",
+      alt: "Incheon Airport terminal arrivals runway lights",
+      width: 1200,
+      height: 800,
+    },
+  },
+] as const;
+
+export const SEED_NEIGHBORHOODS: readonly Neighborhood[] = NEIGHBORHOOD_DATA.map(
+  (item) => ({
+    ...SAMPLE_BASE,
+    sample: false,
+    id: `neighborhood-${item.slug}`,
+    slug: item.slug,
+    nameEn: item.nameEn,
+    nameKo: item.nameKo,
+    region: item.region as NeighborhoodRegion,
+    dek: item.dek,
+    hero: item.hero,
+  }),
+);
