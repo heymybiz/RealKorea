@@ -13,7 +13,7 @@ type: "neighborhood"
 
 ## ⚡ Local Tips in this Area
 
-- [[bukchon-quiet-hours-curfew|Bukchon Hanok Village night curfew: 17:00 cutoff & fine rules]] `[etiquette]`
+- [[bukchon-quiet-hours-curfew|Bukchon Hanok Village night curfew: 17:00 to 10:00 entry restrictions]] `[etiquette]`
 
 ## 🍽️ Authentic Icons & Places
 

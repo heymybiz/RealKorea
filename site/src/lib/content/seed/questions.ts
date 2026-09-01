@@ -155,7 +155,7 @@ const QUESTIONS_DATA: readonly Question[] = [
       },
       {
         type: "paragraph",
-        text: "When dining solo at a BBQ house, say: 'Hon-bap gwaen-chan-ayo? 2-in-boon si-kil-ge-yo' (Solo dining OK? I will order 2 portions). Once the owner knows you will pay for two meat servings (~32,000–36,000 KRW), they will seat you happily.",
+        text: "When dining solo at a BBQ house, say: 'Hon-bap gwaen-chan-ayo? 2-in-boon si-kil-ge-yo' (Solo dining OK? I will order 2 portions). Once the owner knows you will pay for two meat servings (~35,000–40,000 KRW), they will seat you happily.",
       },
     ],
     comments: [],

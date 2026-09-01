@@ -6,15 +6,20 @@
       {
         "id": "da415ecccc056507",
         "type": "tabs",
+        "dimension": 24.739195230998508,
         "children": [
           {
             "id": "0e763b23b599cbf6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "neighborhoods/gangnam-sinsa.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "gangnam-sinsa"
             }
           }
         ]
@@ -22,15 +27,16 @@
       {
         "id": "1ae06dba108bccf1",
         "type": "tabs",
+        "dimension": 75.26080476900148,
         "children": [
           {
             "id": "39c9a6f4d72163ad",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "새 탭"
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
         ]
@@ -111,6 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "neighborhoods/gangnam-sinsa.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,6 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "neighborhoods/gangnam-sinsa.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -171,6 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "neighborhoods/gangnam-sinsa.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -178,13 +187,25 @@
               "icon": "lucide-list",
               "title": "개요"
             }
+          },
+          {
+            "id": "20dcb7eb3b9bf175",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "neighborhoods/gangnam-sinsa.md"
+              },
+              "icon": "lucide-info",
+              "title": "파일 속성"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,31 +218,34 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "2f99087bd460dbf7",
+  "active": "20dcb7eb3b9bf175",
   "lastOpenFiles": [
+    "무제.md",
+    "neighborhoods/euljiro.md",
+    "neighborhoods/gangnam-sinsa.md",
+    "neighborhoods/ikseon-bukchon.md",
+    "neighborhoods/jamsil.md",
+    "neighborhoods/jongno.md",
+    "guides/01-first-24-hours-after-icn.md",
+    "guides/02-seoul-subway-mastery.md",
+    "guides/04-late-night-survival-seoul.md",
+    "guides/03-money-cards-and-payments-korea.md",
+    "_templates/Tip-Template.md",
+    "neighborhoods/suwon.md",
     "places/myeongdong-street-food-trap.md",
     "places/center-coffee-seongsu.md",
     "places/sunhee-bindaetteok-gwangjang.md",
     "places/dongwon-jip-euljiro.md",
     "neighborhoods/icn-songdo.md",
     "neighborhoods/paju.md",
-    "neighborhoods/suwon.md",
-    "neighborhoods/jamsil.md",
-    "neighborhoods/gangnam-sinsa.md",
     "neighborhoods/seongsu.md",
-    "neighborhoods/euljiro.md",
     "neighborhoods/itaewon-hannam.md",
     "neighborhoods/hongdae-yeonnam.md",
     "neighborhoods/myeongdong.md",
-    "neighborhoods/ikseon-bukchon.md",
-    "neighborhoods/jongno.md",
     "topics/traps.md",
     "topics/survival.md",
     "topics/etiquette.md",
     "topics/money.md",
-    "topics/transit.md",
-    "topics/arrival.md",
-    "무제.md",
     "places",
     "topics",
     "neighborhoods"

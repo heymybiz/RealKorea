@@ -33,10 +33,10 @@ status: "published"
 ## 💡 Essential Tip Boxes
 
 ### ⚡ Airport Currency Spread Warning
-Never exchange large sums of cash ($500+) at airport bank booths (which charge an 8–12% spread markup). Withdraw only 30,000 KRW at the Global ATM for immediate transit, and exchange your main spending budget at private licensed booths in Myeongdong.
+Never exchange large sums of cash ($500+) at airport bank booths (which charge a 2–4% cash spread). Withdraw only 30,000 KRW at the Global ATM for immediate transit, and exchange your main spending budget at private licensed booths in Myeongdong.
 
 ### 🚖 Taxi Line 5C vs Sidewalk Touts
-Never accept rides from men approaching you inside the arrivals terminal offering 'flat-rate VIP vans' for $150. Walk straight out to Taxi Platform 5C for standard metered city taxis (~72,000 KRW to downtown).
+Never accept rides from men approaching you inside the arrivals terminal offering 'flat-rate VIP vans' for $150. Walk straight out to Taxi Platform 5C for standard metered city taxis (~90,000–110,000 KRW to downtown including late-night surcharge and tolls).
 
 ## 📖 Guide Breakdown
 

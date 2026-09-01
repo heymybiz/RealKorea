@@ -13,8 +13,9 @@ type: "neighborhood"
 
 ## ⚡ Local Tips in this Area
 
-- [[olive-young-instant-tax-refund|Olive Young Tax Refund: Instant checkout discount vs Airport customs]] `[money]`
-- [[kakaot-taxi-foreign-card-guide|Calling Kakao T without a Korean credit card]] `[transit]`
+- [[naver-map-english-setup|Why Google Maps fails in Seoul and how to master Naver Map]] `[transit]`
+- [[olive-young-instant-tax-refund|Olive Young instant tax refund: 15,000 KRW threshold & shopping rules]] `[money]`
+- [[kakaot-taxi-foreign-card-guide|How to use Kakao T without a Korean card: Pay to Driver guide]] `[transit]`
 - [[tap-water-arisu-safety|Can you drink tap water in Seoul? The Arisu reality vs. old pipe risks]] `[survival]`
 - [[convenience-store-atm-withdrawal|Convenience store ATM fees vs. bank Global ATMs]] `[money]`
 - [[jimjilbang-sauna-sleepover|Seoul Jimjilbang sleepover: Lockers, sauna etiquette & overnight rules]] `[survival]`

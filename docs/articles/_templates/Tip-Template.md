@@ -1,4 +1,4 @@
-﻿---
+---
 id: tip-{{slug}}
 slug: {{slug}}
 title: {{title}}

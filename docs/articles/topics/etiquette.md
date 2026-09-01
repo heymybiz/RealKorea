@@ -10,13 +10,13 @@ type: "topic"
 
 ## 🔗 Connected High-Density Tips
 
-- [[korean-bbq-ordering-rules|K-BBQ Etiquette: Why ordering 1 portion of pork belly is forbidden]]
+- [[korean-bbq-ordering-rules|The Korean BBQ 2-Portion Rule: Solo dining etiquette & grill rules]]
 - [[pojangmacha-cash-price-rules|Jongno Pojangmacha street tents: Cash rules & price reality]]
-- [[bukchon-quiet-hours-curfew|Bukchon Hanok Village night curfew: 17:00 cutoff & fine rules]]
+- [[bukchon-quiet-hours-curfew|Bukchon Hanok Village night curfew: 17:00 to 10:00 entry restrictions]]
 
 ## 🗺️ Key Regional Hotspots
 
+- [[jongno]]
 - [[euljiro]]
 - [[gangnam-sinsa]]
-- [[jongno]]
 - [[ikseon-bukchon]]

@@ -14,8 +14,8 @@ type: "neighborhood"
 ## ⚡ Local Tips in this Area
 
 - [[tmoney-vs-climate-card|T-money vs. Climate Card: Which transit pass do you actually need?]] `[transit]`
-- [[currency-exchange-rates-seoul|Never exchange cash at Incheon Airport counters]] `[money]`
-- [[olive-young-instant-tax-refund|Olive Young Tax Refund: Instant checkout discount vs Airport customs]] `[money]`
+- [[currency-exchange-rates-seoul|Best currency exchange in Seoul: Myeongdong vs. Airport rates]] `[money]`
+- [[olive-young-instant-tax-refund|Olive Young instant tax refund: 15,000 KRW threshold & shopping rules]] `[money]`
 - [[trash-bins-and-t-money-waste|Where are the trash bins in Seoul? The Pay-Per-Bag reality]] `[survival]`
 
 ## 🍽️ Authentic Icons & Places

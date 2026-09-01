@@ -14,7 +14,6 @@ type: "neighborhood"
 ## ⚡ Local Tips in this Area
 
 - [[incheon-late-night-arex-survival|Landing past 23:30 at Incheon: Express AREX is closed — here is your late-night protocol.]] `[arrival]`
-- [[currency-exchange-rates-seoul|Never exchange cash at Incheon Airport counters]] `[money]`
 
 ## 🍽️ Authentic Icons & Places
 

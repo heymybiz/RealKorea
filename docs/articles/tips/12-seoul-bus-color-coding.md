@@ -2,10 +2,10 @@
 id: "tip-seoul-bus-color-coding"
 slug: "seoul-bus-color-coding"
 title: "Seoul City buses decoded: Colors, fares & the tag-off penalty rule"
-dek: "Blue, Green, Red, and Yellow buses serve different distances. Always tap your T-money card when exiting to avoid double-fare penalties."
+dek: "Blue, Green, Red, and Yellow buses serve different distances. Always tap your T-money card when exiting to protect your transfer discount."
 topic: "transit"
 status: "published"
-lastVerifiedAt: "2026-08-30T00:00:00Z"
+lastVerifiedAt: "2026-09-02T00:00:00Z"
 editorVerified: true
 type: "tip"
 neighborhoods:
@@ -16,42 +16,34 @@ neighborhoods:
 
 # Seoul City buses decoded: Colors, fares & the tag-off penalty rule
 
-> **Dek**: Blue, Green, Red, and Yellow buses serve different distances. Always tap your T-money card when exiting to avoid double-fare penalties.
+> **Dek**: Blue, Green, Red, and Yellow buses serve different distances. Always tap your T-money card when exiting to protect your transfer discount.
 
 ### 🌐 Knowledge Mesh Links
 - **Core Topic**: [[transit]]
 - **Neighborhood Hubs**: [[jongno]], [[gangnam-sinsa]], [[hongdae-yeonnam]]
 - **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
 
-![Blue and Green city buses stopped along central Seoul transit avenue](https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85)
-*Plate: Blue and Green city buses stopped along central Seoul transit avenue (16:9 Documentary Plate)*
+![City bus waiting at a central transit median island platform in Seoul](https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=1200&q=85)
+*Plate: City bus waiting at a central transit median island platform in Seoul (16:9 Documentary Plate)*
 
 ## 💡 Local Insider Tip Boxes
 
 ### ⚡ The Tag-Off Requirement
-Always tap your transit card on the rear exit door reader when stepping off the bus. If you fail to tap out, the transit computer assumes you rode to the absolute end of the route and deducts a maximum distance surcharge on your next journey.
+Always tap your transit card on the rear exit door reader when stepping off the bus. Failing to tap out assumes you rode to the route terminus and deducts a maximum distance surcharge on your next journey.
 
 ### 🔄 30-Minute Free Transfer Window
-Transferring between different bus routes or from bus to subway is 100% free (or requires only a small distance top-up of 100–200 KRW) if you tap into your next transit vehicle within 30 minutes of exiting the previous one (extended to 60 minutes after 21:00).
+Transferring between bus routes or between bus and subway is free (with only minor distance surcharges over 10 km) if you tap into your connecting vehicle within 30 minutes of exiting the previous one (extended to 60 minutes from 21:00 to 07:00).
 
-### 🚫 Front In, Rear Out Rule
-Board strictly through the front door beside the driver and tap the card reader. Exit strictly through the wider rear middle doors. Never attempt to board through the rear door unless the driver explicitly waves you in during severe overcrowding.
+### 🚪 Board Front, Exit Rear
+Board strictly through the front door beside the driver and tap the card reader. Press the red stop bell (하차벨) on the wall before your stop and exit through the wider rear doors.
 
 ## 📖 Article Content
 
 ### 1. The 4-Color Bus Network Hierarchy
 
-Seoul operates one of the most punctual and extensive surface bus networks in the world, with color-coded liveries indicating vehicle speed and operational scope:
+Seoul operates a color-coded municipal bus network: • Blue Buses (간선, 1,500 KRW): Trunk routes connecting outer districts to downtown along median transit corridors. • Green Buses (지선, 1,500 KRW / Maeul village buses 1,200 KRW): Feeder routes connecting residential hills and alleys to subway hubs. • Red Buses (광역, 3,000 KRW): Express coaches connecting satellite cities. • Yellow Buses (순환): Loop routes around downtown tourism zones.
 
-• Blue Buses (간선버스, Trunk Lines): Connect major outer districts directly to downtown Seoul (Jongno, City Hall, Gangnam) along central dedicated highway median lanes. Base fare: 1,500 KRW.
+### 2. Real-Time Tracking & Etiquette
 
-• Green Buses (지선버스, Feeder Lines): Shorter neighborhood routes connecting residential hill communities and alleys to the nearest subway transfer hub. Includes small green village buses (Maeul Bus, 1,200 KRW). Base fare: 1,500 KRW.
-
-• Red Buses (광역버스, Express Commuter Lines): High-speed coaches that bypass local stops to transport commuters from distant Gyeonggi satellite cities (Bundang, Suwon, Incheon) into central Seoul. Base fare: 3,000 KRW.
-
-• Yellow Buses (순환버스, Circular Lines): Downtown loop routes operating around major commercial tourism zones like Namsan Seoul Tower and Myeongdong.
-
-### 2. The Boarding & Egress Etiquette
-
-Seoul bus drivers accelerate and brake briskly. When boarding, tap your card on the front console reader and grab a handrail or seat immediately. Press the red 'Stop' (하차) bell on the wall or ceiling as soon as your upcoming stop name is broadcast over the loudspeaker. Walk toward the rear exit door and tap your card against the reader while the bus is coming to a stop.
+Use Naver Map or KakaoBus to view live arrival countdowns and bus congestion levels. Board through the front door, tap your card, take a seat or hold handrails securely, and press the stop bell as your station name is announced.
 

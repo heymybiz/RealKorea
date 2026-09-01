@@ -2,10 +2,10 @@
 id: "tip-jimjilbang-sauna-sleepover"
 slug: "jimjilbang-sauna-sleepover"
 title: "Seoul Jimjilbang sleepover: Lockers, sauna etiquette & overnight rules"
-dek: "Overnight Korean bathhouses offer heated ondol floor sleeping for ~16,000 KRW. Here is the exact protocol to avoid cultural confusion."
+dek: "24-hour Korean bathhouses offer heated ondol floor sleeping for ~18,000–23,000 KRW with overnight surcharges. Here is the exact bathhouse protocol."
 topic: "survival"
 status: "published"
-lastVerifiedAt: "2026-08-30T00:00:00Z"
+lastVerifiedAt: "2026-09-02T00:00:00Z"
 editorVerified: true
 type: "tip"
 neighborhoods:
@@ -16,7 +16,7 @@ neighborhoods:
 
 # Seoul Jimjilbang sleepover: Lockers, sauna etiquette & overnight rules
 
-> **Dek**: Overnight Korean bathhouses offer heated ondol floor sleeping for ~16,000 KRW. Here is the exact protocol to avoid cultural confusion.
+> **Dek**: 24-hour Korean bathhouses offer heated ondol floor sleeping for ~18,000–23,000 KRW with overnight surcharges. Here is the exact bathhouse protocol.
 
 ### 🌐 Knowledge Mesh Links
 - **Core Topic**: [[survival]]
@@ -29,27 +29,21 @@ neighborhoods:
 ## 💡 Local Insider Tip Boxes
 
 ### 🧼 Full Nudity in Gender-Segregated Baths
-Swimsuits are strictly prohibited in the hot soaking pools (Mokyoktang). You must shower thoroughly with soap at the seated washing stalls before entering any communal hot or cold tub.
+Swimsuits are strictly prohibited in the hot soaking pools (Mokyoktang). Shower thoroughly with soap at the seated washing stalls before entering communal hot or cold mineral tubs.
 
-### 👕 Unisex Jimjilbang Loungewear
+### 👕 Unisex Jimjilbang Cotton Loungewear
 After bathing, change into the matching cotton t-shirt and shorts (Jimjilbok) provided at check-in. The common heated floor halls, salt kilns, snack bars, and sleeping zones are fully co-ed.
 
-### 🥚 Sikhye & Baked Egg Tradition
-At the 24-hour snack counter, order chilled sweet fermented rice punch (Sikhye, ~3,500 KRW) and brown kiln-baked eggs (Maekbanseok Gyeran, ~2,500 KRW for 3). Crack the egg shell against your friend's forehead or the wooden floor.
+### 🌙 Night Surcharge & Admission Policies
+Daytime entry is typically 13,000–16,000 KRW, with an overnight surcharge (usually 2,000–5,000 KRW) applied after 21:00 or 22:00 (18,000–23,000 KRW total for 12 hours). Note that heavily intoxicated guests or visible extensive tattoo groupings may be restricted by local management.
 
 ## 📖 Article Content
 
-### 1. The 16,000 KRW Overnight Shelter
+### 1. The 24-Hour Bathhouse Shelter
 
-If you miss the midnight subway train or arrive in Seoul on a late red-eye flight without an active hotel reservation, a 24-hour Jimjilbang (찜질방) is the quintessential Korean emergency sleep sanctuary. For 15,000 to 18,000 KRW, you receive 12 to 24 hours of access to hot mineral baths, sauna kilns, and communal heated ondol sleeping floors.
+If you miss the midnight subway train or need affordable rest before morning check-in, 24-hour Jimjilbangs (such as Sparex Dongdaemun or Spa Lei in Sinsa) provide a quintessential Korean relaxation and sleep experience with mineral baths and heated ondol sleeping floors.
 
-### 2. The Check-in & Keycard Protocol
+### 2. Check-In & Electronic Key Protocol
 
-At the entrance front desk, state 'Jimjilbang' to receive your locker key wristband and two towels. 1. Remove your shoes and lock them in the numbered shoe locker matching your wristband. 2. Proceed to the gender-segregated changing room and locate your large luggage/clothing locker. 3. Strip down completely, grab your small towel, and enter the wet bath area.
-
-Your electronic wristband acts as a digital charge card inside the facility. When you buy snacks, drinks, or massage chair sessions, simply tap the wristband at the counter. All expenses are settled at the front desk when you check out the next morning.
-
-### 3. Sleeping Comfort & Mat Etiquette
-
-In the large common hall, locate the stacks of foam sleeping mats (maeteu) and hard faux-leather cylinder pillows (mokbege). Claim an open floor space away from the main walking paths. Korean ondol floors are heated from underneath, providing comforting warmth during autumn and winter nights. Earplugs and an eye mask in your backpack will drastically improve your sleep quality.
+Pay at the front counter to receive your locker key wristband and Jimjilbok clothing. Lock your shoes in your designated shoe locker, head to the gender-segregated changing room for your main locker, and proceed to the bath area. Your wristband serves as a digital charge key for snacks and drinks, settled upon morning checkout.
 

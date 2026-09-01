@@ -13,8 +13,7 @@ type: "neighborhood"
 
 ## ⚡ Local Tips in this Area
 
-- [[naver-map-english-setup|Why Google Maps fails in Korea (and how to set up Naver Map in English)]] `[survival]`
-- [[korean-bbq-ordering-rules|K-BBQ Etiquette: Why ordering 1 portion of pork belly is forbidden]] `[etiquette]`
+- [[korean-bbq-ordering-rules|The Korean BBQ 2-Portion Rule: Solo dining etiquette & grill rules]] `[etiquette]`
 - [[tap-water-arisu-safety|Can you drink tap water in Seoul? The Arisu reality vs. old pipe risks]] `[survival]`
 - [[pojangmacha-cash-price-rules|Jongno Pojangmacha street tents: Cash rules & price reality]] `[etiquette]`
 

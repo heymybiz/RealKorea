@@ -10,7 +10,6 @@ type: "topic"
 
 ## 🔗 Connected High-Density Tips
 
-- [[naver-map-english-setup|Why Google Maps fails in Korea (and how to set up Naver Map in English)]]
 - [[tap-water-arisu-safety|Can you drink tap water in Seoul? The Arisu reality vs. old pipe risks]]
 - [[jimjilbang-sauna-sleepover|Seoul Jimjilbang sleepover: Lockers, sauna etiquette & overnight rules]]
 - [[trash-bins-and-t-money-waste|Where are the trash bins in Seoul? The Pay-Per-Bag reality]]

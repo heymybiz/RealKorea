@@ -15,14 +15,17 @@ type: "neighborhood"
 
 - [[incheon-late-night-arex-survival|Landing past 23:30 at Incheon: Express AREX is closed — here is your late-night protocol.]] `[arrival]`
 - [[tmoney-vs-climate-card|T-money vs. Climate Card: Which transit pass do you actually need?]] `[transit]`
-- [[naver-map-english-setup|Why Google Maps fails in Korea (and how to set up Naver Map in English)]] `[survival]`
+- [[naver-map-english-setup|Why Google Maps fails in Seoul and how to master Naver Map]] `[transit]`
+- [[currency-exchange-rates-seoul|Best currency exchange in Seoul: Myeongdong vs. Airport rates]] `[money]`
+- [[korean-bbq-ordering-rules|The Korean BBQ 2-Portion Rule: Solo dining etiquette & grill rules]] `[etiquette]`
+- [[kakaot-taxi-foreign-card-guide|How to use Kakao T without a Korean card: Pay to Driver guide]] `[transit]`
 - [[tap-water-arisu-safety|Can you drink tap water in Seoul? The Arisu reality vs. old pipe risks]] `[survival]`
 - [[convenience-store-atm-withdrawal|Convenience store ATM fees vs. bank Global ATMs]] `[money]`
 - [[pojangmacha-cash-price-rules|Jongno Pojangmacha street tents: Cash rules & price reality]] `[etiquette]`
 - [[jimjilbang-sauna-sleepover|Seoul Jimjilbang sleepover: Lockers, sauna etiquette & overnight rules]] `[survival]`
 - [[seoul-bus-color-coding|Seoul City buses decoded: Colors, fares & the tag-off penalty rule]] `[transit]`
 - [[trash-bins-and-t-money-waste|Where are the trash bins in Seoul? The Pay-Per-Bag reality]] `[survival]`
-- [[bukchon-quiet-hours-curfew|Bukchon Hanok Village night curfew: 17:00 cutoff & fine rules]] `[etiquette]`
+- [[bukchon-quiet-hours-curfew|Bukchon Hanok Village night curfew: 17:00 to 10:00 entry restrictions]] `[etiquette]`
 
 ## 🍽️ Authentic Icons & Places
 
