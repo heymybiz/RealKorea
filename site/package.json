@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
+    "audit": "node scripts/audit-articles.js",
     "sync:obsidian": "node scripts/sync-obsidian.js",
     "export:obsidian": "node scripts/export-obsidian.js"
   },
