@@ -30,7 +30,16 @@ export function TipCard({
     <article className="heritage-card flex flex-col justify-between border-t-2 border-t-[var(--amber)] p-5">
       <div>
         <Link href={`/tips/${tip.slug}`} className="group block overflow-hidden border border-[var(--rule)]">
-          {tip.image ? null : (
+          {tip.image ? (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
+              src={tip.image.src}
+              alt={tip.image.alt}
+              width={tip.image.width}
+              height={tip.image.height}
+              className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
             <MediaPlaceholder
               ratio="3/2"
               label="Photograph pending"

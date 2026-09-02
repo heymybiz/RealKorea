@@ -205,7 +205,7 @@ const QUESTIONS_DATA: readonly Question[] = [
     officialAnswer: [
       {
         type: "paragraph",
-        text: "For most tourists, NO. A 3-day tourist Climate Card costs 10,000 KRW (plus a 3,000 KRW physical card fee). A single metro ride is 1,400 KRW with free transfers.",
+        text: "For most tourists, NO. A 3-day tourist Climate Card costs 10,000 KRW (plus a 3,000 KRW physical card fee). A single metro ride is 1,550 KRW with free transfers.",
       },
       {
         type: "paragraph",

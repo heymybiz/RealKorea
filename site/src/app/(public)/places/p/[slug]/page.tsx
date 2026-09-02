@@ -112,7 +112,16 @@ export default async function PlacePage({
       {/* PRD 04 §4 — body and fact stack split at 960px. */}
       <div className="mt-10 grid gap-10 min-[960px]:grid-cols-[1.3fr_0.7fr]">
         <div>
-          {place.photos.at(0) ? null : (
+          {place.photos.at(0) ? (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
+              src={place.photos[0].src}
+              alt={place.photos[0].alt}
+              width={place.photos[0].width}
+              height={place.photos[0].height}
+              className="mb-8 aspect-[3/2] w-full border border-[var(--rule)] object-cover"
+            />
+          ) : (
             <MediaPlaceholder ratio="3/2" label="Photograph pending" />
           )}
 

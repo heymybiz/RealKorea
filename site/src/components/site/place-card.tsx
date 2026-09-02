@@ -34,7 +34,16 @@ export function PlaceCard({ place }: { place: Place }) {
     <article className="heritage-card flex flex-col justify-between border-t-2 border-t-[var(--chili)] p-5">
       <div>
         <Link href={`/places/p/${place.slug}`} className="group block overflow-hidden border border-[var(--rule)]">
-          {firstPhoto ? null : (
+          {firstPhoto ? (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
+              src={firstPhoto.src}
+              alt={firstPhoto.alt}
+              width={firstPhoto.width}
+              height={firstPhoto.height}
+              className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
             <MediaPlaceholder
               ratio="3/2"
               label={place.venueNameEn || "Venue Photo"}

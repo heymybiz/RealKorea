@@ -289,7 +289,7 @@ export async function getGuideBySlug(slug: string): Promise<Guide | null> {
   if (isSanityConfigured()) {
     try {
       const guide = await client.fetch<Guide | null>(
-        `*[_type == "guide" && slug.current == $slug][0] { "id": _id, title, "slug": slug.current, dek, checklistId, checklistItems, body, isFirst24Alias }`,
+        `*[_type == "guide" && slug.current == $slug][0] { "id": _id, title, "slug": slug.current, status, publishedAt, sample, dek, checklistId, checklistItems, body, tipBoxes, hero, isFirst24Alias }`,
         { slug }
       );
       if (guide && isPubliclyVisible(guide as unknown as { status: string; publishedAt: string | null })) {

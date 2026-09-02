@@ -36,7 +36,16 @@ export function GuideArticle({ guide }: { guide: Guide }) {
 
       <div className="border-rule mt-10 grid gap-10 border-t pt-10 min-[960px]:grid-cols-[1.3fr_0.7fr]">
         <div>
-          {guide.hero ? null : (
+          {guide.hero ? (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
+              src={guide.hero.src}
+              alt={guide.hero.alt}
+              width={guide.hero.width}
+              height={guide.hero.height}
+              className="mb-8 aspect-[16/9] w-full border border-[var(--rule)] object-cover"
+            />
+          ) : (
             <MediaPlaceholder ratio="16/9" label="Photograph pending" />
           )}
           <Prose blocks={guide.body} />

@@ -70,7 +70,18 @@ export default async function PlacesIndexPage({
                 href={`/places/${neighborhood.slug}`}
                 className="group block"
               >
-                {neighborhood.hero ? null : <MediaPlaceholder ratio="4/5" />}
+                {neighborhood.hero ? (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img
+                    src={neighborhood.hero.src}
+                    alt={neighborhood.hero.alt}
+                    width={neighborhood.hero.width}
+                    height={neighborhood.hero.height}
+                    className="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <MediaPlaceholder ratio="4/5" />
+                )}
                 <p className="group-hover:text-crimson mt-3 text-[15px] font-medium transition-colors duration-[180ms] ease-out">
                   {neighborhood.nameEn}
                 </p>

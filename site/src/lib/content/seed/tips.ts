@@ -180,7 +180,7 @@ const FULL_16_TIPS: readonly Tip[] = [
     neighborhoodSlugs: ["hongdae-yeonnam", "jongno", "gangnam-sinsa"],
     lastVerifiedAt: "2026-09-02T00:00:00Z",
     editorVerified: true,
-    relatedQuestionSlugs: ["why-does-google-maps-fail-in-seoul", "apple-pay-on-a-seoul-bus"],
+    relatedQuestionSlugs: ["does-uber-work-in-seoul", "apple-pay-on-a-seoul-bus"],
     relatedPlaceSlugs: ["dongwon-jip-euljiro"],
     promotedFromQuestionSlug: null,
     image: {

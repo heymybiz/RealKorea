@@ -1,67 +1,22 @@
 {
   "collapse-filter": false,
   "search": "",
-  "local-search": "",
-  "local-link": 1,
-  "local-unresolved": true,
-  "local-neighbors": true,
-  "showTags": true,
+  "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [
-    {
-      "query": "path:topics",
-      "color": {
-        "a": 1,
-        "rgb": 16744448
-      }
-    },
-    {
-      "query": "path:neighborhoods",
-      "color": {
-        "a": 1,
-        "rgb": 3394815
-      }
-    },
-    {
-      "query": "path:tips",
-      "color": {
-        "a": 1,
-        "rgb": 16766720
-      }
-    },
-    {
-      "query": "path:guides",
-      "color": {
-        "a": 1,
-        "rgb": 11155967
-      }
-    },
-    {
-      "query": "path:places isTouristTrap:true",
-      "color": {
-        "a": 1,
-        "rgb": 16724530
-      }
-    },
-    {
-      "query": "path:places",
-      "color": {
-        "a": 1,
-        "rgb": 4388710
-      }
-    }
-  ],
+  "colorGroups": [],
   "collapse-display": false,
-  "showArrow": true,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1.35,
-  "lineSizeMultiplier": 1.2,
+  "showArrow": false,
+  "textFadeMultiplier": -2.3,
+  "nodeSizeMultiplier": 1.63737841196383,
+  "lineSizeMultiplier": 2.28239705189185,
   "collapse-forces": false,
-  "centerStrength": 0.51875,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 180
+  "centerStrength": 0.640099412949394,
+  "repelStrength": 15.0484478736767,
+  "linkStrength": 0.914342031966405,
+  "linkDistance": 354,
+  "scale": 1.0000000000000002,
+  "close": false
 }
