@@ -7,20 +7,21 @@ topic: "money"
 status: "published"
 lastVerifiedAt: "2026-09-02T00:00:00Z"
 editorVerified: true
-type: "tip"
 neighborhoods:
   - "myeongdong"
   - "jongno"
+image:
+  src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85"
+  alt: "Currency exchange signs and storefronts along commercial street in Myeongdong"
 ---
 
 # Best currency exchange in Seoul: Myeongdong vs. Airport rates
 
 > **Dek**: Airport bank booths charge a 2–4% cash spread on physical banknotes. Exchange your main travel funds at licensed private booths in Myeongdong.
 
-### 🌐 Knowledge Mesh Links
-- **Core Topic**: [[money]]
-- **Neighborhood Hubs**: [[myeongdong]], [[jongno]]
-- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
+- **Topic**: `money`
+- **Last Verified**: `2026-09-02T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[myeongdong]], [[jongno]]
 
 ![Currency exchange signs and storefronts along commercial street in Myeongdong](https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85)
 *Plate: Currency exchange signs and storefronts along commercial street in Myeongdong (16:9 Documentary Plate)*

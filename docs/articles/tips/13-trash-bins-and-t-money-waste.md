@@ -7,21 +7,22 @@ topic: "survival"
 status: "published"
 lastVerifiedAt: "2026-09-02T00:00:00Z"
 editorVerified: true
-type: "tip"
 neighborhoods:
   - "myeongdong"
   - "hongdae-yeonnam"
   - "jongno"
+image:
+  src: "https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&fit=crop&w=1200&q=85"
+  alt: "Pristine pedestrian sidewalk street corner in downtown Seoul"
 ---
 
 # Where are the trash bins in Seoul? The Pay-Per-Bag reality
 
 > **Dek**: Sidewalk trash cans are rare due to volume-rate waste disposal laws. Here is where travelers can legally and politely dispose of litter.
 
-### 🌐 Knowledge Mesh Links
-- **Core Topic**: [[survival]]
-- **Neighborhood Hubs**: [[myeongdong]], [[hongdae-yeonnam]], [[jongno]]
-- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
+- **Topic**: `survival`
+- **Last Verified**: `2026-09-02T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[myeongdong]], [[hongdae-yeonnam]], [[jongno]]
 
 ![Pristine pedestrian sidewalk street corner in downtown Seoul](https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&fit=crop&w=1200&q=85)
 *Plate: Pristine pedestrian sidewalk street corner in downtown Seoul (16:9 Documentary Plate)*

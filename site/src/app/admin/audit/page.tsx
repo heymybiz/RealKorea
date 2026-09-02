@@ -6,6 +6,7 @@ import { CheckCircle2, AlertTriangle, ShieldCheck, Sparkles, ArrowUpRight } from
 export const metadata = {
   title: "Editorial Audit Command Center | Real Korea Admin",
   description: "Automated 2-Part Editorial & Fact Verification Dashboard",
+  robots: { index: false, follow: false },
 };
 
 export default function AdminAuditPage() {

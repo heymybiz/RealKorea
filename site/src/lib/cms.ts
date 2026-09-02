@@ -597,8 +597,8 @@ export async function getSearchCorpus(): Promise<readonly SearchDocument[]> {
       title: tip.title,
       dek: tip.dek,
       topicOrCategory: tip.topic,
-      neighborhood: tip.neighborhoodSlugs[0] ?? null,
-      haystack: `${tip.title} ${tip.dek ?? ""} ${tip.topic} ${tip.tipBoxes.map((b) => b.body).join(" ")}`.toLowerCase(),
+      neighborhood: tip.neighborhoodSlugs?.[0] ?? null,
+      haystack: `${tip.title} ${tip.dek ?? ""} ${tip.topic} ${(tip.tipBoxes ?? []).map((b) => b.body).join(" ")}`.toLowerCase(),
     });
   }
 

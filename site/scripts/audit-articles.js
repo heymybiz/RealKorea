@@ -1,9 +1,10 @@
 const path = require('path');
-const esbuild = require('D:/Project/RealKorea/site/node_modules/esbuild');
+const esbuild = require('esbuild');
 
 async function run() {
+  const entryPoint = path.resolve(__dirname, '../src/lib/audit/index.ts');
   const result = await esbuild.build({
-    entryPoints: ['D:/Project/RealKorea/site/src/lib/audit/index.ts'],
+    entryPoints: [entryPoint],
     bundle: true,
     write: false,
     format: 'cjs',

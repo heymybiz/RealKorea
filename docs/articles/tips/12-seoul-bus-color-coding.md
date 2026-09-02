@@ -7,21 +7,22 @@ topic: "transit"
 status: "published"
 lastVerifiedAt: "2026-09-02T00:00:00Z"
 editorVerified: true
-type: "tip"
 neighborhoods:
   - "jongno"
   - "gangnam-sinsa"
   - "hongdae-yeonnam"
+image:
+  src: "https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=1200&q=85"
+  alt: "City bus waiting at a central transit median island platform in Seoul"
 ---
 
 # Seoul City buses decoded: Colors, fares & the tag-off penalty rule
 
 > **Dek**: Blue, Green, Red, and Yellow buses serve different distances. Always tap your T-money card when exiting to protect your transfer discount.
 
-### 🌐 Knowledge Mesh Links
-- **Core Topic**: [[transit]]
-- **Neighborhood Hubs**: [[jongno]], [[gangnam-sinsa]], [[hongdae-yeonnam]]
-- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
+- **Topic**: `transit`
+- **Last Verified**: `2026-09-02T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[jongno]], [[gangnam-sinsa]], [[hongdae-yeonnam]]
 
 ![City bus waiting at a central transit median island platform in Seoul](https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=1200&q=85)
 *Plate: City bus waiting at a central transit median island platform in Seoul (16:9 Documentary Plate)*

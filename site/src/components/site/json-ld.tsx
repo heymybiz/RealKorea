@@ -22,12 +22,15 @@ import { absoluteUrl } from "@/lib/site-url";
  * Sample scaffolding emits nothing: unverified placeholders should not be
  * offered to search engines as articles.
  */
+function safeJsonLd(data: Record<string, unknown>): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
 function Script({ data }: { data: Record<string, unknown> }) {
   return (
     <script
       type="application/ld+json"
-      // The payload is built from typed content, never from user input.
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(data) }}
     />
   );
 }

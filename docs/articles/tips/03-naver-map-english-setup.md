@@ -7,21 +7,22 @@ topic: "transit"
 status: "published"
 lastVerifiedAt: "2026-09-02T00:00:00Z"
 editorVerified: true
-type: "tip"
 neighborhoods:
   - "hongdae-yeonnam"
   - "jongno"
   - "gangnam-sinsa"
+image:
+  src: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=85"
+  alt: "Traveler checking smartphone navigation while walking in downtown Seoul"
 ---
 
 # Why Google Maps fails in Seoul and how to master Naver Map
 
 > **Dek**: National spatial data security laws restrict Google Maps walking navigation in Korea. Use Naver Map with English interface and phone number search.
 
-### 🌐 Knowledge Mesh Links
-- **Core Topic**: [[transit]]
-- **Neighborhood Hubs**: [[hongdae-yeonnam]], [[jongno]], [[gangnam-sinsa]]
-- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
+- **Topic**: `transit`
+- **Last Verified**: `2026-09-02T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[hongdae-yeonnam]], [[jongno]], [[gangnam-sinsa]]
 
 ![Traveler checking smartphone navigation while walking in downtown Seoul](https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=85)
 *Plate: Traveler checking smartphone navigation while walking in downtown Seoul (16:9 Documentary Plate)*

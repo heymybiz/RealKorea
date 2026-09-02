@@ -7,21 +7,22 @@ topic: "transit"
 status: "published"
 lastVerifiedAt: "2026-09-02T00:00:00Z"
 editorVerified: true
-type: "tip"
 neighborhoods:
   - "hongdae-yeonnam"
   - "gangnam-sinsa"
   - "jongno"
+image:
+  src: "https://images.unsplash.com/photo-1569336415962-a4bd9f69c07b?auto=format&fit=crop&w=1200&q=85"
+  alt: "Orange and silver Seoul metered taxis lined up along a central avenue"
 ---
 
 # How to use Kakao T without a Korean card: Pay to Driver guide
 
 > **Dek**: Foreign credit cards often fail in-app verification on standard Kakao T. Select 'General Request' and swipe to 'Pay to Driver Directly' to pay in person.
 
-### 🌐 Knowledge Mesh Links
-- **Core Topic**: [[transit]]
-- **Neighborhood Hubs**: [[hongdae-yeonnam]], [[gangnam-sinsa]], [[jongno]]
-- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
+- **Topic**: `transit`
+- **Last Verified**: `2026-09-02T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[hongdae-yeonnam]], [[gangnam-sinsa]], [[jongno]]
 
 ![Orange and silver Seoul metered taxis lined up along a central avenue](https://images.unsplash.com/photo-1569336415962-a4bd9f69c07b?auto=format&fit=crop&w=1200&q=85)
 *Plate: Orange and silver Seoul metered taxis lined up along a central avenue (16:9 Documentary Plate)*

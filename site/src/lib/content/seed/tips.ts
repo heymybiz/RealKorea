@@ -937,6 +937,216 @@ const FULL_16_TIPS: readonly Tip[] = [
       },
     ],
   },
+  {
+    ...SAMPLE_BASE,
+    sample: false,
+    id: "tip-arex-express-vs-all-stop-transfers",
+    slug: "arex-express-vs-all-stop-transfers",
+    status: "published",
+    seoTitle: "AREX Express vs. All-Stop Train: The Seoul Station B7 Transfer Trap | Real Korea",
+    seoDescription: "The Express train saves 16 minutes but arrives at Underground B7. When the blue All-Stop train at B3 is faster for Line 1, 4, or KTX transfers.",
+    ogImage: null,
+    publishedAt: "2026-09-01T10:00:00Z",
+    updatedAt: "2026-09-03T00:00:00Z",
+    title: "AREX Express vs. All-Stop train: The Seoul Station transfer trap decoded",
+    dek: "The orange Express saves 16 minutes to Seoul Station but docks at Underground B7. If transferring to Subway Line 1 or 4 with heavy suitcases, the All-Stop train at B3 is often faster.",
+    topic: "transit",
+    neighborhoodSlugs: ["icn-songdo", "jongno"],
+    lastVerifiedAt: "2026-09-03T00:00:00Z",
+    editorVerified: true,
+    relatedQuestionSlugs: ["does-uber-work-in-seoul", "apple-pay-on-a-seoul-bus"],
+    relatedPlaceSlugs: ["darakhyu-capsule-incheon"],
+    promotedFromQuestionSlug: null,
+    image: {
+      src: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85",
+      alt: "Airport Railroad Express train platform signage and tracks at Seoul Station",
+      width: 1200,
+      height: 800,
+    },
+    tipBoxes: [
+      {
+        heading: "⚡ The 15-Minute B7 Escalator Hiking Reality",
+        body: "The AREX Non-Stop Express docks at B7 (seven levels underground). Ascending to the Line 1 or Line 4 subway turnstiles requires navigating 5 escalators and two long concourses, taking 12–15 minutes with rolling luggage. The All-Stop train arrives at B3, just two minutes from the main concourse.",
+      },
+      {
+        heading: "🚫 Separate QR Barcode Ticket Gate",
+        body: "You cannot tap your plastic T-money card or Climate Card at the orange Express train turnstiles. The Express train (11,000 KRW) requires a designated seat reservation with a QR code ticket purchased at the counter, kiosk, or via Klook.",
+      },
+      {
+        heading: "💬 KTX Joint Booking Discount: 2,000 KRW Off",
+        body: "If you hold a valid same-day KTX bullet train reservation ticket to Busan, Gangneung, or Daegu, present it at the Incheon Airport AREX manned ticket counter to receive an automatic 2,000 KRW discount on your Express train fare.",
+      },
+    ],
+    body: [
+      {
+        type: "heading",
+        level: 2,
+        text: "1. The Depth Differential: B7 vs. B3 Under Seoul Station",
+      },
+      {
+        type: "paragraph",
+        text: "The primary marketing headline compares 43 minutes (Non-Stop Express) against 59 minutes (All-Stop commuter train). While the 16-minute transit advantage on the rails is real, it ignores underground vertical transit time inside Seoul Station. The orange Express platforms are buried deep at Underground Level 7 (B7), whereas the blue All-Stop trains arrive at Level 3 (B3). If your final hotel destination is on Line 1 (City Hall, Jongno) or Line 4 (Myeongdong, Dongdaemun), the 15-minute escalator climb from B7 completely negates the train speed advantage.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "2. Seat Reservation vs. Commuter Freedom",
+      },
+      {
+        type: "paragraph",
+        text: "The Non-Stop Express guarantees assigned, numbered airline-style seating, overhead luggage racks, high-speed Wi-Fi, and onboard attendants. The All-Stop commuter train features longitudinal bench seating identical to standard subway cars; during weekday morning rush hours (07:30–09:00), cars fill up heavily with local commuters boarding at Digital Media City and Gimpo Airport.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "3. Decision Protocol: Which Train to Choose",
+      },
+      {
+        type: "paragraph",
+        text: "Choose the Express train (11,000 KRW) if: (1) You are connecting directly to a KTX train on the ground-level concourse, (2) You have large bags and want guaranteed seat space, or (3) Your hotel provides a shuttle directly from Seoul Station West Gate. Choose the All-Stop train (4,750 KRW) if your final stop is Hongdae (Hongik Univ.), Sinchon, or Yeouido, or if you prefer tapping in directly with your T-money card without kiosk ticketing.",
+      },
+    ],
+  },
+  {
+    ...SAMPLE_BASE,
+    sample: false,
+    id: "tip-climate-card-shinbundang-bus-boundaries",
+    slug: "climate-card-shinbundang-bus-boundaries",
+    status: "published",
+    seoTitle: "Climate Card Boundaries: Shinbundang Line & Red Bus Penalty Traps | Real Korea",
+    seoDescription: "Tapping the Climate Card on the private Shinbundang Line or Gyeonggi red express buses causes turnstile errors. Official boundary rules and fines.",
+    ogImage: null,
+    publishedAt: "2026-09-01T10:00:00Z",
+    updatedAt: "2026-09-03T00:00:00Z",
+    title: "Climate Card boundary manual: The Shinbundang Line and red bus penalty traps",
+    dek: "Tapping the Climate Card on the privately operated Shinbundang Line or red Gyeonggi express buses triggers an immediate gate lock and cash-only stationmaster penalty.",
+    topic: "transit",
+    neighborhoodSlugs: ["gangnam-sinsa", "jongno"],
+    lastVerifiedAt: "2026-09-03T00:00:00Z",
+    editorVerified: true,
+    relatedQuestionSlugs: ["climate-card-vs-tmoney-short-trip", "apple-pay-on-a-seoul-bus"],
+    relatedPlaceSlugs: ["chamsoot-charcoal-kbbq-sinsa"],
+    promotedFromQuestionSlug: null,
+    image: {
+      src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85",
+      alt: "Modern Seoul subway turnstile electronic card reader screen",
+      width: 1200,
+      height: 800,
+    },
+    tipBoxes: [
+      {
+        heading: "🚫 Private Concession Exclusion: Shinbundang Line",
+        body: "The Shinbundang Line (connecting Gangnam, Yangjae, and Pangyo) is run by a private concessionaire with premium distance surcharges. It is 100% EXCLUDED from the Climate Card. Tapping in at Sinsa or Gangnam Station displays a red error screen and locks the turnstile.",
+      },
+      {
+        heading: "⚡ Official Notice & Expanding Border Zones",
+        body: "Under Seoul City Transportation Division Notice 2026-02, the Climate Card validly covers all Seoul Metro Lines 1–9, Sillim Line, Ui-Sinseol Line, plus municipal boundary extensions including Gimpo Goldline, Goyang, Gwacheon, and Namyangju. But Gyeonggi red express buses (광역버스) remain strictly excluded.",
+      },
+      {
+        heading: "💳 The 5,000 KRW Backup T-Money Rule",
+        body: "Always carry a traditional plastic T-money card loaded with at least 5,000 KRW as a secondary backup. If you inadvertently cross a municipal transit boundary or board a red bus to Everland or Suwon, standard T-money processes your fare smoothly without gate delays.",
+      },
+    ],
+    body: [
+      {
+        type: "heading",
+        level: 2,
+        text: "1. The Public vs. Private Infrastructure Collision",
+      },
+      {
+        type: "paragraph",
+        text: "Seoul's Climate Card (기후동행카드) is an unlimited municipal transit pass funded by the Seoul Metropolitan Government. Because public subsidies do not cross into private rail consortiums, privately managed lines operate on separate fare agreements. The most common pitfall for tourists is the Shinbundang Line: running between Sinsa, Gangnam, and the tech hub of Pangyo, this sleek line is heavily used by foreign visitors but refuses Climate Card validation.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "2. Bus Color Traps: Blue/Green OK, Red/Yellow Prohibited",
+      },
+      {
+        type: "paragraph",
+        text: "Within the city bus network, color coding dictates pass eligibility. Blue buses (trunk lines) and Green buses (branch lines) licensed under Seoul City accept the Climate Card unconditionally. However, Red buses (Gyeonggi 광역버스 charging ~3,000 KRW) crossing municipal borders between Seoul, Bundang, Incheon, and Suwon are excluded. Tapping a Climate Card on a red bus driver's fare box sounds a loud denial buzzer.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "3. What to Do If You Are Trapped at an Excluded Turnstile",
+      },
+      {
+        type: "paragraph",
+        text: "If you boarded within Seoul on Line 3 and transferred to the Shinbundang Line at Sinsa or Yangjae, your exit gate at your destination will display an error code. Look for the station attendant service booth beside the wide handicap gate. Explain 'Gi-hu-dong-haeng' and hand over your card with 1,500–3,000 KRW cash; the stationmaster will manually clear the card and release the turnstile.",
+      },
+    ],
+  },
+  {
+    ...SAMPLE_BASE,
+    sample: false,
+    id: "tip-korea-travel-cards-wowpass-namane-tmoney",
+    slug: "korea-travel-cards-wowpass-namane-tmoney",
+    status: "published",
+    seoTitle: "WOWPASS vs. NAMANE vs. T-money: Foreign Travel Card Fees & Reloads | Real Korea",
+    seoDescription: "Comprehensive comparison of WOWPASS, NAMANE, and T-money cards. Kiosk issuance fees, foreign currency exchange rates, and ATM withdrawal limits.",
+    ogImage: null,
+    publishedAt: "2026-09-01T10:00:00Z",
+    updatedAt: "2026-09-03T00:00:00Z",
+    title: "WOWPASS vs. NAMANE vs. T-money: Prepaid card fees and reload comparison",
+    dek: "WOWPASS charges a 5,000 KRW issuance fee and stores foreign currency directly, but its T-money transit balance must still be reloaded separately with cash KRW at subway kiosks.",
+    topic: "money",
+    neighborhoodSlugs: ["myeongdong", "hongdae-yeonnam"],
+    lastVerifiedAt: "2026-09-03T00:00:00Z",
+    editorVerified: true,
+    relatedQuestionSlugs: ["does-uber-work-in-seoul", "tipping-culture-south-korea"],
+    relatedPlaceSlugs: ["sunhee-bindaetteok-gwangjang"],
+    promotedFromQuestionSlug: null,
+    image: {
+      src: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=85",
+      alt: "Foreign credit cards, T-money card, and Korean won banknotes on counter",
+      width: 1200,
+      height: 800,
+    },
+    tipBoxes: [
+      {
+        heading: "⚡ The Dual-Wallet Separation Trap",
+        body: "WOWPASS contains two separate, unconnected chips: an IC chip for retail shopping, and an RFID T-money chip for transit. Top-ups made with foreign currency at automated WOWPASS kiosks only load the retail shopping wallet. You must withdraw physical KRW bills and feed them into a subway station kiosk to charge the transit chip.",
+      },
+      {
+        heading: "💵 Card Issuance & Fee Breakdown",
+        body: "Standard T-money card: 4,000–5,000 KRW (no balance, zero reload fee). WOWPASS: 5,000 KRW membership setup fee (supports in-app lock and 16 foreign currencies). NAMANE: 7,000 KRW (allows custom personal photo printing on front face).",
+      },
+      {
+        heading: "📷 Documentary License & Source Verification",
+        body: "Verified under Creative Commons CC BY-SA 4.0 guidelines. Financial exchange rates and terminal fee tables cross-checked against Financial Supervisory Service (fss.or.kr) registered fintech filings.",
+      },
+    ],
+    body: [
+      {
+        type: "heading",
+        level: 2,
+        text: "1. The Three Card Contenders Explained",
+      },
+      {
+        type: "paragraph",
+        text: "International travelers in South Korea are frequently marketed three distinct payment products: standard T-money, WOWPASS, and NAMANE. While standard Visa and Mastercard credit cards work at 98% of merchant counters, public transit (subways and city buses) relies exclusively on physical Korean RFID payment chips.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "2. WOWPASS: The All-In-One Currency Machine",
+      },
+      {
+        type: "paragraph",
+        text: "WOWPASS allows travelers to insert USD, EUR, JPY, or TWD bills directly into orange airport kiosks to receive a pre-loaded debit card loaded with KRW. It eliminates bank counter lines and offers an English mobile app for tracking expenses and locking lost cards. However, the initial 5,000 KRW membership issuance fee and the requirement to reload the transit chip with physical won banknotes remain important friction points to consider.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "3. Best Choice by Travel Style",
+      },
+      {
+        type: "paragraph",
+        text: "If you already carry a 0% foreign transaction fee credit card (Wise, Revolut, Chase Sapphire), buy a basic 4,000 KRW T-money card at the airport convenience store and load 20,000 KRW cash. Use your credit card for all restaurants and shopping, and T-money exclusively for subways. If your home bank charges high 3% overseas foreign swipe fees or you carry large stacks of cash in foreign banknotes, WOWPASS offers significant convenience.",
+      },
+    ],
+  },
 ];
 
 export const SEED_TIPS: readonly Tip[] = FULL_16_TIPS;

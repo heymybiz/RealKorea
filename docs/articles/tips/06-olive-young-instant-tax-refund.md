@@ -7,21 +7,22 @@ topic: "money"
 status: "published"
 lastVerifiedAt: "2026-09-02T00:00:00Z"
 editorVerified: true
-type: "tip"
 neighborhoods:
   - "myeongdong"
   - "hongdae-yeonnam"
   - "gangnam-sinsa"
+image:
+  src: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85"
+  alt: "Beauty cosmetics shelves and skincare products in a modern Seoul boutique"
 ---
 
 # Olive Young instant tax refund: 15,000 KRW threshold & shopping rules
 
 > **Dek**: Show your physical passport at the register for purchases between 15,000 and 1,000,000 KRW to receive an immediate VAT deduction on your receipt.
 
-### 🌐 Knowledge Mesh Links
-- **Core Topic**: [[money]]
-- **Neighborhood Hubs**: [[myeongdong]], [[hongdae-yeonnam]], [[gangnam-sinsa]]
-- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
+- **Topic**: `money`
+- **Last Verified**: `2026-09-02T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[myeongdong]], [[hongdae-yeonnam]], [[gangnam-sinsa]]
 
 ![Beauty cosmetics shelves and skincare products in a modern Seoul boutique](https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85)
 *Plate: Beauty cosmetics shelves and skincare products in a modern Seoul boutique (16:9 Documentary Plate)*

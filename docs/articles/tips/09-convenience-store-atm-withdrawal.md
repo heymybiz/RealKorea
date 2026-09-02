@@ -7,21 +7,22 @@ topic: "money"
 status: "published"
 lastVerifiedAt: "2026-09-02T00:00:00Z"
 editorVerified: true
-type: "tip"
 neighborhoods:
   - "hongdae-yeonnam"
   - "jongno"
   - "gangnam-sinsa"
+image:
+  src: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=85"
+  alt: "Commercial bank Global ATM automated kiosk vestibule in central Seoul"
 ---
 
 # Convenience store ATM fees vs. bank Global ATMs
 
 > **Dek**: International card cash withdrawals involve local operator fees, issuer fees, and DCC. Choose commercial bank Global ATMs and always select KRW billing.
 
-### 🌐 Knowledge Mesh Links
-- **Core Topic**: [[money]]
-- **Neighborhood Hubs**: [[hongdae-yeonnam]], [[jongno]], [[gangnam-sinsa]]
-- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
+- **Topic**: `money`
+- **Last Verified**: `2026-09-02T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[hongdae-yeonnam]], [[jongno]], [[gangnam-sinsa]]
 
 ![Commercial bank Global ATM automated kiosk vestibule in central Seoul](https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=85)
 *Plate: Commercial bank Global ATM automated kiosk vestibule in central Seoul (16:9 Documentary Plate)*

@@ -39,7 +39,11 @@ export async function generateMetadata({
 
   return {
     title: question.seoTitle ?? question.title,
-    description: question.seoDescription ?? undefined,
+    description:
+      question.seoDescription ??
+      question.officialAnswer?.[0]?.text ??
+      question.body ??
+      undefined,
     alternates: { canonical: `/ask/${slug}` },
     robots: indexable ? undefined : { index: false, follow: true },
   };

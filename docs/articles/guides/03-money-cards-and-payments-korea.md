@@ -3,16 +3,16 @@ id: "guide-money-and-payments"
 slug: "money-cards-and-payments-korea"
 title: "Money, Cards, and Payments in Korea: What Works and What Fails"
 dek: "Apple Pay limitations, foreign Visa/Mastercard acceptance, instant tax refund rules, and where you still need physical won."
-type: "guide"
 status: "published"
+isFirst24Alias: false
+hero:
+  src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85"
+  alt: "Seoul bustling commercial street neon retail signs"
 ---
 
 # Money, Cards, and Payments in Korea: What Works and What Fails
 
 > **Dek**: Apple Pay limitations, foreign Visa/Mastercard acceptance, instant tax refund rules, and where you still need physical won.
-
-### 🌐 Connected Topic Pillars
-- [[arrival]], [[transit]], [[money]], [[survival]]
 
 ![Seoul bustling commercial street neon retail signs](https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85)
 *Plate: Seoul bustling commercial street neon retail signs*

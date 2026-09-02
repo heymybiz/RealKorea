@@ -7,21 +7,22 @@ topic: "etiquette"
 status: "published"
 lastVerifiedAt: "2026-09-02T00:00:00Z"
 editorVerified: true
-type: "tip"
 neighborhoods:
   - "jongno"
   - "euljiro"
   - "gangnam-sinsa"
+image:
+  src: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85"
+  alt: "Sizzling pork belly samgyeopsal grilling over hot hardwood charcoal in a Korean BBQ restaurant"
 ---
 
 # The Korean BBQ 2-Portion Rule: Solo dining etiquette & grill rules
 
 > **Dek**: Traditional charcoal grill restaurants generally require a 2-portion minimum order due to table setup and charcoal overhead costs.
 
-### 🌐 Knowledge Mesh Links
-- **Core Topic**: [[etiquette]]
-- **Neighborhood Hubs**: [[jongno]], [[euljiro]], [[gangnam-sinsa]]
-- **Key Guide**: [[01-first-24-hours-after-icn|First 24 Hours Guide]], [[02-seoul-subway-mastery|Subway Mastery]]
+- **Topic**: `etiquette`
+- **Last Verified**: `2026-09-02T00:00:00Z` (Verified Local Fact 正)
+- **Connected Hubs**: [[jongno]], [[euljiro]], [[gangnam-sinsa]]
 
 ![Sizzling pork belly samgyeopsal grilling over hot hardwood charcoal in a Korean BBQ restaurant](https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85)
 *Plate: Sizzling pork belly samgyeopsal grilling over hot hardwood charcoal in a Korean BBQ restaurant (16:9 Documentary Plate)*

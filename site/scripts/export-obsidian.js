@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const esbuild = require('D:/Project/RealKorea/site/node_modules/esbuild');
+const esbuild = require('esbuild');
 
 async function run() {
+  const entryPoint = path.resolve(__dirname, '../src/lib/content/seed/index.ts');
   const result = await esbuild.build({
-    entryPoints: ['D:/Project/RealKorea/site/src/lib/content/seed/index.ts'],
+    entryPoints: [entryPoint],
     bundle: true,
     write: false,
     format: 'cjs',
@@ -19,7 +20,7 @@ async function run() {
   fn(mod, exports, require);
 
   const { SEED_TIPS, SEED_GUIDES, SEED_PLACES, SEED_NEIGHBORHOODS } = mod.exports || exports;
-  const baseDir = path.resolve('D:/Project/RealKorea/docs/articles');
+  const baseDir = path.resolve(__dirname, '../../docs/articles');
 
   // 1. Export Tips with rich Frontmatter & Obsidian Wiki-links
   SEED_TIPS.forEach((tip, idx) => {

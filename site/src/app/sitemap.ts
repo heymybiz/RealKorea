@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import {
-  getGuideBySlug,
+  getGuides,
   getNeighborhoods,
   getPlaces,
   getQuestions,
@@ -10,46 +10,35 @@ import {
 import { isIndexableQuestion } from "@/lib/content/types";
 import { absoluteUrl } from "@/lib/site-url";
 
-/**
- * NFR-008 — a sitemap of published, indexable URLs only.
- *
- * Two exclusions matter and are easy to get wrong:
- *
- * 1. Sample scaffolding is left out. Those pages carry `noindex` and no verified
- *    facts, so listing them would ask Google to crawl placeholders.
- * 2. Unanswered questions are left out (FR-014). A question with no editor
- *    answer is a thin page by definition.
- *
- * The result today is a small sitemap: the static surfaces plus whatever real
- * content exists. That is correct rather than broken.
- */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [tips, places, neighborhoods, questions, first24] = await Promise.all([
+  const [tips, places, neighborhoods, questions, guides] = await Promise.all([
     getTips(),
     getPlaces(),
     getNeighborhoods(),
     getQuestions(),
-    getGuideBySlug("first-24-hours-after-icn"),
+    getGuides(),
   ]);
 
   const staticEntries: MetadataRoute.Sitemap = [
     { url: absoluteUrl("/"), priority: 1 },
     { url: absoluteUrl("/ask"), priority: 0.9 },
     { url: absoluteUrl("/tips"), priority: 0.8 },
+    { url: absoluteUrl("/guides"), priority: 0.85 },
     { url: absoluteUrl("/eat"), priority: 0.8 },
     { url: absoluteUrl("/places"), priority: 0.8 },
     { url: absoluteUrl("/shop"), priority: 0.5 },
-    { url: absoluteUrl("/about"), priority: 0.5 },
-    { url: absoluteUrl("/legal/privacy"), priority: 0.2 },
-    { url: absoluteUrl("/legal/terms"), priority: 0.2 },
-    { url: absoluteUrl("/legal/affiliates"), priority: 0.2 },
+    { url: absoluteUrl("/about"), priority: 0.6 },
+    { url: absoluteUrl("/contact"), priority: 0.6 },
+    { url: absoluteUrl("/legal/privacy"), priority: 0.3 },
+    { url: absoluteUrl("/legal/terms"), priority: 0.3 },
+    { url: absoluteUrl("/legal/affiliates"), priority: 0.3 },
   ];
 
   const tipEntries: MetadataRoute.Sitemap = tips
     .filter((tip) => !tip.sample)
     .map((tip) => ({
       url: absoluteUrl(`/tips/${tip.slug}`),
-      lastModified: tip.updatedAt ?? undefined,
+      lastModified: tip.updatedAt ?? tip.lastVerifiedAt ?? undefined,
       priority: 0.7,
     }));
 
@@ -76,10 +65,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }));
 
-  const guideEntries: MetadataRoute.Sitemap =
-    first24 && !first24.sample
-      ? [{ url: absoluteUrl("/first-24-hours"), priority: 0.8 }]
-      : [];
+  const guideEntries: MetadataRoute.Sitemap = guides
+    .filter((guide) => !guide.sample)
+    .map((guide) => ({
+      url: absoluteUrl(guide.isFirst24Alias ? "/first-24-hours" : `/guides/${guide.slug}`),
+      lastModified: guide.updatedAt ?? undefined,
+      priority: 0.8,
+    }));
 
   return [
     ...staticEntries,

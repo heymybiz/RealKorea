@@ -24,21 +24,23 @@ export const MOBILE_UTILITY_NAV: readonly NavItem[] = [
   { href: "/search", label: "Search" },
   { href: "/first-24-hours", label: "First 24 hours" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 /** PRD 02 §2 — footer column 3. */
 export const ARRIVE_NAV: readonly NavItem[] = [
   { href: "/first-24-hours", label: "First 24 hours" },
   { href: "/about#how-we-verify", label: "How we verify" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About Us" },
+  { href: "/contact", label: "Contact Us" },
 ] as const;
 
-/** PRD 02 §2 — footer column 4. Donate target is undecided (PRD 01 §11). */
+/** PRD 02 §2 — footer column 4. Legal and compliance links for AdSense. */
 export const LEGAL_NAV: readonly NavItem[] = [
-  { href: "/legal/privacy", label: "Privacy" },
-  { href: "/legal/terms", label: "Terms" },
-  { href: "/legal/affiliates", label: "Affiliates" },
-  { href: "/about#donate", label: "Donate" },
+  { href: "/legal/privacy", label: "Privacy Policy" },
+  { href: "/legal/terms", label: "Terms of Service" },
+  { href: "/legal/affiliates", label: "Affiliate Disclosures" },
+  { href: "/contact", label: "Contact & Errata" },
 ] as const;
 
 export const SITE_NAME = "Real Korea";

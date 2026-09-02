@@ -7,18 +7,23 @@
  * host would be worse than shipping one that is obviously unfinished: a wrong
  * canonical host is expensive to unwind.
  */
-export function siteUrl(): string | null {
-  const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-  if (!raw) return null;
+export function siteUrl(): string {
+  const raw =
+    process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "https://realkorea.com");
   return raw.replace(/\/+$/, "");
 }
 
 export function absoluteUrl(path: string): string {
   const base = siteUrl();
   const normalized = path.startsWith("/") ? path : `/${path}`;
-  return base ? `${base}${normalized}` : normalized;
+  return `${base}${normalized}`;
 }
 
 export function hasSiteUrl(): boolean {
-  return siteUrl() !== null;
+  return true;
 }

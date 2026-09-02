@@ -3,16 +3,16 @@ id: "guide-first-24-hours"
 slug: "first-24-hours-after-icn"
 title: "First 24 Hours in Seoul: The Non-Negotiable Survival Protocol"
 dek: "From touchdown at Incheon to your first hot gukbap bowl in Jongno: five chronological steps to avoid airport scams, data failures, and card lockouts."
-type: "guide"
 status: "published"
+isFirst24Alias: true
+hero:
+  src: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85"
+  alt: "Incheon International Airport terminal arrivals escalator view"
 ---
 
 # First 24 Hours in Seoul: The Non-Negotiable Survival Protocol
 
 > **Dek**: From touchdown at Incheon to your first hot gukbap bowl in Jongno: five chronological steps to avoid airport scams, data failures, and card lockouts.
-
-### 🌐 Connected Topic Pillars
-- [[arrival]], [[transit]], [[money]], [[survival]]
 
 ![Incheon International Airport terminal arrivals escalator view](https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85)
 *Plate: Incheon International Airport terminal arrivals escalator view*
