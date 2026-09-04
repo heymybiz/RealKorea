@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup 3: Vercel Style Transit Boundary Matrix</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing: -0.015em; }
+    code, .mono { font-family: 'Geist Mono', monospace; }
+  </style>
+</head>
+<body class="bg-black text-neutral-100 min-h-screen p-6 md:p-12 antialiased">
+  <div class="max-w-5xl mx-auto space-y-10">
+
+    <!-- Header Shell -->
+    <header class="border-b border-neutral-800 pb-5 flex items-baseline justify-between text-xs text-neutral-400">
+      <div class="flex items-center gap-3">
+        <svg class="w-4 h-4 fill-white" viewBox="0 0 76 65"><path d="M37.5274 0L75.0548 65H0L37.5274 0Z"/></svg>
+        <span class="font-semibold text-white">REAL KOREA</span>
+        <span class="text-neutral-600">/</span>
+        <span>POLICY MATRIX</span>
+      </div>
+      <div class="mono text-[11px] text-neutral-500">POLICY: SEOUL METRO CLIMATE PASS v2.4</div>
+    </header>
+
+    <!-- Executive Path Header -->
+    <section class="space-y-3">
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight text-white">
+        Climate Card Boundary Matrix: Shinbundang Line & Red Bus Exclusions
+      </h1>
+      <p class="text-neutral-400 text-sm md:text-base max-w-3xl leading-relaxed">
+        Tapping a Seoul Climate Card (기후동행카드) on privately-operated lines or Gyeonggi red commuter buses triggers a gate rejection (<code class="mono text-xs text-rose-400">ERR: 04</code>) and requires an station attendant override fee. Check exact eligibility below.
+      </p>
+    </section>
+
+    <!-- Live Filter Bar & Search -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-neutral-950 p-4 rounded-lg border border-neutral-800">
+      <div class="flex items-center gap-2">
+        <span class="text-xs text-neutral-400 mono">FILTER:</span>
+        <button onclick="filterLines('all')" class="filter-btn px-3 py-1 rounded text-xs font-medium border border-neutral-700 bg-neutral-800 text-white" data-filter="all">All Transit</button>
+        <button onclick="filterLines('valid')" class="filter-btn px-3 py-1 rounded text-xs font-medium border border-neutral-800 text-neutral-400 hover:text-white" data-filter="valid">Valid (100%)</button>
+        <button onclick="filterLines('excluded')" class="filter-btn px-3 py-1 rounded text-xs font-medium border border-neutral-800 text-neutral-400 hover:text-white" data-filter="excluded">Excluded Only</button>
+      </div>
+      <div class="relative">
+        <input id="lineSearch" type="text" placeholder="Search line, station, or bus..." class="bg-neutral-900 border border-neutral-800 focus:border-neutral-600 rounded px-3 py-1.5 text-xs text-white placeholder-neutral-500 focus:outline-none w-64">
+      </div>
+    </div>
+
+    <!-- 12-Column Full Evidence Audit Table -->
+    <div class="border border-neutral-800 rounded-lg overflow-hidden bg-neutral-950">
+      <table class="w-full text-left text-sm border-collapse" id="matrixTable">
+        <thead>
+          <tr class="border-b border-neutral-800 text-neutral-500 text-xs mono uppercase bg-neutral-900/40">
+            <th class="py-3.5 px-4">Transit Service</th>
+            <th class="py-3.5 px-4">Operator Model</th>
+            <th class="py-3.5 px-4">Climate Card Status</th>
+            <th class="py-3.5 px-4 text-right">Standard Adult Fare</th>
+            <th class="py-3.5 px-4 text-right">Attendant Penalty</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-900 text-neutral-300">
+          <tr class="transit-row" data-status="valid">
+            <td class="py-3.5 px-4 font-medium text-white">Seoul Subway Lines 1 ~ 9</td>
+            <td class="py-3.5 px-4 text-xs text-neutral-400">Seoul Metro (Public Municipal)</td>
+            <td class="py-3.5 px-4"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-medium bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">✓ 100% Unlimited</span></td>
+            <td class="py-3.5 px-4 text-right mono">₩1,550</td>
+            <td class="py-3.5 px-4 text-right mono text-neutral-500">₩0</td>
+          </tr>
+          <tr class="transit-row" data-status="excluded">
+            <td class="py-3.5 px-4 font-medium text-white">Shinbundang Line (Gangnam ~ Pangyo)</td>
+            <td class="py-3.5 px-4 text-xs text-neutral-400">NeoTrans (Private Rail Concession)</td>
+            <td class="py-3.5 px-4"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-medium bg-rose-950/60 text-rose-400 border border-rose-800/60">✕ Gate Rejection (Not Valid)</span></td>
+            <td class="py-3.5 px-4 text-right mono text-white">₩3,200 ~ ₩4,100</td>
+            <td class="py-3.5 px-4 text-right mono text-rose-400">Full Fare Paid in Cash</td>
+          </tr>
+          <tr class="transit-row" data-status="valid">
+            <td class="py-3.5 px-4 font-medium text-white">Seoul City Regular Buses (Blue/Green)</td>
+            <td class="py-3.5 px-4 text-xs text-neutral-400">Seoul Metropolitan Bus Association</td>
+            <td class="py-3.5 px-4"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-medium bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">✓ 100% Unlimited</span></td>
+            <td class="py-3.5 px-4 text-right mono">₩1,500</td>
+            <td class="py-3.5 px-4 text-right mono text-neutral-500">₩0</td>
+          </tr>
+          <tr class="transit-row" data-status="excluded">
+            <td class="py-3.5 px-4 font-medium text-white">Red Express Buses (Gyeonggi G-Bus)</td>
+            <td class="py-3.5 px-4 text-xs text-neutral-400">Gyeonggi Province Transit Authority</td>
+            <td class="py-3.5 px-4"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-medium bg-rose-950/60 text-rose-400 border border-rose-800/60">✕ Excluded (Red Numbers)</span></td>
+            <td class="py-3.5 px-4 text-right mono text-white">₩3,000</td>
+            <td class="py-3.5 px-4 text-right mono text-rose-400">Tag Failed Warning</td>
+          </tr>
+          <tr class="transit-row" data-status="excluded">
+            <td class="py-3.5 px-4 font-medium text-white">Airport Railroad Express (AREX 직통)</td>
+            <td class="py-3.5 px-4 text-xs text-neutral-400">Airport Railroad Co., Ltd. (Dedicated)</td>
+            <td class="py-3.5 px-4"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-medium bg-rose-950/60 text-rose-400 border border-rose-800/60">✕ Excluded (Seat Ticket Required)</span></td>
+            <td class="py-3.5 px-4 text-right mono text-white">₩11,000</td>
+            <td class="py-3.5 px-4 text-right mono text-rose-400">Station Penalty Gate</td>
+          </tr>
+          <tr class="transit-row" data-status="valid">
+            <td class="py-3.5 px-4 font-medium text-white">Gimpo Goldline & Sillim Line</td>
+            <td class="py-3.5 px-4 text-xs text-neutral-400">Seoul Light Rail Transit Agreement</td>
+            <td class="py-3.5 px-4"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-medium bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">✓ 100% Unlimited</span></td>
+            <td class="py-3.5 px-4 text-right mono">₩1,550</td>
+            <td class="py-3.5 px-4 text-right mono text-neutral-500">₩0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Fallback Protocol & Station Attendant Notice -->
+    <div class="rounded-lg border border-neutral-800 p-5 bg-neutral-950 space-y-3">
+      <h3 class="text-sm font-semibold text-white flex items-center gap-2">
+        <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Actionable Field Protocol for Inadvertent Boundary Rejection
+      </h3>
+      <p class="text-xs text-neutral-400 leading-relaxed">
+        If you board inside Seoul on a valid line and disembark at an excluded station (e.g. Pangyo Station on the Shinbundang line), the turnstile gate will fail. <strong>Do not force the gate.</strong> Press the red "Help (도움)" bell next to the handicap wide turnstile and explain to the agent: <span class="text-white mono bg-neutral-900 px-1.5 py-0.5 rounded">기후동행카드 승차 (Climate Card Boarding)</span>. You will pay only the segment fare differential in cash without a 30x penalty.
+      </p>
+    </div>
+
+    <footer class="border-t border-neutral-900 pt-6 flex justify-between text-xs text-neutral-500 mono">
+      <span>REF: SEOUL METROPOLITAN GOVERNMENT REGULATION #2024-819</span>
+      <span>LAST UPDATED: 2026-03-01 KST</span>
+    </footer>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('lineSearch');
+    const rows = document.querySelectorAll('.transit-row');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    let currentFilter = 'all';
+
+    function filterLines(type) {
+      currentFilter = type;
+      filterButtons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === type) {
+          btn.className = "filter-btn px-3 py-1 rounded text-xs font-medium border border-neutral-700 bg-neutral-800 text-white";
+        } else {
+          btn.className = "filter-btn px-3 py-1 rounded text-xs font-medium border border-neutral-800 text-neutral-400 hover:text-white";
+        }
+      });
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const q = searchInput.value.toLowerCase().trim();
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        const status = row.getAttribute('data-status');
+        const matchesType = (currentFilter === 'all') || (currentFilter === status);
+        const matchesQuery = !q || text.includes(q);
+
+        if (matchesType && matchesQuery) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>

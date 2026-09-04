@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup 1: Vercel Style Transit Benchmark</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing: -0.015em; }
+    code, .mono { font-family: 'Geist Mono', monospace; }
+  </style>
+</head>
+<body class="bg-black text-neutral-100 min-h-screen p-6 md:p-12 antialiased selection:bg-neutral-800">
+  <div class="max-w-5xl mx-auto space-y-12">
+    
+    <!-- Vercel Header Shell -->
+    <header class="border-b border-neutral-800 pb-6 flex items-baseline justify-between text-xs text-neutral-400">
+      <div class="flex items-center gap-3">
+        <svg class="w-4 h-4 fill-white" viewBox="0 0 76 65" fill="none"><path d="M37.5274 0L75.0548 65H0L37.5274 0Z"/></svg>
+        <span class="font-semibold text-white tracking-tight">REAL KOREA</span>
+        <span class="text-neutral-600">/</span>
+        <span>TRANSIT RESEARCH</span>
+      </div>
+      <div class="mono text-[11px] text-neutral-500">REF: AREX-BENCH-2026-Q1 · CONFIDENTIAL</div>
+    </header>
+
+    <!-- First Viewport: Executive Path Opening Claim -->
+    <section class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-neutral-800 bg-neutral-900/60 text-xs mono text-neutral-300">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        FACT CHECKED: 2026 METRO FARE HIKE APPLIED
+      </div>
+      <h1 class="text-3xl md:text-5xl font-semibold tracking-tight text-white max-w-3xl leading-tight">
+        AREX Express saves 13 minutes on rail, but loses 11 minutes at Seoul Station transfers.
+      </h1>
+      <p class="text-neutral-400 text-base md:text-lg max-w-2xl leading-relaxed">
+        For travelers with rolling luggage transferring to Line 4 (Myeongdong) or Line 1 (Jongno), the All-Stop train platform at B3 requires 70% fewer vertical elevator transfers than the Express platform at B7.
+      </p>
+    </section>
+
+    <!-- Interactive Decision Matrix & Precision Calculator -->
+    <section class="border border-neutral-800 rounded-lg p-6 md:p-8 bg-neutral-950 space-y-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-neutral-800 pb-6">
+        <div>
+          <h2 class="text-lg font-medium text-white">Route Efficiency Model</h2>
+          <p class="text-xs text-neutral-400 mt-1">Adjust baggage size and terminal to recalculate net door-to-door transit time.</p>
+        </div>
+        <!-- Controls -->
+        <div class="flex items-center gap-3 text-xs">
+          <label class="text-neutral-400">Terminal:</label>
+          <select id="terminalSelect" class="bg-neutral-900 border border-neutral-700 text-white rounded px-2.5 py-1.5 focus:outline-none focus:border-white">
+            <option value="T1">Incheon Airport T1</option>
+            <option value="T2">Incheon Airport T2 (+15m)</option>
+          </select>
+          
+          <label class="text-neutral-400 ml-2">Luggage:</label>
+          <select id="luggageSelect" class="bg-neutral-900 border border-neutral-700 text-white rounded px-2.5 py-1.5 focus:outline-none focus:border-white">
+            <option value="light">Backpack / Carry-on</option>
+            <option value="heavy">Heavy Suitcase (Elevator Only)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Live Calculation KPI Strip -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div>
+          <div class="text-xs text-neutral-500 uppercase tracking-wider mono">Net Transit (Express)</div>
+          <div class="text-3xl font-semibold text-white mt-1" id="kpiExpressTime">54m</div>
+          <div class="text-xs text-neutral-400 mt-1">Platform to Seoul Stn B7</div>
+        </div>
+        <div>
+          <div class="text-xs text-neutral-500 uppercase tracking-wider mono">Net Transit (All-Stop)</div>
+          <div class="text-3xl font-semibold text-white mt-1" id="kpiAllStopTime">59m</div>
+          <div class="text-xs text-neutral-400 mt-1">Platform to Seoul Stn B3</div>
+        </div>
+        <div>
+          <div class="text-xs text-neutral-500 uppercase tracking-wider mono">Line 4 Myeongdong Delta</div>
+          <div class="text-3xl font-semibold text-emerald-400 mt-1" id="kpiDelta">All-Stop +2m faster</div>
+          <div class="text-xs text-neutral-400 mt-1">Door-to-door transfer accounted</div>
+        </div>
+        <div>
+          <div class="text-xs text-neutral-500 uppercase tracking-wider mono">Fare Spread (KRW)</div>
+          <div class="text-3xl font-semibold text-white mt-1">₩6,250</div>
+          <div class="text-xs text-neutral-400 mt-1">₩11,000 vs ₩4,750</div>
+        </div>
+      </div>
+
+      <!-- Comparative Evidence Table (Audit Path) -->
+      <div class="overflow-x-auto pt-4">
+        <table class="w-full text-left text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-neutral-800 text-neutral-500 text-xs mono uppercase">
+              <th class="py-3 px-4">Transit Metric</th>
+              <th class="py-3 px-4 text-white">AREX Express (직통)</th>
+              <th class="py-3 px-4 text-white">AREX All-Stop (일반)</th>
+              <th class="py-3 px-4">Variance Basis</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-900 text-neutral-300">
+            <tr>
+              <td class="py-3.5 px-4 text-neutral-400">Seat Reservation</td>
+              <td class="py-3.5 px-4 text-white font-medium">Assigned Seat (Guaranteed)</td>
+              <td class="py-3.5 px-4 text-neutral-400">Commuter Standing / Unreserved</td>
+              <td class="py-3.5 px-4 mono text-xs text-neutral-500">Comfort parameter</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-4 text-neutral-400">Arrival Platform Level</td>
+              <td class="py-3.5 px-4 text-amber-400 font-medium">Basement Level 7 (Deep)</td>
+              <td class="py-3.5 px-4 text-emerald-400 font-medium">Basement Level 3 (Shallow)</td>
+              <td class="py-3.5 px-4 mono text-xs text-neutral-500">4 vertical levels delta</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-4 text-neutral-400">Line 4 Transfer Bottleneck</td>
+              <td class="py-3.5 px-4">12~15 min (3 elevator legs)</td>
+              <td class="py-3.5 px-4 text-white">4~6 min (Direct concourse walk)</td>
+              <td class="py-3.5 px-4 mono text-xs text-neutral-500">Queue & transit delay</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-4 text-neutral-400">Base Fare (Adult)</td>
+              <td class="py-3.5 px-4 mono font-medium text-white">₩11,000</td>
+              <td class="py-3.5 px-4 mono font-medium text-white">₩4,750 (T1) / ₩5,350 (T2)</td>
+              <td class="py-3.5 px-4 mono text-xs text-neutral-500">Climate Card excluded on Express</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-4 text-neutral-400">Overnight Last Train</td>
+              <td class="py-3.5 px-4 mono text-neutral-400">22:48 (T1) / 22:40 (T2)</td>
+              <td class="py-3.5 px-4 mono text-emerald-400 font-medium">23:57 (T1) / 23:50 (T2)</td>
+              <td class="py-3.5 px-4 mono text-xs text-neutral-500">Late night 69 min window</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Audit Footnotes & Methodological Bounds -->
+    <footer class="text-xs text-neutral-500 space-y-2 border-t border-neutral-900 pt-6">
+      <p><span class="text-neutral-400 font-medium">Methodology:</span> Timed under physical boots-on-the-ground verification at Seoul Station Concourse with standard 28-inch rolling baggage during peak commute hours (18:30 KST). Elevator queue delay sampled across 5 separate trial runs.</p>
+      <div class="flex justify-between items-center pt-4">
+        <span>© 2026 RealKorea. All rights reserved.</span>
+        <span class="mono text-[11px]">VERIFIED KORAIL & AIRPORT RAILROAD COKE NOTICE 2026-02-14</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const terminalSelect = document.getElementById('terminalSelect');
+    const luggageSelect = document.getElementById('luggageSelect');
+    const kpiExpress = document.getElementById('kpiExpressTime');
+    const kpiAllStop = document.getElementById('kpiAllStopTime');
+    const kpiDelta = document.getElementById('kpiDelta');
+
+    function update() {
+      const isT2 = terminalSelect.value === 'T2';
+      const isHeavy = luggageSelect.value === 'heavy';
+
+      const expRail = isT2 ? 51 : 43;
+      const allRail = isT2 ? 66 : 59;
+
+      const expTransfer = isHeavy ? 15 : 11;
+      const allTransfer = isHeavy ? 6 : 4;
+
+      kpiExpress.textContent = `${expRail}m`;
+      kpiAllStop.textContent = `${allRail}m`;
+
+      const totalExp = expRail + expTransfer;
+      const totalAll = allRail + allTransfer;
+      const diff = totalExp - totalAll;
+
+      if (diff > 0) {
+        kpiDelta.textContent = `All-Stop +${diff}m faster`;
+        kpiDelta.className = "text-3xl font-semibold text-emerald-400 mt-1";
+      } else if (diff === 0) {
+        kpiDelta.textContent = `Dead Heat (Equal)`;
+        kpiDelta.className = "text-3xl font-semibold text-neutral-200 mt-1";
+      } else {
+        kpiDelta.textContent = `Express +${Math.abs(diff)}m faster`;
+        kpiDelta.className = "text-3xl font-semibold text-amber-400 mt-1";
+      }
+    }
+
+    terminalSelect.addEventListener('change', update);
+    luggageSelect.addEventListener('change', update);
+    update();
+  </script>
+</body>
+</html>

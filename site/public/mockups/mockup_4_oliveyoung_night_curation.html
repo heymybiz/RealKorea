@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup 4: Olive Young Style Night Owl Convenience Gourmet</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: -0.025em; }
+    .olive-rotate { transform: rotate(-13deg); }
+  </style>
+</head>
+<body class="bg-[#FAFAFA] text-[#131518] antialiased">
+  
+  <!-- Header -->
+  <header class="bg-white border-b border-[#F0F0F0] sticky top-0 z-40">
+    <div class="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="font-black text-base tracking-tight text-[#131518]">REAL KOREA</span>
+        <span class="text-[#CCC]">·</span>
+        <span class="text-xs font-bold text-[#82DC28] bg-[#131518] px-2 py-0.5 rounded-md">24H NIGHT SURVIVAL</span>
+      </div>
+      <div class="flex items-center gap-2 text-xs font-bold text-[#666]">
+        <span class="w-2 h-2 rounded-full bg-[#82DC28] animate-ping"></span>
+        <span>심야 오픈 편의점 실시간 안내</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6 space-y-8">
+    
+    <!-- Hero Banner (Olive Young Signature Style) -->
+    <section class="relative rounded-3xl bg-[#F2FBDD] p-6 md:p-8 overflow-hidden shadow-sm">
+      <div class="absolute w-44 h-60 rounded-full bg-[#82DC28] right-8 -top-10 olive-rotate opacity-90"></div>
+      <div class="absolute w-24 h-36 rounded-full bg-[#FF7878] -right-2 -top-6 olive-rotate opacity-80"></div>
+      
+      <div class="relative z-10 max-w-md space-y-3">
+        <div class="inline-flex items-center gap-1.5 text-xs font-black text-[#557C1F] bg-white px-2.5 py-1 rounded-full shadow-sm">
+          <span>🌙 밤 11시 이후 서울 생존 매뉴얼</span>
+        </div>
+        <h1 class="text-2xl md:text-3xl font-black text-[#131518] leading-tight">
+          식당 문 닫았을 때 실패 없는<br>
+          <span class="text-[#4F9414]">편의점 K-미식 꿀조합</span> 큐레이션
+        </h1>
+        <p class="text-sm text-[#596050] font-medium leading-relaxed">
+          새벽 1시에도 CU·GS25·세븐일레븐에서 현금 없이 해외 카드로 바로 완성하는 현지인 검증 3대 야식 레시피.
+        </p>
+      </div>
+    </section>
+
+    <!-- Category Tabs (Chip Style) -->
+    <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-bold">
+      <button onclick="filterGourmet('all')" class="tab-btn px-4 py-2 rounded-full bg-[#131518] text-white whitespace-nowrap shadow-sm" data-tab="all">전체보기</button>
+      <button onclick="filterGourmet('ramen')" class="tab-btn px-4 py-2 rounded-full bg-white text-[#666] border border-[#EBEBEB] hover:border-[#82DC28] whitespace-nowrap" data-tab="ramen">🍜 라면 꿀조합</button>
+      <button onclick="filterGourmet('wellness')" class="tab-btn px-4 py-2 rounded-full bg-white text-[#666] border border-[#EBEBEB] hover:border-[#82DC28] whitespace-nowrap" data-tab="wellness">🌿 웰니스 & 숙취해소</button>
+      <button onclick="filterGourmet('snack')" class="tab-btn px-4 py-2 rounded-full bg-white text-[#666] border border-[#EBEBEB] hover:border-[#82DC28] whitespace-nowrap" data-tab="snack">🍙 든든 야식 삼각김밥</button>
+    </div>
+
+    <!-- Curation Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="gourmetGrid">
+      
+      <!-- Card 1: Mark Meal Combo -->
+      <article class="gourmet-card bg-white rounded-2xl p-5 border border-[#EBEBEB] hover:shadow-md transition-all flex flex-col justify-between" data-category="ramen">
+        <div class="space-y-3">
+          <div class="aspect-[1/0.88] bg-[#FFF0EF] rounded-xl relative flex items-center justify-center overflow-hidden">
+            <span class="absolute left-2.5 top-2.5 bg-[#FF7878] text-white text-[10px] font-black px-2 py-0.5 rounded-full">🔥 매콤 꿀조합</span>
+            <div class="text-center p-3">
+              <span class="text-3xl">🧀🍜</span>
+              <div class="text-[11px] font-black text-[#D9474F] mt-1">마크정식 (떡볶이+치즈+라면)</div>
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] font-bold text-[#888]">CU / GS25 공통 레시피</div>
+            <h3 class="text-base font-bold text-[#131518] mt-0.5">자이언트 떡볶이 + 콕콕 스파게티 + 스트링치즈</h3>
+            <p class="text-xs text-[#666] mt-1 leading-relaxed">전자레인지 3분 30초면 완성되는 극강의 단짠단짠. 외국인도 즐길 수 있는 마일드 매운맛.</p>
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-[#F5F5F5] flex items-center justify-between">
+          <div class="text-xs">
+            <span class="text-[#888]">예상 총 비용:</span>
+            <span class="font-black text-sm text-[#131518] ml-1">₩5,400</span>
+          </div>
+          <span class="text-[11px] font-bold text-[#4F9414] bg-[#F4FCE9] px-2 py-0.5 rounded-md">맵기 ★★☆☆☆</span>
+        </div>
+      </article>
+
+      <!-- Card 2: Hangover & Hydration -->
+      <article class="gourmet-card bg-white rounded-2xl p-5 border border-[#EBEBEB] hover:shadow-md transition-all flex flex-col justify-between" data-category="wellness">
+        <div class="space-y-3">
+          <div class="aspect-[1/0.88] bg-[#F4FCE9] rounded-xl relative flex items-center justify-center overflow-hidden">
+            <span class="absolute left-2.5 top-2.5 bg-[#82DC28] text-[#17300B] text-[10px] font-black px-2 py-0.5 rounded-full">🌿 웰니스 회복</span>
+            <div class="text-center p-3">
+              <span class="text-3xl">🍐💧</span>
+              <div class="text-[11px] font-black text-[#4F9414] mt-1">K-배주스 갈아만든배 + 이온음료</div>
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] font-bold text-[#888]">K-드링크 클래식</div>
+            <h3 class="text-base font-bold text-[#131518] mt-0.5">IdH(갈아만든배) + 컨디션 헛개수 세트</h3>
+            <p class="text-xs text-[#666] mt-1 leading-relaxed">한국 삼겹살·소주 회식 후 필수 코스. 호주 연구진도 인정한 배(LDH)의 숙취해소 효소 작용.</p>
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-[#F5F5F5] flex items-center justify-between">
+          <div class="text-xs">
+            <span class="text-[#888]">예상 총 비용:</span>
+            <span class="font-black text-sm text-[#131518] ml-1">₩3,200</span>
+          </div>
+          <span class="text-[11px] font-bold text-[#2767B2] bg-[#EDF5FF] px-2 py-0.5 rounded-md">수분충전 100%</span>
+        </div>
+      </article>
+
+      <!-- Card 3: Late Night Snack -->
+      <article class="gourmet-card bg-white rounded-2xl p-5 border border-[#EBEBEB] hover:shadow-md transition-all flex flex-col justify-between" data-category="snack">
+        <div class="space-y-3">
+          <div class="aspect-[1/0.88] bg-[#F5F5F5] rounded-xl relative flex items-center justify-center overflow-hidden">
+            <span class="absolute left-2.5 top-2.5 bg-[#131518] text-white text-[10px] font-black px-2 py-0.5 rounded-full">🍙 든든 단백질</span>
+            <div class="text-center p-3">
+              <span class="text-3xl">🥚🍙</span>
+              <div class="text-[11px] font-black text-[#333] mt-1">감동란 + 참치마요 삼각김밥</div>
+            </div>
+          </div>
+          <div>
+            <div class="text-[11px] font-bold text-[#888]">언제나 베스트셀러 1위</div>
+            <h3 class="text-base font-bold text-[#131518] mt-0.5">반숙 감동란 2구 + 전주비빔 & 참치마요</h3>
+            <p class="text-xs text-[#666] mt-1 leading-relaxed">간이 짭짤하게 밴 쫀득한 반숙 계란과 바삭한 김의 조화. 3천 원으로 해결하는 완벽한 새벽 간식.</p>
+          </div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-[#F5F5F5] flex items-center justify-between">
+          <div class="text-xs">
+            <span class="text-[#888]">예상 총 비용:</span>
+            <span class="font-black text-sm text-[#131518] ml-1">₩3,100</span>
+          </div>
+          <span class="text-[11px] font-bold text-[#9A6200] bg-[#FFF4D6] px-2 py-0.5 rounded-md">가성비 ★★★★★</span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Practical Traveler Tip Box -->
+    <div class="rounded-2xl p-5 bg-[#F4FCE9] border border-[#ADEB5B] flex gap-3.5 items-start">
+      <span class="text-xl">💳</span>
+      <div class="text-xs leading-relaxed text-[#17300B] space-y-1">
+        <strong class="font-black text-sm">편의점 결제 실전 팁:</strong>
+        <p>한국의 모든 편의점(CU, GS25, 7-Eleven, Emart24)은 트래블월렛, 트래블로그, 비자/마스터 신용카드, T-money, WOWPASS 결제를 100% 지원합니다. 500원짜리 껌 하나도 카드 결제가 원칙이며 거부당하지 않습니다.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function filterGourmet(cat) {
+      const cards = document.querySelectorAll('.gourmet-card');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-tab') === cat) {
+          btn.className = "tab-btn px-4 py-2 rounded-full bg-[#131518] text-white whitespace-nowrap shadow-sm";
+        } else {
+          btn.className = "tab-btn px-4 py-2 rounded-full bg-white text-[#666] border border-[#EBEBEB] hover:border-[#82DC28] whitespace-nowrap";
+        }
+      });
+
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

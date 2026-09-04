@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup 2: Olive Young Style K-Beauty & Tax Refund Curation</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: -0.025em; }
+    .olive-badge { transform: rotate(-13deg); }
+    .bg-olive-green { background-color: #82DC28; }
+    .text-olive-green { color: #82DC28; }
+    .bg-coral-orange { background-color: #FF7878; }
+    .text-coral-orange { color: #FF7878; }
+    .border-olive-green { border-color: #82DC28; }
+  </style>
+</head>
+<body class="bg-[#FAFAFA] text-[#131518] antialiased">
+  <!-- Olive Young App Header Shell -->
+  <header class="bg-white border-b border-[#F0F0F0] sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-1.5 text-base font-black tracking-tighter">
+        <span>OLIVE</span>
+        <span class="relative w-4 h-5 rounded-full bg-olive-green olive-badge inline-block">
+          <span class="absolute inset-[3px] rounded-full bg-white"></span>
+          <span class="absolute w-1.5 h-2 rounded-full bg-coral-orange left-1.5 top-1"></span>
+        </span>
+        <span>YOUNG</span>
+        <span class="ml-2 text-xs font-bold text-[#557C1F] bg-[#F2FBDD] px-2 py-0.5 rounded-full">K-BEAUTY DISCOVERY</span>
+      </div>
+      <div class="flex items-center gap-3 text-xs font-bold">
+        <span class="flex items-center gap-1 text-[#4F9414] bg-[#F4FCE9] px-2.5 py-1 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#82DC28]"></span>
+          여권 지참 시 즉시 7% 차감
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6 space-y-8">
+    
+    <!-- Hero Banner with 13° Signature Motif -->
+    <section class="relative rounded-3xl bg-[#F2FBDD] p-6 md:p-8 overflow-hidden shadow-sm">
+      <!-- Background Ellipses -->
+      <div class="absolute w-48 h-64 rounded-full bg-olive-green right-6 -top-12 olive-badge opacity-90"></div>
+      <div class="absolute w-28 h-40 rounded-full bg-coral-orange -right-4 -top-8 olive-badge opacity-80"></div>
+      
+      <div class="relative z-10 max-w-md space-y-3">
+        <div class="inline-flex items-center gap-1.5 text-xs font-black text-[#557C1F] uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-coral-orange"></span>
+          REAL KOREA × OLIVE YOUNG GUIDE
+        </div>
+        <h1 class="text-2xl md:text-3xl font-black leading-tight text-[#131518]">
+          올리브영 결제 즉시 텍스리펀!<br>
+          <span class="text-[#4F9414]">15,000원 이상</span> 공항 대기 없이 자동 차감
+        </h1>
+        <p class="text-sm text-[#596050] font-medium leading-relaxed">
+          2026년 기준 즉시환급 최저 결제 기준이 15,000원으로 인하되었습니다. 계산대에서 여권(Passport)만 제시하면 부가세가 현장 차감 결제됩니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactive Instant Tax Refund Calculator Card -->
+    <section class="bg-white rounded-2xl p-6 border border-[#EBEBEB] shadow-sm space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#F5F5F5] pb-4">
+        <div>
+          <h2 class="text-lg font-black text-[#131518] flex items-center gap-2">
+            <span>⚡ 즉시환급 현장 차감 계산기</span>
+            <span class="text-xs font-bold text-coral-orange bg-[#FFF1F1] px-2 py-0.5 rounded-full">실시간 자동 계산</span>
+          </h2>
+          <p class="text-xs text-[#777] mt-0.5">매장에서 결제할 총 금액을 입력하면 여권 제시 시 지불할 실제 금액을 계산합니다.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <!-- Input Area -->
+        <div class="md:col-span-6 space-y-3">
+          <label class="block text-xs font-bold text-[#666]">결제 예정 장바구니 금액 (KRW)</label>
+          <div class="relative flex items-center">
+            <span class="absolute left-3.5 text-sm font-bold text-[#999]">₩</span>
+            <input id="krwInput" type="number" value="48000" step="1000" min="15000" max="500000" class="w-full bg-[#F7F7F7] border border-transparent focus:border-olive-green focus:bg-white focus:outline-none rounded-xl py-3 pl-8 pr-4 text-base font-black text-[#131518] transition-all">
+          </div>
+          <!-- Preset Buttons -->
+          <div class="flex gap-2 text-xs">
+            <button onclick="setAmount(30000)" class="px-2.5 py-1 rounded-lg bg-[#F5F5F5] hover:bg-[#EBEBEB] font-bold text-[#555]">₩30,000</button>
+            <button onclick="setAmount(50000)" class="px-2.5 py-1 rounded-lg bg-[#F5F5F5] hover:bg-[#EBEBEB] font-bold text-[#555]">₩50,000</button>
+            <button onclick="setAmount(100000)" class="px-2.5 py-1 rounded-lg bg-[#F5F5F5] hover:bg-[#EBEBEB] font-bold text-[#555]">₩100,000</button>
+          </div>
+        </div>
+
+        <!-- Live Calculation Result Card -->
+        <div class="md:col-span-6 rounded-xl bg-[#F4FCE9] p-5 border border-[#CBF294] space-y-3">
+          <div class="flex justify-between items-center text-xs font-bold text-[#4F9414]">
+            <span>즉시 할인 혜택</span>
+            <span class="bg-white px-2 py-0.5 rounded-full text-coral-orange font-black">현장 차감 100%</span>
+          </div>
+          <div class="flex justify-between items-baseline">
+            <span class="text-sm font-bold text-[#315B17]">최종 현장 결제액:</span>
+            <span id="finalPrice" class="text-2xl font-black text-[#17300B]">₩44,640</span>
+          </div>
+          <div class="flex justify-between text-xs text-[#557C1F] border-t border-[#ADEB5B]/40 pt-2 font-medium">
+            <span>차감된 텍스리펀 환급액:</span>
+            <span id="refundAmount" class="font-bold text-coral-orange">-₩3,360 (약 7%)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Olive Young Best Picks Curation (Product Grid) -->
+    <section class="space-y-4">
+      <div class="flex items-baseline justify-between">
+        <div>
+          <h2 class="text-xl font-black text-[#131518]">외국인 필수 구매 올영픽 BEST 3</h2>
+          <p class="text-xs text-[#777] mt-0.5">현지 에디터가 올리브영 명동·홍대 플래그십에서 실시간 검증한 스테디셀러</p>
+        </div>
+        <span class="text-xs font-bold text-[#4F9414] hover:underline cursor-pointer">전체보기 ›</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        
+        <!-- Product 1 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#EBEBEB] hover:shadow-md transition-all group">
+          <div class="aspect-[1/0.88] bg-[#F5F5F5] rounded-xl relative flex items-center justify-center overflow-hidden mb-3">
+            <span class="absolute left-2.5 top-2.5 bg-coral-orange text-white text-[10px] font-black px-2 py-0.5 rounded-full z-10">1+1 기획</span>
+            <div class="w-16 h-24 bg-white border border-[#DDD] rounded-lg shadow-sm flex flex-col items-center justify-center p-2 group-hover:scale-105 transition-transform">
+              <span class="w-8 h-2 bg-olive-green rounded-sm mb-2"></span>
+              <span class="text-[9px] font-black text-center text-[#333]">CERAMIDE<br>CREAM</span>
+            </div>
+          </div>
+          <div class="text-[11px] font-bold text-[#888]">바이오힐보</div>
+          <h3 class="text-sm font-bold text-[#131518] line-clamp-2 mt-0.5">프로바이오덤 3D 리프팅 크림 50ml 더블기획</h3>
+          <div class="mt-2 flex items-baseline gap-1.5">
+            <span class="text-base font-black text-coral-orange">32%</span>
+            <span class="text-base font-black text-[#131518]">₩29,800</span>
+            <span class="text-xs text-[#AAA] line-through">₩43,900</span>
+          </div>
+          <div class="mt-2 flex items-center gap-1 text-[11px] text-[#777]">
+            <span class="text-amber-400">★</span>
+            <span class="font-bold text-[#131518]">4.9</span>
+            <span>(24,190)</span>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#EBEBEB] hover:shadow-md transition-all group">
+          <div class="aspect-[1/0.88] bg-[#FFF0EF] rounded-xl relative flex items-center justify-center overflow-hidden mb-3">
+            <span class="absolute left-2.5 top-2.5 bg-olive-green text-[#17300B] text-[10px] font-black px-2 py-0.5 rounded-full z-10">올영 단독</span>
+            <div class="w-12 h-24 bg-coral-orange rounded-lg shadow-sm flex flex-col items-center justify-center p-2 group-hover:scale-105 transition-transform">
+              <span class="text-[8px] font-black text-center text-white">DEWY<br>TINT</span>
+            </div>
+          </div>
+          <div class="text-[11px] font-bold text-[#888]">웨이크메이크</div>
+          <h3 class="text-sm font-bold text-[#131518] line-clamp-2 mt-0.5">워터 블러링 픽싱 틴트 (K-퍼스널컬러 베스트셀러)</h3>
+          <div class="mt-2 flex items-baseline gap-1.5">
+            <span class="text-base font-black text-coral-orange">25%</span>
+            <span class="text-base font-black text-[#131518]">₩12,000</span>
+            <span class="text-xs text-[#AAA] line-through">₩16,000</span>
+          </div>
+          <div class="mt-2 flex items-center gap-1 text-[11px] text-[#777]">
+            <span class="text-amber-400">★</span>
+            <span class="font-bold text-[#131518]">4.8</span>
+            <span>(15,820)</span>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-white rounded-2xl p-4 border border-[#EBEBEB] hover:shadow-md transition-all group">
+          <div class="aspect-[1/0.88] bg-[#F4FCE9] rounded-xl relative flex items-center justify-center overflow-hidden mb-3">
+            <span class="absolute left-2.5 top-2.5 bg-[#131518] text-white text-[10px] font-black px-2 py-0.5 rounded-full z-10">오늘드림</span>
+            <div class="w-20 h-20 bg-white border border-[#CBF294] rounded-full shadow-sm flex flex-col items-center justify-center p-2 group-hover:scale-105 transition-transform">
+              <span class="text-[9px] font-black text-center text-[#4F9414]">TEA TREE<br>PAD</span>
+            </div>
+          </div>
+          <div class="text-[11px] font-bold text-[#888]">메디힐</div>
+          <h3 class="text-sm font-bold text-[#131518] line-clamp-2 mt-0.5">티트리 트러블 패드 100매 더블 기획세트</h3>
+          <div class="mt-2 flex items-baseline gap-1.5">
+            <span class="text-base font-black text-coral-orange">30%</span>
+            <span class="text-base font-black text-[#131518]">₩19,900</span>
+            <span class="text-xs text-[#AAA] line-through">₩28,500</span>
+          </div>
+          <div class="mt-2 flex items-center gap-1 text-[11px] text-[#777]">
+            <span class="text-amber-400">★</span>
+            <span class="font-bold text-[#131518]">4.9</span>
+            <span>(41,200)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const krwInput = document.getElementById('krwInput');
+    const finalPrice = document.getElementById('finalPrice');
+    const refundAmount = document.getElementById('refundAmount');
+
+    function calculateRefund() {
+      const val = parseInt(krwInput.value) || 0;
+      if (val < 15000) {
+        finalPrice.textContent = `₩${val.toLocaleString()}`;
+        refundAmount.textContent = `최소 ₩15,000원 이상 결제 시 환급 적용`;
+        return;
+      }
+      // Standard Korea Immediate Tax Refund approximation: ~7%
+      const refund = Math.floor(val * 0.07);
+      const discounted = val - refund;
+      finalPrice.textContent = `₩${discounted.toLocaleString()}`;
+      refundAmount.textContent = `-₩${refund.toLocaleString()} (약 7% 즉시 차감)`;
+    }
+
+    function setAmount(amt) {
+      krwInput.value = amt;
+      calculateRefund();
+    }
+
+    krwInput.addEventListener('input', calculateRefund);
+    calculateRefund();
+  </script>
+</body>
+</html>
