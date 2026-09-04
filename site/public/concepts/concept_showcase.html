@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Korea: Olive Young Style 5-Concept UI Showcase</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.025em; }
+    .olive-badge { transform: rotate(-13deg); }
+  </style>
+</head>
+<body class="bg-[#111315] text-neutral-100 min-h-screen flex flex-col antialiased">
+  
+  <!-- Global Top Bar -->
+  <header class="bg-[#1A1D20] border-b border-[#2A2E33] px-6 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4 sticky top-0 z-50">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-xl bg-[#82DC28] flex items-center justify-center text-[#17300B] font-black text-xs shadow-md">
+        RK
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="font-black text-sm text-white">REAL KOREA DESIGN LAB</span>
+          <span class="text-[11px] px-2 py-0.5 rounded-full bg-[#82DC28] text-[#17300B] font-black">
+            MOCKUP #4 접목 5종
+          </span>
+        </div>
+        <div class="text-xs text-[#999]">올리브영 생기·건강 컬러(#82DC28 & #FF7878) 전면 적용 5대 화면</div>
+      </div>
+    </div>
+
+    <!-- 5 Concept Switcher Tabs -->
+    <div class="flex items-center gap-1.5 bg-[#111315] p-1 rounded-xl border border-[#2A2E33] overflow-x-auto max-w-full">
+      <button onclick="loadConcept(1)" id="tab-1" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-black bg-[#82DC28] text-[#17300B] shadow-sm transition-all">
+        #1 메인 홈
+      </button>
+      <button onclick="loadConcept(2)" id="tab-2" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-[#AAA] hover:text-white transition-all">
+        #2 가이드 허브
+      </button>
+      <button onclick="loadConcept(3)" id="tab-3" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-[#AAA] hover:text-white transition-all">
+        #3 팁 상세 본문
+      </button>
+      <button onclick="loadConcept(4)" id="tab-4" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-[#AAA] hover:text-white transition-all">
+        #4 동네 & 맛집
+      </button>
+      <button onclick="loadConcept(5)" id="tab-5" class="tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-[#AAA] hover:text-white transition-all">
+        #5 유틸리티 & FAQ
+      </button>
+    </div>
+
+    <!-- Viewport Mode Toggle -->
+    <div class="flex items-center gap-2 text-xs">
+      <button onclick="setViewport('desktop')" id="vp-desktop" class="px-2.5 py-1.5 rounded-lg bg-[#2A2E33] text-white font-bold border border-[#3A4047]">Desktop</button>
+      <button onclick="setViewport('mobile')" id="vp-mobile" class="px-2.5 py-1.5 rounded-lg bg-[#111315] text-[#AAA] font-bold border border-[#2A2E33] hover:text-white">Mobile (390px)</button>
+      <a id="externalLink" href="concept_1_vibrant_home.html" target="_blank" class="px-2.5 py-1.5 rounded-lg bg-[#2A2E33] hover:bg-[#33383F] text-white flex items-center gap-1 font-bold">
+        <span>새 탭으로 열기</span>
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Explanatory Context Strip -->
+  <div class="bg-[#14171A] border-b border-[#22262B] px-6 py-2.5 text-xs text-[#AAA] flex items-center justify-between">
+    <div id="conceptDescription" class="flex items-center gap-2">
+      <strong class="text-white font-bold">[컨셉 1: 메인 홈]</strong>
+      <span>활기찬 도시 탐험가 — 13° 올리브 타원 히어로 + 가로 스크롤 동네 칩 + 3열 필수 팁 카드</span>
+    </div>
+    <div class="text-[11px] text-[#777] hidden md:block font-mono">
+      INTERACTIVE PREVIEW
+    </div>
+  </div>
+
+  <!-- Main Canvas Frame -->
+  <main class="flex-1 flex justify-center items-start bg-[#0D0F11] p-4 md:p-8 overflow-hidden">
+    <div id="frameWrapper" class="w-full h-[82vh] max-w-6xl transition-all duration-300 rounded-2xl overflow-hidden border border-[#2A2E33] shadow-2xl bg-[#FAFAFA]">
+      <iframe id="conceptFrame" src="concept_1_vibrant_home.html" class="w-full h-full border-0"></iframe>
+    </div>
+  </main>
+
+  <script>
+    const concepts = {
+      1: {
+        file: 'concept_1_vibrant_home.html',
+        desc: '<strong class="text-white font-bold">[컨셉 1: 메인 홈 (Home)]</strong> 활기찬 도시 탐험가: 13° 올리브 타원 히어로 배너 + 가로 스크롤 동네 칩 + 3열 필수 팁 카드 그리드'
+      },
+      2: {
+        file: 'concept_2_editorial_guides.html',
+        desc: '<strong class="text-white font-bold">[컨셉 2: 가이드 허브 (Guides Hub)]</strong> 매거진 다이제스트: 4대 핵심 가이드(첫 24시간, 지하철, 결제, 심야) 챕터 카드 & 필수 체크리스트'
+      },
+      3: {
+        file: 'concept_3_field_manual_article.html',
+        desc: '<strong class="text-white font-bold">[컨셉 3: 팁 상세 본문 (Article Detail)]</strong> 실전 액션 매뉴얼: 검증 배지 + B7 엘리베이터 경고 박스 + 층별 단면도 + 한국어 1클릭 복사 스크립트'
+      },
+      4: {
+        file: 'concept_4_local_places.html',
+        desc: '<strong class="text-white font-bold">[컨셉 4: 동네 & 맛집 (Places)]</strong> 스트리트 워크: 성수동 카페거리/맛집 큐레이션 + 네이버지도 길찾기 연동 + 24시간 맛집 배지'
+      },
+      5: {
+        file: 'concept_5_utility_lounge.html',
+        desc: '<strong class="text-white font-bold">[컨셉 5: 유틸리티 & FAQ (Lounge)]</strong> 포켓 여행 도우미: 24h 긴급 직통전화(1330/112/119) + 씬 콘텐츠 방어용 접이식 FAQ 아코디언'
+      }
+    };
+
+    let currentConcept = 1;
+    const iframe = document.getElementById('conceptFrame');
+    const desc = document.getElementById('conceptDescription');
+    const extLink = document.getElementById('externalLink');
+    const frameWrapper = document.getElementById('frameWrapper');
+
+    function loadConcept(id) {
+      currentConcept = id;
+      document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+        if (idx + 1 === id) {
+          btn.className = "tab-btn px-3 py-1.5 rounded-lg text-xs font-black bg-[#82DC28] text-[#17300B] shadow-sm transition-all";
+        } else {
+          btn.className = "tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-[#AAA] hover:text-white transition-all";
+        }
+      });
+      iframe.src = concepts[id].file;
+      desc.innerHTML = concepts[id].desc;
+      extLink.href = concepts[id].file;
+    }
+
+    function setViewport(mode) {
+      const btnDesk = document.getElementById('vp-desktop');
+      const btnMob = document.getElementById('vp-mobile');
+
+      if (mode === 'mobile') {
+        frameWrapper.style.maxWidth = '390px';
+        frameWrapper.style.height = '844px';
+        btnMob.className = "px-2.5 py-1.5 rounded-lg bg-[#2A2E33] text-white font-bold border border-[#3A4047]";
+        btnDesk.className = "px-2.5 py-1.5 rounded-lg bg-[#111315] text-[#AAA] font-bold border border-[#2A2E33] hover:text-white";
+      } else {
+        frameWrapper.style.maxWidth = '1152px';
+        frameWrapper.style.height = '82vh';
+        btnDesk.className = "px-2.5 py-1.5 rounded-lg bg-[#2A2E33] text-white font-bold border border-[#3A4047]";
+        btnMob.className = "px-2.5 py-1.5 rounded-lg bg-[#111315] text-[#AAA] font-bold border border-[#2A2E33] hover:text-white";
+      }
+    }
+  </script>
+</body>
+</html>
