@@ -1,0 +1,29 @@
+# apphosting.yaml
+runConfig:
+  cpu: 1
+  memoryMiB: 512
+  minInstances: 0
+  maxInstances: 10
+  concurrency: 80
+
+env:
+  - variable: NEXT_PUBLIC_SITE_URL
+    value: "https://realkorea-travel-13da4.web.app"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_SANITY_PROJECT_ID
+    value: "qc22xrrg"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_SANITY_DATASET
+    value: "production"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: ADMIN_SECRET
+    value: "realkorea-admin-secret-key"
+    availability:
+      - BUILD
+      - RUNTIME
