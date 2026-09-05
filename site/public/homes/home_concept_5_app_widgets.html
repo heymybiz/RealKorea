@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Concept 5: App-Like Mobile-First Widget Hub</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.025em; }
+    .olive-badge { transform: rotate(-13deg); }
+    .bg-olive-green { background-color: #82DC28; }
+    .text-olive-green { color: #82DC28; }
+    .bg-coral-orange { background-color: #FF7878; }
+    .text-coral-orange { color: #FF7878; }
+  </style>
+</head>
+<body class="bg-[#F4F5F7] text-[#131518] antialiased pb-20">
+
+  <!-- Mobile App Header Shell -->
+  <header class="bg-white border-b border-[#EBEBEB] sticky top-0 z-40">
+    <div class="max-w-md mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="relative w-4 h-6 rounded-full bg-olive-green olive-badge inline-block shadow-xs">
+          <span class="absolute inset-[2.5px] rounded-full bg-white"></span>
+          <span class="absolute w-1 h-1.5 rounded-full bg-coral-orange left-1.5 top-1"></span>
+        </span>
+        <span class="text-base font-black tracking-tight text-[#131518]">REAL KOREA APP</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-olive-green animate-ping"></span>
+        <span class="text-xs font-bold text-[#4F9414]">Seoul Live</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-md mx-auto px-4 py-5 space-y-6">
+
+    <!-- Story Highlights Bar (Instagram / Olive Young App Style) -->
+    <div class="flex items-center gap-3.5 overflow-x-auto pb-1 scrollbar-none text-center text-[11px] font-bold">
+      <div class="flex flex-col items-center gap-1.5 cursor-pointer flex-shrink-0">
+        <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-[#82DC28] to-[#FF7878] shadow-xs">
+          <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-xl">
+            🚆
+          </div>
+        </div>
+        <span class="text-[#333] whitespace-nowrap">AREX B7</span>
+      </div>
+
+      <div class="flex flex-col items-center gap-1.5 cursor-pointer flex-shrink-0">
+        <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-[#82DC28] to-[#CBF294] shadow-xs">
+          <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-xl">
+            🛍️
+          </div>
+        </div>
+        <span class="text-[#333] whitespace-nowrap">Tax Refund</span>
+      </div>
+
+      <div class="flex flex-col items-center gap-1.5 cursor-pointer flex-shrink-0">
+        <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-[#FF7878] to-[#FFDADA] shadow-xs">
+          <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-xl">
+            💳
+          </div>
+        </div>
+        <span class="text-[#333] whitespace-nowrap">Climate Pass</span>
+      </div>
+
+      <div class="flex flex-col items-center gap-1.5 cursor-pointer flex-shrink-0">
+        <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-[#82DC28] to-[#131518] shadow-xs">
+          <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-xl">
+            🥩
+          </div>
+        </div>
+        <span class="text-[#333] whitespace-nowrap">Solo BBQ</span>
+      </div>
+
+      <div class="flex flex-col items-center gap-1.5 cursor-pointer flex-shrink-0">
+        <div class="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-[#131518] to-[#777] shadow-xs">
+          <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-xl">
+            🌙
+          </div>
+        </div>
+        <span class="text-[#333] whitespace-nowrap">N-Bus</span>
+      </div>
+    </div>
+
+    <!-- Live Widget Grid (2x2 App Style) -->
+    <div class="grid grid-cols-2 gap-3">
+      
+      <!-- Widget 1: Currency Converter -->
+      <div class="bg-white rounded-2xl p-4 border border-[#EBEBEB] space-y-2 shadow-xs">
+        <div class="flex justify-between items-center text-[11px] font-bold text-[#888]">
+          <span>USD / KRW</span>
+          <span class="text-[#4F9414] bg-[#F4FCE9] px-1.5 py-0.5 rounded">Live Rate</span>
+        </div>
+        <div class="text-xl font-black text-[#131518]">$1 = ₩1,414</div>
+        <div class="text-[11px] text-[#666]">$100 ≈ ₩141,400</div>
+      </div>
+
+      <!-- Widget 2: Subway Last Train -->
+      <div class="bg-white rounded-2xl p-4 border border-[#EBEBEB] space-y-2 shadow-xs">
+        <div class="flex justify-between items-center text-[11px] font-bold text-[#888]">
+          <span>AREX LAST TRAIN</span>
+          <span class="text-coral-orange bg-[#FFF1F1] px-1.5 py-0.5 rounded">T1 Gate</span>
+        </div>
+        <div class="text-xl font-black text-coral-orange">23:57 KST</div>
+        <div class="text-[11px] text-[#666]">All-Stop Commuter Train</div>
+      </div>
+
+      <!-- Widget 3: Weather & Air -->
+      <div class="bg-white rounded-2xl p-4 border border-[#EBEBEB] space-y-2 shadow-xs">
+        <div class="flex justify-between items-center text-[11px] font-bold text-[#888]">
+          <span>SEOUL (JONGNO)</span>
+          <span class="text-olive-green">Good Air</span>
+        </div>
+        <div class="text-xl font-black text-[#131518]">18.4°C ☀️</div>
+        <div class="text-[11px] text-[#666]">Light jacket in evening</div>
+      </div>
+
+      <!-- Widget 4: Instant SOS -->
+      <div class="bg-[#17300B] rounded-2xl p-4 text-white space-y-2 shadow-xs cursor-pointer hover:bg-[#204010] transition-colors">
+        <div class="flex justify-between items-center text-[11px] font-bold text-olive-green">
+          <span>TOURIST HOTLINE</span>
+          <span class="bg-[#82DC28] text-[#17300B] px-1.5 py-0.5 rounded font-black">24/7</span>
+        </div>
+        <div class="text-xl font-black">Dial 1330 📞</div>
+        <div class="text-[11px] text-neutral-300">Free English interpretation</div>
+      </div>
+
+    </div>
+
+    <!-- Quick Action Banner -->
+    <div class="rounded-2xl bg-[#F2FBDD] p-4 border border-[#CBF294] flex items-center justify-between">
+      <div class="space-y-0.5">
+        <div class="text-xs font-black text-[#17300B]">Heading to Olive Young?</div>
+        <div class="text-[11px] text-[#4F9414]">Bring passport for 7% instant VAT refund</div>
+      </div>
+      <button class="bg-olive-green text-[#17300B] font-black text-xs px-3 py-1.5 rounded-xl shadow-xs">
+        See Rules →
+      </button>
+    </div>
+
+    <!-- Infinite Quick Intel Feed -->
+    <section class="space-y-3">
+      <div class="flex justify-between items-center text-xs font-black">
+        <span class="text-[#131518]">POCKET INTEL FEED</span>
+        <span class="text-[#888]">17 Articles</span>
+      </div>
+
+      <div class="space-y-3">
+        
+        <!-- Feed Card 1 -->
+        <article class="bg-white rounded-2xl p-4 border border-[#EBEBEB] shadow-xs flex items-center justify-between gap-3 hover:border-olive-green transition-colors cursor-pointer">
+          <div class="space-y-1">
+            <div class="text-[10px] font-black text-[#4F9414]">TRANSIT CHECKPOINT</div>
+            <h3 class="text-sm font-black text-[#131518] leading-tight">AREX Express vs All-Stop: B7 Platform Trap</h3>
+            <p class="text-[11px] text-[#777] line-clamp-1">Why taking the express train costs 15m extra at Line 4.</p>
+          </div>
+          <span class="text-lg text-[#CCC]">›</span>
+        </article>
+
+        <!-- Feed Card 2 -->
+        <article class="bg-white rounded-2xl p-4 border border-[#EBEBEB] shadow-xs flex items-center justify-between gap-3 hover:border-olive-green transition-colors cursor-pointer">
+          <div class="space-y-1">
+            <div class="text-[10px] font-black text-coral-orange">PAYMENT CHECKPOINT</div>
+            <h3 class="text-sm font-black text-[#131518] leading-tight">Shinbundang Line Rejection at Gangnam</h3>
+            <p class="text-[11px] text-[#777] line-clamp-1">What to do when turnstile gate throws ERR 04.</p>
+          </div>
+          <span class="text-lg text-[#CCC]">›</span>
+        </article>
+
+        <!-- Feed Card 3 -->
+        <article class="bg-white rounded-2xl p-4 border border-[#EBEBEB] shadow-xs flex items-center justify-between gap-3 hover:border-olive-green transition-colors cursor-pointer">
+          <div class="space-y-1">
+            <div class="text-[10px] font-black text-[#131518]">FOOD & DINING</div>
+            <h3 class="text-sm font-black text-[#131518] leading-tight">Pojangmacha Cash & Menu Price Etiquette</h3>
+            <p class="text-[11px] text-[#777] line-clamp-1">How to avoid tourist surcharges on street skewers.</p>
+          </div>
+          <span class="text-lg text-[#CCC]">›</span>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Floating Navigation Bar (Mobile App Style) -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-[#EBEBEB] py-2.5 z-50">
+    <div class="max-w-md mx-auto px-6 flex justify-between items-center text-[10px] font-black text-[#888]">
+      <div class="flex flex-col items-center gap-1 text-[#4F9414]">
+        <span class="text-base">🏠</span>
+        <span>Home</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 hover:text-[#131518] cursor-pointer">
+        <span class="text-base">🗺️</span>
+        <span>Map</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 hover:text-[#131518] cursor-pointer">
+        <span class="text-base">📖</span>
+        <span>Guides</span>
+      </div>
+      <div class="flex flex-col items-center gap-1 hover:text-[#131518] cursor-pointer">
+        <span class="text-base">⚡</span>
+        <span>SOS 1330</span>
+      </div>
+    </div>
+  </nav>
+
+</body>
+</html>

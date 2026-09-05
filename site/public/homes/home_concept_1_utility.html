@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Concept 1: Smart Utility & Quick Navigator</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.025em; }
+    .olive-badge { transform: rotate(-13deg); }
+    .bg-olive-green { background-color: #82DC28; }
+    .text-olive-green { color: #82DC28; }
+    .bg-coral-orange { background-color: #FF7878; }
+    .text-coral-orange { color: #FF7878; }
+  </style>
+</head>
+<body class="bg-[#F8F9FA] text-[#131518] antialiased">
+
+  <!-- Top Live Utility Banner -->
+  <div class="bg-[#17300B] text-white px-4 py-2 text-xs font-bold">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-olive-green animate-pulse"></span>
+        <span class="text-olive-green">LIVE SEOUL PULSE:</span>
+        <span class="hidden sm:inline">AREX Last Train 23:57 KST · Subways Operating Normal</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] font-mono">
+        <span>USD/KRW: <strong class="text-olive-green">₩1,414</strong></span>
+        <span>SEOUL: <strong class="text-white">18°C ☀️</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="bg-white border-b border-[#EBEBEB] sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="relative w-5 h-7 rounded-full bg-olive-green olive-badge inline-block shadow-sm">
+          <span class="absolute inset-[3px] rounded-full bg-white"></span>
+          <span class="absolute w-1.5 h-2 rounded-full bg-coral-orange left-1.5 top-1"></span>
+        </span>
+        <span class="text-xl font-black tracking-tight text-[#131518]">REAL KOREA</span>
+        <span class="text-xs font-bold text-[#4F9414] bg-[#F2FBDD] px-2.5 py-0.5 rounded-full ml-1 hidden sm:inline">POCKET NAVIGATOR</span>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="relative w-48 sm:w-64">
+          <input type="text" placeholder="Search metro, tax, eSIM..." class="w-full bg-[#F5F5F5] border border-transparent focus:border-olive-green focus:bg-white rounded-full py-1.5 pl-8 pr-3 text-xs text-[#131518] focus:outline-none transition-all">
+          <svg class="w-3.5 h-3.5 text-[#888] absolute left-2.5 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="11" cy="11" r="8" stroke-width="2"/><path d="m21 21-4.35-4.35" stroke-width="2"/></svg>
+        </div>
+        <button class="bg-[#131518] hover:bg-[#333] text-white px-3.5 py-1.5 rounded-full text-xs font-bold transition-colors">
+          🚨 SOS 1330
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8 space-y-10">
+
+    <!-- Utility Hero: Immediate Action Search & Quick Cards -->
+    <section class="rounded-3xl bg-gradient-to-br from-[#F2FBDD] to-[#E9F8CC] p-6 md:p-10 border border-[#CBF294] shadow-sm space-y-6">
+      <div class="max-w-2xl space-y-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-xs font-black text-[#4F9414] shadow-xs">
+          <span>⚡ INSTANT FIELD ANSWERS</span>
+        </span>
+        <h1 class="text-2xl md:text-4xl font-black text-[#131518] leading-tight tracking-tight">
+          What do you need to solve right now?
+        </h1>
+        <p class="text-xs md:text-sm text-[#596050] font-medium">
+          Zero marketing fluff. Tap below for instant, verified boots-on-the-ground survival instructions.
+        </p>
+      </div>
+
+      <!-- 4 Instant Problem Solver Buttons -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        <button class="bg-white hover:bg-[#FAFDF6] hover:border-olive-green p-4 rounded-2xl border border-[#DCE8CE] text-left space-y-2 shadow-xs transition-all group">
+          <div class="w-10 h-10 rounded-xl bg-[#F2FBDD] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+            🚆
+          </div>
+          <div>
+            <div class="text-xs font-black text-[#131518] group-hover:text-[#4F9414] transition-colors">AREX Transfer Trap</div>
+            <div class="text-[11px] text-[#777] mt-0.5">Express vs All-Stop B7 guide</div>
+          </div>
+        </button>
+
+        <button class="bg-white hover:bg-[#FAFDF6] hover:border-olive-green p-4 rounded-2xl border border-[#DCE8CE] text-left space-y-2 shadow-xs transition-all group">
+          <div class="w-10 h-10 rounded-xl bg-[#FFF1F1] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+            💳
+          </div>
+          <div>
+            <div class="text-xs font-black text-[#131518] group-hover:text-coral-orange transition-colors">Climate Card Gates</div>
+            <div class="text-[11px] text-[#777] mt-0.5">Shinbundang & Red Bus rules</div>
+          </div>
+        </button>
+
+        <button class="bg-white hover:bg-[#FAFDF6] hover:border-olive-green p-4 rounded-2xl border border-[#DCE8CE] text-left space-y-2 shadow-xs transition-all group">
+          <div class="w-10 h-10 rounded-xl bg-[#F4FCE9] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+            🛍️
+          </div>
+          <div>
+            <div class="text-xs font-black text-[#131518] group-hover:text-[#4F9414] transition-colors">Instant Tax Refund</div>
+            <div class="text-[11px] text-[#777] mt-0.5">₩15,000 threshold discount</div>
+          </div>
+        </button>
+
+        <button class="bg-white hover:bg-[#FAFDF6] hover:border-olive-green p-4 rounded-2xl border border-[#DCE8CE] text-left space-y-2 shadow-xs transition-all group">
+          <div class="w-10 h-10 rounded-xl bg-[#F5F5F5] flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+            🌙
+          </div>
+          <div>
+            <div class="text-xs font-black text-[#131518] group-hover:text-[#131518] transition-colors">Late Night Subway</div>
+            <div class="text-[11px] text-[#777] mt-0.5">N-buses & 24h Saunas</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Quick Pocket Calculator: Transit & Currency -->
+    <section class="bg-white rounded-3xl p-6 border border-[#EBEBEB] shadow-sm space-y-6">
+      <div class="flex items-center justify-between border-b border-[#F5F5F5] pb-4">
+        <div>
+          <span class="text-[11px] font-black text-[#4F9414] bg-[#F4FCE9] px-2.5 py-0.5 rounded-full uppercase">POCKET CALCULATOR</span>
+          <h2 class="text-lg font-black text-[#131518] mt-1">Seoul Subway Single Fare vs Unlimited Pass</h2>
+        </div>
+        <div class="text-xs font-bold text-[#888]">Updated for 2026 ₩1,550 base fare</div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div class="space-y-2">
+          <label class="block text-xs font-bold text-[#666]">How many subway rides will you take today?</label>
+          <div class="flex items-center gap-3">
+            <input type="range" id="ridesRange" min="1" max="10" value="4" class="w-full accent-[#82DC28]">
+            <span id="ridesValue" class="text-lg font-black text-[#131518] w-12 text-center bg-[#F5F5F5] py-1 rounded-lg">4 rides</span>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-[#F4FCE9] border border-[#CBF294] text-center space-y-1">
+          <div class="text-xs font-bold text-[#4F9414]">T-Money Single Pay-as-you-go</div>
+          <div id="singleTotal" class="text-2xl font-black text-[#17300B]">₩6,200</div>
+          <div class="text-[11px] text-[#557C1F]">₩1,550 × 4 rides</div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-[#F2FBDD] border border-[#ADEB5B] text-center space-y-1">
+          <div class="text-xs font-bold text-[#557C1F]">Climate Card (1-Day Pass: ₩5,000)</div>
+          <div id="cardVerdict" class="text-2xl font-black text-[#4F9414]">Save ₩1,200! 🎉</div>
+          <div class="text-[11px] text-[#557C1F]">Climate Card is cheaper starting from 4 rides/day</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Ranked Field Verification Feed (Clean 3-Card Grid) -->
+    <section class="space-y-4">
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-lg font-black text-[#131518]">High Priority Ground Intel (17 Articles)</h2>
+        <a href="#" class="text-xs font-bold text-[#4F9414] hover:underline">View All Verified Guides ›</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <div class="bg-white rounded-2xl p-5 border border-[#EBEBEB] hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-[#4F9414] bg-[#F4FCE9] font-black px-2 py-0.5 rounded">TRANSIT</span>
+              <span class="text-[#888]">3 min read</span>
+            </div>
+            <h3 class="text-base font-black text-[#131518]">Naver Map vs Google Maps in Seoul</h3>
+            <p class="text-xs text-[#666] leading-relaxed">Why Google Maps cannot calculate walking directions in Korea due to national security map export laws, and how to set Naver Map to English.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-[#F5F5F5] flex justify-between items-center text-xs font-bold">
+            <span class="text-olive-green">Verified 2026</span>
+            <span class="text-[#131518]">Read Manual →</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 border border-[#EBEBEB] hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-coral-orange bg-[#FFF1F1] font-black px-2 py-0.5 rounded">PAYMENTS</span>
+              <span class="text-[#888]">4 min read</span>
+            </div>
+            <h3 class="text-base font-black text-[#131518]">Global ATM Pin Number Rules (4 vs 6 Digits)</h3>
+            <p class="text-xs text-[#666] leading-relaxed">Why Korean convenience store ATMs reject foreign cards when prompted for 6 digits, and the exact '00' trick to withdraw cash instantly.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-[#F5F5F5] flex justify-between items-center text-xs font-bold">
+            <span class="text-olive-green">Verified 2026</span>
+            <span class="text-[#131518]">Read Manual →</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 border border-[#EBEBEB] hover:shadow-md transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-[#131518] bg-[#F5F5F5] font-black px-2 py-0.5 rounded">FOOD & DINING</span>
+              <span class="text-[#888]">2 min read</span>
+            </div>
+            <h3 class="text-base font-black text-[#131518]">K-BBQ Solo Dining Minimum 2 Portions Rule</h3>
+            <p class="text-xs text-[#666] leading-relaxed">How to order pork belly or beef alone without getting turned away at traditional charcoal grill barbecue houses in Jongno.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-[#F5F5F5] flex justify-between items-center text-xs font-bold">
+            <span class="text-olive-green">Verified 2026</span>
+            <span class="text-[#131518]">Read Manual →</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-t border-[#EBEBEB] py-8 text-xs text-[#888] text-center">
+    <div>REAL KOREA · Concept 1: Smart Utility & Quick Navigator</div>
+  </footer>
+
+  <script>
+    const ridesRange = document.getElementById('ridesRange');
+    const ridesValue = document.getElementById('ridesValue');
+    const singleTotal = document.getElementById('singleTotal');
+    const cardVerdict = document.getElementById('cardVerdict');
+
+    ridesRange.addEventListener('input', (e) => {
+      const rides = parseInt(e.target.value);
+      ridesValue.textContent = `${rides} rides`;
+      const cost = rides * 1550;
+      singleTotal.textContent = `₩${cost.toLocaleString()}`;
+
+      if (cost > 5000) {
+        const diff = cost - 5000;
+        cardVerdict.textContent = `Save ₩${diff.toLocaleString()}! 🎉`;
+        cardVerdict.className = "text-2xl font-black text-[#4F9414]";
+      } else if (cost === 5000) {
+        cardVerdict.textContent = `Break-even (Equal)`;
+        cardVerdict.className = "text-2xl font-black text-[#555]";
+      } else {
+        const diff = 5000 - cost;
+        cardVerdict.textContent = `Pay-as-you-go saves ₩${diff.toLocaleString()}`;
+        cardVerdict.className = "text-xl font-black text-coral-orange";
+      }
+    });
+  </script>
+</body>
+</html>

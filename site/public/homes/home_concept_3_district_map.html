@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Concept 3: Interactive District Pulse</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.025em; }
+    .olive-badge { transform: rotate(-13deg); }
+    .bg-olive-green { background-color: #82DC28; }
+    .text-olive-green { color: #82DC28; }
+    .bg-coral-orange { background-color: #FF7878; }
+    .text-coral-orange { color: #FF7878; }
+  </style>
+</head>
+<body class="bg-[#F8F9FA] text-[#131518] antialiased">
+
+  <!-- Main Navigation -->
+  <header class="bg-white border-b border-[#EBEBEB] sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="relative w-5 h-7 rounded-full bg-olive-green olive-badge inline-block">
+          <span class="absolute inset-[3px] rounded-full bg-white"></span>
+          <span class="absolute w-1.5 h-2 rounded-full bg-coral-orange left-1.5 top-1"></span>
+        </span>
+        <span class="text-xl font-black tracking-tight text-[#131518]">REAL KOREA</span>
+        <span class="text-xs font-bold text-[#557C1F] bg-[#F2FBDD] px-2.5 py-0.5 rounded-full ml-1">DISTRICT PULSE</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs font-bold text-[#666]">
+        <span class="hidden sm:inline">Choose your destination district below:</span>
+        <button class="bg-[#131518] text-white px-3.5 py-1.5 rounded-full text-xs font-bold">
+          Seoul Metro Map 🗺️
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8 space-y-10">
+
+    <!-- Interactive District Selector Bar -->
+    <section class="space-y-4">
+      <div class="flex justify-between items-baseline">
+        <h1 class="text-xl md:text-2xl font-black text-[#131518] flex items-center gap-2">
+          <span>📍 Select A Seoul District to Decode:</span>
+        </h1>
+        <span class="text-xs font-bold text-[#4F9414]">Live Ground Intelligence</span>
+      </div>
+
+      <!-- District Tabs -->
+      <div class="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none text-xs font-black">
+        <button onclick="selectDistrict('seongsu')" id="tab-seongsu" class="district-tab px-4 py-2.5 rounded-2xl bg-[#131518] text-white whitespace-nowrap shadow-sm transition-all">
+          ☕ Seongsu-dong (Cafes & Pop-ups)
+        </button>
+        <button onclick="selectDistrict('myeongdong')" id="tab-myeongdong" class="district-tab px-4 py-2.5 rounded-2xl bg-white text-[#555] border border-[#EBEBEB] hover:border-olive-green whitespace-nowrap transition-all">
+          🛍️ Myeongdong (Tax Refund & Street Food)
+        </button>
+        <button onclick="selectDistrict('jongno')" id="tab-jongno" class="district-tab px-4 py-2.5 rounded-2xl bg-white text-[#555] border border-[#EBEBEB] hover:border-olive-green whitespace-nowrap transition-all">
+          🏮 Jongno & Ikseon (Heritage & Hanok)
+        </button>
+        <button onclick="selectDistrict('hongdae')" id="tab-hongdae" class="district-tab px-4 py-2.5 rounded-2xl bg-white text-[#555] border border-[#EBEBEB] hover:border-olive-green whitespace-nowrap transition-all">
+          🌙 Hongdae & Yeonnam (Youth & Night)
+        </button>
+      </div>
+    </section>
+
+    <!-- Dynamic District Feature Canvas -->
+    <section id="districtBanner" class="rounded-3xl bg-[#F2FBDD] p-6 md:p-10 border border-[#CBF294] relative overflow-hidden shadow-sm transition-all space-y-6">
+      <div class="absolute w-64 h-80 rounded-full bg-olive-green right-8 -top-16 olive-badge opacity-90"></div>
+      <div class="absolute w-36 h-48 rounded-full bg-coral-orange -right-4 -top-8 olive-badge opacity-80"></div>
+      
+      <div class="relative z-10 max-w-xl space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-xs font-black text-[#557C1F] shadow-xs">
+          <span id="badgeText">☕ TREND CAPITAL OF K-FASHION</span>
+        </div>
+        <h2 id="districtTitle" class="text-3xl md:text-4xl font-black text-[#131518] leading-tight">
+          Seongsu-dong: The Factory Alleyway Renaissance
+        </h2>
+        <p id="districtDesc" class="text-xs md:text-sm text-[#596050] font-medium leading-relaxed">
+          Former industrial shoe factories transformed into global flagship pop-ups and specialty roasteries. Use CatchTable waiting kiosks to avoid 90-minute lines.
+        </p>
+
+        <!-- District Key Metric -->
+        <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-bold">
+          <div class="bg-white/80 backdrop-blur px-3 py-1.5 rounded-xl text-[#315B17] border border-[#DCE8CE]">
+            🚇 Nearest Station: <strong id="transitText">Line 2 Seongsu Stn (성수역)</strong>
+          </div>
+          <div class="bg-white/80 backdrop-blur px-3 py-1.5 rounded-xl text-[#315B17] border border-[#DCE8CE]">
+            ⏰ Best Visiting Time: <strong id="timeText">13:00 ~ 19:00 KST</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Spots & Ground Rules Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Local Ground Rule Card -->
+      <div class="bg-white rounded-3xl p-6 border border-[#EBEBEB] flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 text-coral-orange font-black text-xs uppercase">
+            <span class="w-2 h-2 rounded-full bg-coral-orange"></span>
+            <span>DISTRICT GROUND RULE</span>
+          </div>
+          <h3 id="ruleTitle" class="text-lg font-black text-[#131518]">CatchTable Mobile Waiting Hack</h3>
+          <p id="ruleBody" class="text-xs text-[#666] leading-relaxed">
+            Most popular Seongsu bakeries (Onion, NuDake) have tablet kiosks at the entrance. Register with an international mobile number to receive WhatsApp / SMS queue status without standing in line.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-[#F5F5F5] text-xs font-black text-[#4F9414]">
+          Verified Ground Tip ✓
+        </div>
+      </div>
+
+      <!-- Spot 1 Card -->
+      <div class="bg-white rounded-3xl p-6 border border-[#EBEBEB] flex flex-col justify-between space-y-4 hover:shadow-lg transition-all">
+        <div class="space-y-3">
+          <div class="flex justify-between items-center text-xs font-bold text-[#888]">
+            <span id="spot1Tag" class="text-[#4F9414] bg-[#F4FCE9] px-2 py-0.5 rounded">24H LEGEND</span>
+            <span>₩11,000</span>
+          </div>
+          <h3 id="spot1Title" class="text-lg font-black text-[#131518]">Somunnan Gamjatang (소문난 성수 감자탕)</h3>
+          <p id="spot1Desc" class="text-xs text-[#666] leading-relaxed">
+            Rich, simmering pork backbone stew with perilla seeds. Open 24 hours, welcoming solo travelers even at 3:00 AM.
+          </p>
+        </div>
+        <button class="w-full py-2.5 rounded-xl bg-olive-green text-[#17300B] font-black text-xs hover:bg-[#72c522] transition-colors shadow-xs">
+          Open in Naver Map ↗
+        </button>
+      </div>
+
+      <!-- Spot 2 Card -->
+      <div class="bg-white rounded-3xl p-6 border border-[#EBEBEB] flex flex-col justify-between space-y-4 hover:shadow-lg transition-all">
+        <div class="space-y-3">
+          <div class="flex justify-between items-center text-xs font-bold text-[#888]">
+            <span id="spot2Tag" class="text-coral-orange bg-[#FFF1F1] px-2 py-0.5 rounded">ROOFTOP ROASTERY</span>
+            <span>₩6,000</span>
+          </div>
+          <h3 id="spot2Title" class="text-lg font-black text-[#131518]">Cafe Onion Seongsu (어니언)</h3>
+          <p id="spot2Desc" class="text-xs text-[#666] leading-relaxed">
+            Raw industrial concrete architecture, powdered sugar Pandoro pastries, and rooftop seating overlooking Seongsu alleyways.
+          </p>
+        </div>
+        <button class="w-full py-2.5 rounded-xl bg-olive-green text-[#17300B] font-black text-xs hover:bg-[#72c522] transition-colors shadow-xs">
+          Open in Naver Map ↗
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-t border-[#EBEBEB] py-8 text-xs text-[#888] text-center">
+    <div>REAL KOREA · Concept 3: Interactive District Pulse</div>
+  </footer>
+
+  <script>
+    const data = {
+      seongsu: {
+        badge: "☕ TREND CAPITAL OF K-FASHION",
+        title: "Seongsu-dong: The Factory Alleyway Renaissance",
+        desc: "Former industrial shoe factories transformed into global flagship pop-ups and specialty roasteries. Use CatchTable waiting kiosks to avoid 90-minute lines.",
+        transit: "Line 2 Seongsu Stn (성수역)",
+        time: "13:00 ~ 19:00 KST",
+        ruleTitle: "CatchTable Mobile Waiting Hack",
+        ruleBody: "Most popular Seongsu bakeries have tablet kiosks at the entrance. Register with an international mobile number to receive WhatsApp / SMS queue status without standing in line.",
+        spot1Tag: "24H LEGEND",
+        spot1Title: "Somunnan Gamjatang (소문난 성수 감자탕)",
+        spot1Desc: "Rich, simmering pork backbone stew with perilla seeds. Open 24 hours, welcoming solo travelers even at 3:00 AM.",
+        spot2Tag: "ROOFTOP ROASTERY",
+        spot2Title: "Cafe Onion Seongsu (어니언)",
+        spot2Desc: "Raw industrial concrete architecture, powdered sugar Pandoro pastries, and rooftop seating overlooking Seongsu alleyways."
+      },
+      myeongdong: {
+        badge: "🛍️ TAX REFUND & STREET FOOD HUB",
+        title: "Myeongdong: Cashless K-Beauty & Night Snacks",
+        desc: "The central duty-free haven where every Olive Young counter immediately deducts 7% VAT with your passport. Street carts start at 16:30 daily.",
+        transit: "Line 4 Myeongdong Stn (명동역)",
+        time: "16:00 ~ 22:30 KST",
+        ruleTitle: "Street Food Cash & T-Money Rules",
+        ruleBody: "95% of retail stores in Myeongdong are cashless, but street vendors require physical Korean cash or bank transfer. Carry ₩20,000 in small bills for food carts.",
+        spot1Tag: "IMMEDIATE REFUND",
+        spot1Title: "Olive Young Myeongdong Town Flagship",
+        spot1Desc: "Multi-story flagship with English speaking staff, instant passport tax refund at cashiers, and exclusive 1+1 K-beauty sets.",
+        spot2Tag: "MICHELIN BIB GOURMAND",
+        spot2Title: "Myeongdong Kyoja (명동교자 본점)",
+        spot2Desc: "Handmade knife-cut noodles (kalguksu) and garlic-infused pork dumplings. Fast-moving lines and prepayment at table."
+      },
+      jongno: {
+        badge: "🏮 HERITAGE & HANOK DISTRICT",
+        title: "Jongno & Ikseon-dong: Alleyways of Joseon Dynasty",
+        desc: "Preserved 1920s hanok alleys with modern tea cafes, quiet craft shops, and ancient royal palace walls.",
+        transit: "Line 1/3/5 Jongno 3-ga Stn",
+        time: "11:00 ~ 20:00 KST",
+        ruleTitle: "Bukchon Quiet Hours Curfew (17:00)",
+        ruleBody: "Bukchon Hanok Village has a strict tourist curfew starting at 17:00 to protect local residents. Violators face municipal fines of ₩100,000.",
+        spot1Tag: "HANOK TEA HOUSE",
+        spot1Title: "Cheong Su Dang (청수당 익선)",
+        spot1Desc: "Iconic bamboo garden lanterns and stone stepping water path. Famous for soufflé castella cakes baked to order.",
+        spot2Tag: "ROYAL PALACE SPOT",
+        spot2Title: "Gyeongbokgung Hanbok Rental Walk",
+        spot2Desc: "Rent a traditional Korean hanbok nearby to get 100% free admission into Gyeongbokgung and Changdeokgung palaces."
+      },
+      hongdae: {
+        badge: "🌙 YOUTH, INDIE MUSIC & NIGHT OWLS",
+        title: "Hongdae: Buskers, 24h Arcades & Night Feasts",
+        desc: "Korea's university cultural epicenter that never sleeps. Late-night samgyeopsal, vintage thrifting, and dawn street busking.",
+        transit: "AREX & Line 2 Hongik Univ Stn",
+        time: "18:00 ~ 04:00 KST",
+        ruleTitle: "Midnight N-Bus (Night Owl) Hub",
+        ruleBody: "Hongdae main intersection is the primary interchange for Seoul Night Buses (N26, N62). Use your T-money card for ₩2,500 night fare when subways stop.",
+        spot1Tag: "LOCAL PORK BBQ",
+        spot1Title: "Pork Belly Alley (홍대 삼겹살 골목)",
+        spot1Desc: "Thick-cut grilled samgyeopsal served with bubbling kimchi stew and cold dongchimi noodles until 5:00 AM.",
+        spot2Tag: "VINTAGE STREET",
+        spot2Title: "Yeonnam-dong Gyeongui Line Forest",
+        spot2Desc: "Linear park built on old railroad tracks with boutique bakeries, craft beer pubs, and outdoor picnic benches."
+      }
+    };
+
+    function selectDistrict(key) {
+      document.querySelectorAll('.district-tab').forEach(btn => {
+        btn.className = "district-tab px-4 py-2.5 rounded-2xl bg-white text-[#555] border border-[#EBEBEB] hover:border-olive-green whitespace-nowrap transition-all";
+      });
+      document.getElementById(`tab-${key}`).className = "district-tab px-4 py-2.5 rounded-2xl bg-[#131518] text-white whitespace-nowrap shadow-sm transition-all";
+
+      const d = data[key];
+      document.getElementById('badgeText').textContent = d.badge;
+      document.getElementById('districtTitle').textContent = d.title;
+      document.getElementById('districtDesc').textContent = d.desc;
+      document.getElementById('transitText').textContent = d.transit;
+      document.getElementById('timeText').textContent = d.time;
+      document.getElementById('ruleTitle').textContent = d.ruleTitle;
+      document.getElementById('ruleBody').textContent = d.ruleBody;
+      document.getElementById('spot1Tag').textContent = d.spot1Tag;
+      document.getElementById('spot1Title').textContent = d.spot1Title;
+      document.getElementById('spot1Desc').textContent = d.spot1Desc;
+      document.getElementById('spot2Tag').textContent = d.spot2Tag;
+      document.getElementById('spot2Title').textContent = d.spot2Title;
+      document.getElementById('spot2Desc').textContent = d.spot2Desc;
+    }
+  </script>
+</body>
+</html>

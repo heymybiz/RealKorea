@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Concept 2: Editorial Magazine & Stories</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.025em; }
+    .olive-badge { transform: rotate(-13deg); }
+    .bg-olive-green { background-color: #82DC28; }
+    .text-olive-green { color: #82DC28; }
+    .bg-coral-orange { background-color: #FF7878; }
+    .text-coral-orange { color: #FF7878; }
+  </style>
+</head>
+<body class="bg-[#FCFCFA] text-[#131518] antialiased">
+
+  <!-- Editorial Top Bar -->
+  <header class="bg-white border-b border-[#F0F0F0] sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 h-18 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="relative w-6 h-8 rounded-full bg-olive-green olive-badge inline-block shadow-sm">
+          <span class="absolute inset-[3.5px] rounded-full bg-white"></span>
+          <span class="absolute w-2 h-3 rounded-full bg-coral-orange left-2 top-1.5"></span>
+        </span>
+        <div>
+          <div class="text-xl font-black tracking-tighter text-[#131518] leading-none">REAL KOREA</div>
+          <div class="text-[10px] tracking-widest uppercase font-bold text-[#888] mt-0.5">THE LOCAL JOURNAL · ISSUE 2026</div>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-[#666]">
+        <a href="#" class="text-[#131518] font-black border-b-2 border-olive-green pb-1">Stories</a>
+        <a href="#" class="hover:text-[#131518] transition-colors">Field Manuals</a>
+        <a href="#" class="hover:text-[#131518] transition-colors">Curated Spots</a>
+        <a href="#" class="hover:text-[#131518] transition-colors">City Life</a>
+      </nav>
+
+      <div class="text-xs font-bold text-[#4F9414] bg-[#F2FBDD] px-3 py-1.5 rounded-full flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-olive-green"></span>
+        <span>Curated by Seoul Residents</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 md:px-6 py-10 space-y-16">
+
+    <!-- Big Cover Story (Hero Editorial) -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-b border-[#EBEBEB] pb-14">
+      <div class="lg:col-span-7 space-y-5">
+        <div class="flex items-center gap-2">
+          <span class="bg-[#17300B] text-olive-green px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">
+            COVER STORY · TRANSIT TRUTHS
+          </span>
+          <span class="text-xs text-[#888] font-bold">10 MIN IN-DEPTH</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-black text-[#131518] leading-[1.08] tracking-tight">
+          Why Taking the Fastest Train in Seoul Can Actually Make You Late.
+        </h1>
+        <p class="text-base md:text-lg text-[#555] leading-relaxed max-w-xl font-normal">
+          The 43-minute AREX Non-Stop Express looks irresistible on paper. But four underground escalator levels at Seoul Station tell a completely different story.
+        </p>
+        <div class="pt-2 flex items-center gap-4 text-xs font-bold">
+          <button class="bg-olive-green hover:bg-[#72c522] text-[#17300B] font-black px-6 py-3 rounded-2xl shadow-sm transition-all">
+            Read The Full Investigation →
+          </button>
+          <span class="text-[#888]">By Editorial Desk · Verified Mar 2026</span>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative">
+        <div class="rounded-3xl bg-[#F2FBDD] p-8 border border-[#CBF294] relative overflow-hidden shadow-lg space-y-6">
+          <div class="absolute w-60 h-80 rounded-full bg-olive-green right-6 -top-20 olive-badge opacity-90"></div>
+          <div class="absolute w-36 h-48 rounded-full bg-coral-orange -right-6 -top-10 olive-badge opacity-80"></div>
+          
+          <div class="relative z-10 space-y-4">
+            <span class="text-xs font-black text-coral-orange bg-white px-3 py-1 rounded-full shadow-xs">
+              CRITICAL FIELD STATISTIC
+            </span>
+            <div class="text-5xl md:text-6xl font-black text-[#17300B] tracking-tight">
+              -11<span class="text-3xl">m</span>
+            </div>
+            <p class="text-xs md:text-sm text-[#315B17] font-semibold leading-relaxed">
+              Travelers carrying 28-inch suitcases lose an average of 11 minutes queueing for Basement 7 elevators compared to the B3 All-Stop train platform.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editor's Curated Stories (3-Column Magazine Spread) -->
+    <section class="space-y-8">
+      <div class="flex justify-between items-end border-b border-[#EBEBEB] pb-4">
+        <div>
+          <span class="text-xs font-black text-[#4F9414] uppercase tracking-wider">ISSUE PICKS</span>
+          <h2 class="text-2xl md:text-3xl font-black text-[#131518] mt-1">This Week's Local Dispatches</h2>
+        </div>
+        <span class="text-xs font-bold text-[#888]">17 Articles in Archive</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Story 1 -->
+        <article class="space-y-3 group cursor-pointer">
+          <div class="aspect-[16/10] rounded-2xl bg-[#FFF0EF] border border-[#FFDADA] p-6 flex flex-col justify-between group-hover:shadow-md transition-all">
+            <span class="self-start text-[10px] font-black text-coral-orange bg-white px-2.5 py-0.5 rounded-full">FINANCE & CARDS</span>
+            <div class="text-4xl">💳💸</div>
+            <div class="text-xs font-black text-coral-orange">ZERO SPREAD FORMULA</div>
+          </div>
+          <div class="space-y-1.5">
+            <div class="text-[11px] font-bold text-[#888]">MONEY IN SEOUL · 5 MIN READ</div>
+            <h3 class="text-lg font-black text-[#131518] group-hover:text-[#4F9414] transition-colors leading-snug">
+              WOWPASS vs NAMANE: Which Foreign Card Actually Saves Cash?
+            </h3>
+            <p class="text-xs text-[#666] leading-relaxed line-clamp-2">
+              Kiosk foreign currency top-up fees, ATM withdrawal caps, and dual transit chip tricks explained.
+            </p>
+          </div>
+        </article>
+
+        <!-- Story 2 -->
+        <article class="space-y-3 group cursor-pointer">
+          <div class="aspect-[16/10] rounded-2xl bg-[#F2FBDD] border border-[#CBF294] p-6 flex flex-col justify-between group-hover:shadow-md transition-all">
+            <span class="self-start text-[10px] font-black text-[#4F9414] bg-white px-2.5 py-0.5 rounded-full">SHOPPING HACKS</span>
+            <div class="text-4xl">🛍️✨</div>
+            <div class="text-xs font-black text-[#4F9414]">15,000 KRW THRESHOLD</div>
+          </div>
+          <div class="space-y-1.5">
+            <div class="text-[11px] font-bold text-[#888]">K-BEAUTY DISCOVERY · 4 MIN READ</div>
+            <h3 class="text-lg font-black text-[#131518] group-hover:text-[#4F9414] transition-colors leading-snug">
+              Instant Tax Refund at Olive Young: Never Queue at the Airport
+            </h3>
+            <p class="text-xs text-[#666] leading-relaxed line-clamp-2">
+              Present your passport at checkout to get an immediate 7% deduction on beauty & skincare essentials.
+            </p>
+          </div>
+        </article>
+
+        <!-- Story 3 -->
+        <article class="space-y-3 group cursor-pointer">
+          <div class="aspect-[16/10] rounded-2xl bg-[#F5F5F5] border border-[#DDD] p-6 flex flex-col justify-between group-hover:shadow-md transition-all">
+            <span class="self-start text-[10px] font-black text-[#333] bg-white px-2.5 py-0.5 rounded-full">NIGHT LOGISTICS</span>
+            <div class="text-4xl">🌙♨️</div>
+            <div class="text-xs font-black text-[#555]">MIDNIGHT SURVIVAL</div>
+          </div>
+          <div class="space-y-1.5">
+            <div class="text-[11px] font-bold text-[#888]">AFTER HOURS · 6 MIN READ</div>
+            <h3 class="text-lg font-black text-[#131518] group-hover:text-[#4F9414] transition-colors leading-snug">
+              When Subways Close at Midnight: N-Bus & Jjimjilbang Guide
+            </h3>
+            <p class="text-xs text-[#666] leading-relaxed line-clamp-2">
+              How to navigate Seoul's late-night owl buses or spend the night comfortably in a 24-hour traditional sauna.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Editorial Quote Banner -->
+    <section class="rounded-3xl bg-[#17300B] p-8 md:p-12 text-white relative overflow-hidden space-y-4">
+      <div class="text-xs font-black tracking-widest text-olive-green uppercase">OUR EDITORIAL PROMISE</div>
+      <blockquote class="text-xl md:text-3xl font-black leading-snug max-w-2xl">
+        “We do not accept payments from tour operators or municipal tourism boards. If an elevator is broken, a card is rejected, or a restaurant is overpriced, we say so directly.”
+      </blockquote>
+      <div class="text-xs text-[#82DC28]/80 font-bold pt-2">
+        — Real Korea Editorial Board, Seoul Bureau
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-t border-[#EBEBEB] py-12 text-xs text-[#777]">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <span>REAL KOREA · Concept 2: Editorial Magazine & Stories</span>
+      <span>© 2026 RealKorea</span>
+    </div>
+  </footer>
+
+</body>
+</html>
