@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { PartnerNotice } from "@/components/site/affiliate-notice";
 import { COZYO_URL } from "@/lib/nav";
 import { AUTHOR } from "@/lib/site-config";
 import { formatMonthYear } from "@/lib/format";
@@ -104,6 +105,7 @@ export function CozyoBanner({ title = "Still deciding where to stay?" }: { title
         <span className="k">Kkami&apos;s pick for where to stay</span>
         <b>{title}</b>
         <small>Compare Seoul neighborhoods on our sister site, Cozyo.</small>
+        <PartnerNotice />
       </div>
       <a href={COZYO_URL} target="_blank" rel="noopener">
         Where to stay →

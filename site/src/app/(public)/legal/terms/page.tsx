@@ -1,60 +1,54 @@
-import { CONTACT_EMAIL } from "@/lib/site-config";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { LegalPage } from "@/components/site/legal-page";
+import { CONTACT_EMAIL, OPERATOR } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Terms and conditions of use for Real Korea travel intelligence publication.",
+  title: "Terms of Use & Disclaimer",
+  description: "The short rules for using RealKO, and why you should confirm fares and rules with official sources.",
   alternates: { canonical: "/legal/terms" },
 };
 
 export default function TermsPage() {
   return (
     <LegalPage
-      title="Terms of Service"
-      intro="Please review these Terms of Service before using Real Korea. By accessing our articles, guides, and tools, you agree to be bound by the following conditions."
+      title="Terms of Use & Disclaimer"
+      intro={`By using RealKO you agree to these short terms. RealKO is run by ${OPERATOR.name} in the Republic of Korea.`}
       sections={[
         {
-          heading: "1. Editorial Nature of Service",
+          heading: "1. Disclaimer: check official sources",
+          id: "disclaimer",
           paragraphs: [
-            "Real Korea operates as an independent digital travel publication providing informational, cultural, and logistical analysis of Seoul and South Korea.",
-            "All content is published for general educational and informational purposes only. We do not provide legal, financial, medical, immigration, or consular advisory services. You must verify visa and entry requirements with official government authorities.",
+            "RealKO is general travel information, not official or professional advice. Fares, card rules, opening hours, visa and entry rules change, sometimes without notice.",
+            "Before you rely on anything, check the official source we link (for example the operator, airport or government page). If our page and the official page disagree, the official page wins.",
+            "We are not responsible for losses caused by changed fares, schedules, closures or rules, or by third-party services you use.",
           ],
         },
         {
-          heading: "2. Accuracy and Time-Sensitivity of Ground Information",
+          heading: "2. Using the site",
           paragraphs: [
-            "While our editorial desk diligently cross-checks transit timetables, fare structures, and municipal ordinances against primary Korean government sources (.go.kr), real-world conditions (such as late-night taxi surcharges, subway maintenance closures, or merchant operating hours) may change without notice.",
-            "Each article features a 'Last Verified' date. Real Korea assumes no legal or financial liability for missed flights, transit fines, currency loss, or itinerary disruptions resulting from third-party operational adjustments.",
+            "You may read, share links to and print our pages for personal, non-commercial use. Do not copy whole articles, scrape the site in bulk, or present our content as your own.",
+            "Photos belong to their authors and are used under the licenses shown on our Image credits page.",
           ],
         },
         {
-          heading: "3. Intellectual Property Rights",
+          heading: "3. What you send us",
           paragraphs: [
-            "All original articles, editorial formatting, proprietary infographics, and code on Real Korea are the intellectual property of Real Korea and protected under the Copyright Act of the Republic of Korea and international copyright treaties.",
-            `You may not scrape, republish, redistribute, or commercially exploit full text articles without prior written authorization from ${CONTACT_EMAIL}. Brief citations with direct attribution and backlinks are permitted.`,
+            "If you post a question or comment, you confirm it is yours and lawful, and you allow us to edit it for length and publish it on RealKO. Do not post other people's personal information. We may remove anything at our discretion.",
           ],
         },
         {
-          heading: "4. User Submissions and Comments",
+          heading: "4. Links, partners and ads",
           paragraphs: [
-            "When you submit questions or comments via 'Ask a Local', you grant Real Korea a non-exclusive, royalty-free, perpetual license to publish, excerpt, and edit your submission for clarity and conciseness.",
-            "Submissions containing hate speech, harassment, commercial spam, defamation, or illegal solicitations will be removed immediately by moderators.",
+            <>Links to other sites, including our sister site Cozyo and any partner links, are provided for convenience; their own terms apply. See our <Link href="/legal/affiliates">Affiliate Disclosure</Link>.</>,
           ],
         },
         {
-          heading: "5. Disclaimer of Warranties and Limitation of Liability",
+          heading: "5. Law and contact",
           paragraphs: [
-            "The website and all content are provided on an 'as is' and 'as available' basis without warranties of any kind, whether express or implied. Real Korea disclaims all warranties, including but not limited to merchantability, fitness for a particular travel purpose, and non-infringement.",
-            "To the maximum extent permitted by applicable law, Real Korea and its editorial staff shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your access to or reliance upon our content.",
-          ],
-        },
-        {
-          heading: "6. Governing Law and Jurisdiction",
-          paragraphs: [
-            "These Terms shall be governed by and construed in accordance with the laws of the Republic of Korea, without regard to its conflict of law principles.",
-            "Any legal action or proceeding arising out of or related to these Terms or the website shall be instituted exclusively in the competent courts of Seoul, Republic of Korea.",
+            "These terms are governed by the laws of the Republic of Korea. Nothing here limits rights you have as a consumer under the law of your country.",
+            <>Questions or corrections: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</>,
           ],
         },
       ]}

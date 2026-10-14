@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { GuideArticle } from "@/components/site/guide-article";
 import { GuideJsonLd } from "@/components/site/json-ld";
+import { ArticleNotice } from "@/components/site/affiliate-notice";
 import {
   AdSlot,
   AuthorBox,
@@ -37,6 +38,7 @@ export default async function FirstTwentyFourHoursPage() {
       <Breadcrumb trail={[{ href: "/arrival", label: "Arrival" }, { label: "First 24 hours" }]} />
       <CheckedBadge checkedBy={guide.checkedBy} checkedAt={guide.checkedAt} />
       <AuthorBox />
+      <ArticleNotice />
       <GuideArticle guide={guide} />
       <AdSlot placement="article-mid" />
       <CozyoBanner title="Need a bed for the first night?" />

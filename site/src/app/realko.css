@@ -158,3 +158,27 @@
 .rk-hero-img { margin: 18px 0; }
 .rk-hero-img img { aspect-ratio: 16 / 9; object-fit: cover; background: #f1e7da; }
 .rk-body h2 { font-family: var(--font-body), sans-serif; font-weight: 900; }
+
+/* Legal pages, consent banner, notices (2026-10-14) */
+.rk-legal { max-width: 780px; }
+.rk-legal-k { font-family: var(--font-hand), cursive; color: var(--rk-acc); font-size: 18px; margin: 0; }
+.rk-legal-date { font-size: 13px; color: var(--rk-mute); }
+.rk-legal-sec, .rk-legal-h { margin-top: 32px; }
+.rk-legal-sec h2, .rk-legal-h { font-size: 22px; font-weight: 900; margin-bottom: 8px; }
+.rk-legal p, .rk-legal td { line-height: 1.7; }
+.rk-legal a, .rk-notice a, .rk-pnote a { color: var(--rk-ink); text-decoration: underline; text-underline-offset: 3px; }
+.rk-legal-av { display: inline-block; vertical-align: middle; border-radius: 50%; margin-right: 10px; }
+.rk-table-wrap { overflow-x: auto; margin: 12px 0 24px; }
+.rk-table { border-collapse: collapse; font-size: 13px; width: 100%; }
+.rk-table th, .rk-table td { border: 1px solid #ead9c4; padding: 6px 8px; text-align: left; vertical-align: top; word-break: break-word; }
+.rk-table th { background: #fff3dc; }
+.rk-notice { font-size: 13px; color: var(--rk-mute); background: #fff8ee; border: 1px dashed #ead9c4; border-radius: 14px; padding: 8px 12px; margin: 12px 0; }
+.rk-pnote { display: block; font-size: 12px; color: var(--rk-mute); margin-top: 4px; }
+.rk-consent { position: fixed; z-index: 60; left: 16px; right: 16px; bottom: 16px; max-width: 640px; margin: 0 auto; background: #fff; color: var(--rk-ink); border: 2px solid var(--rk-ink); border-radius: 20px; padding: 14px 18px; box-shadow: 0 8px 30px rgba(0,0,0,.15); display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 14px; }
+.rk-consent p { flex: 1 1 280px; margin: 0; }
+.rk-consent a { text-decoration: underline; }
+.rk-consent-btns { display: flex; gap: 8px; }
+.rk-consent button { border: 2px solid var(--rk-ink); background: #fff; color: var(--rk-ink); border-radius: 20px; padding: 7px 18px; font-weight: 800; cursor: pointer; }
+.rk-consent button.ok { background: var(--rk-ink); color: #fff; }
+.rk-linkbtn { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
+

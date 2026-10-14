@@ -10,7 +10,9 @@
     "typecheck": "tsc --noEmit",
     "audit": "node scripts/audit-articles.js",
     "sync:obsidian": "node scripts/sync-obsidian.js",
-    "export:obsidian": "node scripts/export-obsidian.js"
+    "export:obsidian": "node scripts/export-obsidian.js",
+    "credits": "node -e \"const f=require('fs');if(f.existsSync('../docs/image-credits.md'))f.copyFileSync('../docs/image-credits.md','content/image-credits.md')\"",
+    "prebuild": "npm run credits"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

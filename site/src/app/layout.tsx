@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Gaegu, Nunito } from "next/font/google";
 
+import { CookieConsent } from "@/components/site/cookie-consent";
+import { GA_MEASUREMENT_ID } from "@/lib/site-config";
 import { MotionProvider } from "@/components/motion-provider";
 import { SITE_NAME, SITE_PROMISE } from "@/lib/nav";
 import { siteUrl } from "@/lib/site-url";
@@ -39,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${body.variable} ${hand.variable} h-full`}>
       <body className="rk-body-root flex min-h-full flex-col">
         <MotionProvider>{children}</MotionProvider>
+        <CookieConsent gaId={GA_MEASUREMENT_ID} />
       </body>
     </html>
   );

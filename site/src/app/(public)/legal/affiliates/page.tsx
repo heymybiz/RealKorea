@@ -1,47 +1,39 @@
 import type { Metadata } from "next";
 
 import { LegalPage } from "@/components/site/legal-page";
+import { CONTACT_EMAIL, OPERATOR } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Affiliate disclosure",
-  description:
-    "How Real Korea makes money, where affiliate links appear, and what a Partner badge means.",
+  title: "Affiliate Disclosure",
+  description: "How RealKO may earn money from links, and how that is kept separate from what we recommend.",
   alternates: { canonical: "/legal/affiliates" },
 };
 
 export default function AffiliatesPage() {
   return (
     <LegalPage
-      title="Affiliate disclosure"
-      intro="Money is kept away from the editorial, and where it exists it is labelled."
+      title="Affiliate Disclosure"
+      intro="Some links on RealKO may earn us a commission or benefit a related business, at no extra cost to you. Here is exactly how that works."
       sections={[
         {
-          heading: "Where commercial links live",
+          heading: "1. What counts as a partner link",
           paragraphs: [
-            "Affiliate links appear in Shop and nowhere else. Every card there carries an Affiliate mark, and its outbound link is tagged so search engines treat it as sponsored.",
-            "Tips, guides, places, and questions carry no product cards. If the desk recommends something inside an article, there is no commission attached to it.",
+            "Affiliate links: if we link to a booking, eSIM, ticket or similar service and you buy through it, the seller may pay us a small commission. These links are marked rel=\"sponsored\".",
+            `Cozyo: our "where to stay" banners link to Cozyo, a sister site run by the same operator (${OPERATOR.name}). We may benefit if you use it.`,
+            "Ads: we do not show ads today. Ad spaces, if added later, will be labelled \"Advertisement\".",
           ],
         },
         {
-          heading: "What a Partner badge means",
+          heading: "2. How we keep it honest",
           paragraphs: [
-            "A place page shows a Partner badge when there is a commercial relationship with that venue. The badge is not optional and links back to this page.",
-            "A partner still gets the same fact stack as anywhere else, including whether the desk considers it a tourist trap. Paying does not buy a better verdict, and it never changes the order places are listed in.",
+            "Partners never pay for a recommendation, a ranking or a removed warning. If a free option is better (for example a public bus or a city card), we say so.",
+            "Every article that can contain partner links carries a short notice at the top, and partner banners carry a notice next to the link.",
+            "This disclosure follows the Korea Fair Trade Commission guidelines on endorsements and advertising and the US FTC Endorsement Guides.",
           ],
         },
         {
-          heading: "What we will not do",
-          paragraphs: [
-            "No display advertising on this site.",
-            "No paid placement dressed as editorial, and no sponsored content published without a label.",
-          ],
-        },
-        {
-          heading: "Still to be settled",
-          paragraphs: [
-            "The specific affiliate programmes and partners have not been signed, so this page names no networks yet.",
-            "The exact disclosure wording still needs review against Korean advertising rules and FTC-style requirements.",
-          ],
+          heading: "3. Questions",
+          paragraphs: [<>Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</>],
         },
       ]}
     />

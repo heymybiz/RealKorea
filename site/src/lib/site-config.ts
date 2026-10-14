@@ -1,14 +1,21 @@
 /**
  * One place for site-wide identity values.
- *
- * TODO(domain): the real domain and mailbox are not chosen yet. Both values
- * below are reserved `.example` placeholders (RFC 2606), so nothing points at
- * a domain we do not own. Replace them before the first deploy, or set
- * NEXT_PUBLIC_SITE_URL / NEXT_PUBLIC_CONTACT_EMAIL.
+ * The site runs on the Firebase default host until a custom domain is chosen.
  */
-export const SITE_URL_DEFAULT = "https://realkorea.example"; // TODO(domain)
-export const CONTACT_EMAIL =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "contact@realkorea.example"; // TODO(domain)
+export const SITE_URL_DEFAULT = "https://realkorea-travel-13da4.web.app";
+export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "heymybiz@gmail.com";
+
+/** The person legally responsible for the site (PIPA privacy officer / GDPR controller). */
+export const OPERATOR = {
+  name: "Woo Jae Hyun",
+  country: "Republic of Korea",
+  email: CONTACT_EMAIL,
+} as const;
+
+/** GA4 measurement ID. Empty means analytics never loads, even after consent. */
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID?.trim() || "";
+export const GA_RETENTION_MONTHS = 14;
+export const LEGAL_UPDATED = "2026-10-14";
 
 /**
  * The byline. Kkami is RealKO's personified author (a character, not a person).

@@ -24,6 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: absoluteUrl("/legal/privacy"), priority: 0.3 },
     { url: absoluteUrl("/legal/terms"), priority: 0.3 },
     { url: absoluteUrl("/legal/affiliates"), priority: 0.3 },
+    { url: absoluteUrl("/legal/image-credits"), priority: 0.2 },
   ];
 
   return [

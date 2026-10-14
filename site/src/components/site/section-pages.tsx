@@ -6,6 +6,7 @@ import { CommentSection } from "@/components/site/comment-section";
 import { GuideArticle } from "@/components/site/guide-article";
 import { GuideJsonLd, TipJsonLd } from "@/components/site/json-ld";
 import { Prose } from "@/components/site/prose";
+import { ArticleNotice } from "@/components/site/affiliate-notice";
 import {
   AdSlot,
   AuthorBox,
@@ -185,6 +186,7 @@ export async function ArticlePage({
         <Breadcrumb trail={[...trail, { label: guide.title }]} />
         <CheckedBadge checkedBy={guide.checkedBy} checkedAt={guide.checkedAt} />
         <AuthorBox />
+        <ArticleNotice />
         <GuideArticle guide={guide} />
         <AdSlot placement="article-mid" />
         <CozyoBanner />
@@ -208,6 +210,7 @@ export async function ArticlePage({
       {tip.dek ? <p className="rk-dek">{tip.dek}</p> : null}
       <CheckedBadge checkedBy={tip.checkedBy} checkedAt={tip.checkedAt} />
       <AuthorBox />
+        <ArticleNotice />
 
       {tip.image ? (
         <figure className="rk-hero-img">

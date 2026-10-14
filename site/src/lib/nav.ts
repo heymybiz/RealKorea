@@ -22,9 +22,12 @@ export const ARRIVE_NAV: readonly NavItem[] = [
 /** Footer: legal and compliance links for AdSense. */
 export const LEGAL_NAV: readonly NavItem[] = [
   { href: "/legal/privacy", label: "Privacy Policy" },
-  { href: "/legal/terms", label: "Terms of Service" },
-  { href: "/legal/affiliates", label: "Advertising & Affiliates" },
-  { href: "/contact", label: "Contact & Errata" },
+  { href: "/legal/terms", label: "Terms of Use" },
+  { href: "/legal/terms#disclaimer", label: "Disclaimer" },
+  { href: "/legal/affiliates", label: "Affiliate Disclosure" },
+  { href: "/legal/image-credits", label: "Image credits" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 export const SITE_NAME = "RealKO";
