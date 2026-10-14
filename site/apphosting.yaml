@@ -23,7 +23,6 @@ env:
       - BUILD
       - RUNTIME
   - variable: ADMIN_SECRET
-    value: "realkorea-admin-secret-key"
+    secret: ADMIN_SECRET
     availability:
-      - BUILD
       - RUNTIME
