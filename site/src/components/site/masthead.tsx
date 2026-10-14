@@ -1,34 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 
-import { CommandSearch } from "@/components/site/command-search";
-import { Wordmark } from "@/components/site/wordmark";
-import { MOBILE_UTILITY_NAV, PRIMARY_NAV } from "@/lib/nav";
-import { cn } from "@/lib/utils";
-
-function isActive(pathname: string, href: string) {
-  return pathname === href || pathname.startsWith(`${href}/`);
-}
+import { sectionForPath } from "@/lib/ia";
+import { PRIMARY_NAV } from "@/lib/nav";
 
 /**
- * PRD 02 §2 and FR-070.
- *
- * Fixed nav order, no language switcher, no avatar, no sign-in.
- * The search control is a real link to `/search` so it works without JS
- * (NFR-010); the command overlay is layered on in a later turn.
+ * Design D navbar: logo left, six sections centred with equal spacing,
+ * search and "Ask a local" right. Each section shows its own pastel underline
+ * on hover and keyboard focus; the current section keeps it.
  */
 export function Masthead() {
   const pathname = usePathname();
+  const active = sectionForPath(pathname);
   const [menuOpen, setMenuOpen] = useState(false);
   const [renderedPathname, setRenderedPathname] = useState(pathname);
 
-  // Close the drawer whenever the route changes, including back/forward
-  // navigation. Adjusting state during render is the pattern React recommends
-  // over an effect here.
   if (pathname !== renderedPathname) {
     setRenderedPathname(pathname);
     setMenuOpen(false);
@@ -36,104 +27,87 @@ export function Masthead() {
 
   useEffect(() => {
     if (!menuOpen) return;
-
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") setMenuOpen(false);
     }
-
     document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[var(--rule)] bg-[var(--paper)]/95 backdrop-blur-md">
-      <div className="h-1 w-full bg-[var(--lacquer)]" />
-      <div className="content-shell flex h-18 items-center justify-between gap-6">
-        <Wordmark />
+    <header className="rk-header-wrap">
+      <div className="rk-header">
+        <Link href="/" className="rk-logo" aria-label="RealKO home">
+          <Image src="/brand/kkami-avatar.webp" alt="" width={36} height={36} className="rk-kav" priority />
+          <span>
+            Real<b>KO</b>
+          </span>
+        </Link>
 
-        <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-2">
-            {PRIMARY_NAV.map((item) => {
-              const active = isActive(pathname, item.href);
-
-              return (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    aria-current={active ? "page" : undefined}
-                    className={cn(
-                      "nav-link",
-                      active && "text-[var(--lacquer)] after:scale-x-100",
-                    )}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+        <nav aria-label="Primary" className="rk-nav">
+          {PRIMARY_NAV.map((item) => (
+            <Link
+              key={item.id}
+              href={item.href}
+              data-sec={item.id}
+              style={{ "--c": item.color } as React.CSSProperties}
+              aria-current={active === item.id ? "page" : undefined}
+              className={active === item.id ? "on" : undefined}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
-        <div className="flex items-center gap-1">
-          <CommandSearch />
-
+        <div className="rk-hright">
+          <Link href="/search" className="rk-srch" aria-label="Search guides">
+            <Search className="size-4" aria-hidden="true" />
+            <span className="t">Search guides</span>
+          </Link>
+          <Link href="/ask" className="rk-ask">
+            <Image src="/brand/kkami-avatar.webp" alt="" width={24} height={24} />
+            Ask a local
+          </Link>
           <button
             type="button"
+            className="rk-burger"
             onClick={() => setMenuOpen((open) => !open)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
-            className="text-ink hover:text-crimson inline-flex size-10 items-center justify-center transition-colors duration-[180ms] ease-out lg:hidden"
           >
-            {menuOpen ? (
-              <X className="size-5" aria-hidden="true" />
-            ) : (
-              <Menu className="size-5" aria-hidden="true" />
-            )}
+            {menuOpen ? <X className="size-5" aria-hidden="true" /> : <Menu className="size-5" aria-hidden="true" />}
           </button>
         </div>
       </div>
 
-      {/* PRD 02 §2 — paper-sheet drawer: five items plus utilities. */}
       {menuOpen ? (
-        <div
-          id="mobile-menu"
-          className="border-rule bg-paper-warm border-t lg:hidden"
-        >
-          <nav aria-label="Mobile" className="content-shell py-4">
-            <ul className="divide-rule divide-y">
+        <div id="mobile-menu" className="rk-drawer">
+          <nav aria-label="Mobile">
+            <ul>
               {PRIMARY_NAV.map((item) => (
-                <li key={item.href}>
+                <li key={item.id}>
                   <Link
                     href={item.href}
-                    aria-current={
-                      isActive(pathname, item.href) ? "page" : undefined
-                    }
-                    className={cn(
-                      "font-display block py-3 text-lg",
-                      isActive(pathname, item.href)
-                        ? "text-crimson"
-                        : "text-ink",
-                    )}
+                    style={{ "--c": item.color } as React.CSSProperties}
+                    aria-current={active === item.id ? "page" : undefined}
+                    className={active === item.id ? "on" : undefined}
                   >
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
-
-            <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
-              {MOBILE_UTILITY_NAV.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-ink-soft hover:text-ink text-xs tracking-[0.12em] uppercase transition-colors duration-[180ms] ease-out"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="rk-drawer-cta">
+              <Link href="/search" className="rk-srch wide">
+                <Search className="size-4" aria-hidden="true" /> Search guides
+              </Link>
+              <Link href="/ask" className="rk-ask">Ask a local</Link>
+            </div>
           </nav>
         </div>
       ) : null}

@@ -1,13 +1,8 @@
 import type { MetadataRoute } from "next";
 
-import {
-  getGuides,
-  getNeighborhoods,
-  getPlaces,
-  getQuestions,
-  getTips,
-} from "@/lib/cms";
+import { getGuides, getNeighborhoods, getPlaces, getQuestions, getTips } from "@/lib/cms";
 import { isIndexableQuestion } from "@/lib/content/types";
+import { guideHref, HUBS, neighborhoodHref, placeHref, SECTIONS, tipHref } from "@/lib/ia";
 import { absoluteUrl } from "@/lib/site-url";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -21,64 +16,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticEntries: MetadataRoute.Sitemap = [
     { url: absoluteUrl("/"), priority: 1 },
-    { url: absoluteUrl("/ask"), priority: 0.9 },
-    { url: absoluteUrl("/tips"), priority: 0.8 },
-    { url: absoluteUrl("/guides"), priority: 0.85 },
-    { url: absoluteUrl("/eat"), priority: 0.8 },
-    { url: absoluteUrl("/places"), priority: 0.8 },
-    { url: absoluteUrl("/shop"), priority: 0.5 },
-    { url: absoluteUrl("/about"), priority: 0.6 },
-    { url: absoluteUrl("/contact"), priority: 0.6 },
+    ...SECTIONS.map((section) => ({ url: absoluteUrl(section.href), priority: 0.9 })),
+    ...Object.entries(HUBS).flatMap(([section, hubs]) =>
+      hubs.map((hub) => ({ url: absoluteUrl(`/${section}/${hub.id}`), priority: 0.8 })),
+    ),
+    { url: absoluteUrl("/contact"), priority: 0.5 },
     { url: absoluteUrl("/legal/privacy"), priority: 0.3 },
     { url: absoluteUrl("/legal/terms"), priority: 0.3 },
     { url: absoluteUrl("/legal/affiliates"), priority: 0.3 },
   ];
 
-  const tipEntries: MetadataRoute.Sitemap = tips
-    .filter((tip) => !tip.sample)
-    .map((tip) => ({
-      url: absoluteUrl(`/tips/${tip.slug}`),
-      lastModified: tip.updatedAt ?? tip.lastVerifiedAt ?? undefined,
-      priority: 0.7,
-    }));
-
-  const placeEntries: MetadataRoute.Sitemap = places
-    .filter((place) => !place.sample)
-    .map((place) => ({
-      url: absoluteUrl(`/places/p/${place.slug}`),
-      lastModified: place.updatedAt ?? undefined,
-      priority: 0.7,
-    }));
-
-  const neighborhoodEntries: MetadataRoute.Sitemap = neighborhoods
-    .filter((neighborhood) => !neighborhood.sample)
-    .map((neighborhood) => ({
-      url: absoluteUrl(`/places/${neighborhood.slug}`),
-      priority: 0.6,
-    }));
-
-  const questionEntries: MetadataRoute.Sitemap = questions
-    .filter((question) => isIndexableQuestion(question) && !question.sample)
-    .map((question) => ({
-      url: absoluteUrl(`/ask/${question.slug}`),
-      lastModified: question.answeredAt ?? question.updatedAt ?? undefined,
-      priority: 0.7,
-    }));
-
-  const guideEntries: MetadataRoute.Sitemap = guides
-    .filter((guide) => !guide.sample)
-    .map((guide) => ({
-      url: absoluteUrl(guide.isFirst24Alias ? "/first-24-hours" : `/guides/${guide.slug}`),
-      lastModified: guide.updatedAt ?? undefined,
-      priority: 0.8,
-    }));
-
   return [
     ...staticEntries,
-    ...tipEntries,
-    ...placeEntries,
-    ...neighborhoodEntries,
-    ...questionEntries,
-    ...guideEntries,
+    ...tips.filter((t) => !t.sample).map((t) => ({ url: absoluteUrl(tipHref(t.slug)), lastModified: t.updatedAt ?? t.lastVerifiedAt ?? undefined, priority: 0.7 })),
+    ...places.filter((p) => !p.sample).map((p) => ({ url: absoluteUrl(placeHref(p.slug)), lastModified: p.updatedAt ?? undefined, priority: 0.7 })),
+    ...neighborhoods.filter((n) => !n.sample).map((n) => ({ url: absoluteUrl(neighborhoodHref(n.slug)), priority: 0.6 })),
+    ...questions
+      .filter((q) => isIndexableQuestion(q) && !q.sample)
+      .map((q) => ({ url: absoluteUrl(`/ask/${q.slug}`), lastModified: q.answeredAt ?? q.updatedAt ?? undefined, priority: 0.7 })),
+    ...guides.filter((g) => !g.sample).map((g) => ({ url: absoluteUrl(guideHref(g.slug)), lastModified: g.updatedAt ?? undefined, priority: 0.8 })),
   ];
 }

@@ -50,6 +50,7 @@ import {
   TIPS_QUERY,
   TIP_BY_SLUG_QUERY,
 } from "@/sanity/lib/queries";
+import { placeHref, tipHref, guideHref } from "@/lib/ia";
 
 function isSanityConfigured(): boolean {
   const pid = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
@@ -593,7 +594,7 @@ export async function getSearchCorpus(): Promise<readonly SearchDocument[]> {
       type: "tip",
       id: tip.id,
       slug: tip.slug,
-      href: `/tips/${tip.slug}`,
+      href: tipHref(tip.slug),
       title: tip.title,
       dek: tip.dek,
       topicOrCategory: tip.topic,
@@ -607,7 +608,7 @@ export async function getSearchCorpus(): Promise<readonly SearchDocument[]> {
       type: "place",
       id: place.id,
       slug: place.slug,
-      href: `/places/p/${place.slug}`,
+      href: placeHref(place.slug),
       title: place.editorialTitle,
       dek: place.whyLocal ?? null,
       topicOrCategory: place.vertical,
@@ -635,7 +636,7 @@ export async function getSearchCorpus(): Promise<readonly SearchDocument[]> {
       type: "guide",
       id: guide.id,
       slug: guide.slug,
-      href: guide.isFirst24Alias ? "/first-24-hours" : `/guides/${guide.slug}`,
+      href: guideHref(guide.slug),
       title: guide.title,
       dek: guide.dek,
       topicOrCategory: "guide",

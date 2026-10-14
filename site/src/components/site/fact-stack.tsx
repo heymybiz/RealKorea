@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { formatMonthYear, toDateTimeAttribute } from "@/lib/format";
 import type { Place } from "@/lib/content/types";
+import { placeHref } from "@/lib/ia";
 
 const UNKNOWN = "Unknown";
 
@@ -101,7 +102,7 @@ export function FactStack({
             place.localAlternative.text
           ) : alternativePlace ? (
             <Link
-              href={`/places/p/${alternativePlace.slug}`}
+              href={placeHref(alternativePlace.slug)}
               className="text-ink hover:text-crimson underline underline-offset-4 transition-colors duration-[180ms] ease-out"
             >
               {alternativePlace.title}

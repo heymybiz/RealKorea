@@ -17,6 +17,7 @@ import {
 import { isIndexableQuestion } from "@/lib/content/types";
 import { formatFullDate, toDateTimeAttribute } from "@/lib/format";
 import { readErrorCode, TOPIC_LABEL } from "@/lib/validation";
+import { placeHref, tipHref, neighborhoodHref } from "@/lib/ia";
 
 /**
  * Question thread — PRD 02 §3.3.
@@ -90,7 +91,7 @@ export default async function QuestionPage({
 
         {neighborhood ? (
           <Link
-            href={`/places/${neighborhood.slug}`}
+            href={neighborhoodHref(neighborhood.slug)}
             className="hover:text-crimson tracking-[0.12em] uppercase transition-colors duration-[180ms] ease-out"
           >
             {neighborhood.nameEn}
@@ -140,7 +141,7 @@ export default async function QuestionPage({
           {tips.map((tip) => (
             <li key={tip.id}>
               <Link
-                href={`/tips/${tip.slug}`}
+                href={tipHref(tip.slug)}
                 className="text-ink hover:text-crimson text-[15px] underline underline-offset-4 transition-colors duration-[180ms] ease-out"
               >
                 {tip.title}
@@ -150,7 +151,7 @@ export default async function QuestionPage({
           {places.map((place) => (
             <li key={place.id}>
               <Link
-                href={`/places/p/${place.slug}`}
+                href={placeHref(place.slug)}
                 className="text-ink hover:text-crimson text-[15px] underline underline-offset-4 transition-colors duration-[180ms] ease-out"
               >
                 {place.editorialTitle}

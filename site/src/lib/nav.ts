@@ -1,49 +1,34 @@
 /**
- * Global navigation, PRD 02 §2 and FR-070.
- *
- * The order is fixed by the founder decision: Ask a Local → Tips →
- * Eat & Drink → Places → Shop. Do not reorder, extend, or add a language
- * switcher, an avatar, or a sign-in entry.
+ * Global navigation for design D (user-confirmed 2026-10-14).
+ * Six sections, in this order. The list itself lives in `ia-map.json`.
  */
+import { SECTIONS } from "@/lib/ia";
 
 export type NavItem = {
   readonly href: string;
   readonly label: string;
 };
 
-export const PRIMARY_NAV: readonly NavItem[] = [
-  { href: "/ask", label: "Ask a Local" },
-  { href: "/tips", label: "Tips" },
-  { href: "/eat", label: "Eat & Drink" },
-  { href: "/places", label: "Places" },
-  { href: "/shop", label: "Shop" },
-] as const;
+export const PRIMARY_NAV = SECTIONS;
 
-/** PRD 02 §2 — mobile drawer carries the five items plus these utilities. */
-export const MOBILE_UTILITY_NAV: readonly NavItem[] = [
-  { href: "/search", label: "Search" },
-  { href: "/first-24-hours", label: "First 24 hours" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-] as const;
-
-/** PRD 02 §2 — footer column 3. */
+/** Footer: help and trust links. */
 export const ARRIVE_NAV: readonly NavItem[] = [
-  { href: "/first-24-hours", label: "First 24 hours" },
-  { href: "/about#how-we-verify", label: "How we verify" },
-  { href: "/about", label: "About Us" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "/arrival/first-24-hours", label: "First 24 hours" },
+  { href: "/about#how-we-check", label: "How a local checks" },
+  { href: "/about", label: "Who is the local" },
+  { href: "/contact", label: "Contact & corrections" },
 ] as const;
 
-/** PRD 02 §2 — footer column 4. Legal and compliance links for AdSense. */
+/** Footer: legal and compliance links for AdSense. */
 export const LEGAL_NAV: readonly NavItem[] = [
   { href: "/legal/privacy", label: "Privacy Policy" },
   { href: "/legal/terms", label: "Terms of Service" },
-  { href: "/legal/affiliates", label: "Affiliate Disclosures" },
+  { href: "/legal/affiliates", label: "Advertising & Affiliates" },
   { href: "/contact", label: "Contact & Errata" },
 ] as const;
 
-export const SITE_NAME = "Real Korea";
-export const SITE_PROMISE = "Local answers. Not the brochure.";
+export const SITE_NAME = "RealKO";
+export const SITE_PROMISE = "Local answers, checked by a real local.";
 export const FOOTER_NOTE =
-  "Editors live in Seoul. Facts are verified; neighborhoods change.";
+  "Kkami is our guide voice. Every fact is checked in person by a real local, with the date shown.";
+export const COZYO_URL = "https://cozyo-seoul.web.app";

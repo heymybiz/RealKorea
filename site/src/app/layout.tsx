@@ -1,69 +1,43 @@
-import type { Metadata } from "next";
-import { Archivo, Playfair_Display, Source_Sans_3 } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Gaegu, Nunito } from "next/font/google";
 
 import { MotionProvider } from "@/components/motion-provider";
 import { SITE_NAME, SITE_PROMISE } from "@/lib/nav";
 import { siteUrl } from "@/lib/site-url";
 
 import "./globals.css";
+import "./realko.css";
+
+/** Design D: Nunito for reading, Gaegu (hand-written) for the logo and headings. */
+const body = Nunito({ variable: "--font-body", subsets: ["latin"], display: "swap", weight: ["400", "700", "900"] });
+const hand = Gaegu({ variable: "--font-hand", subsets: ["latin"], display: "swap", weight: ["700"] });
 
 /**
- * Editorial Serif display, geometric furniture, humanist sans body.
- */
-const display = Playfair_Display({
-  variable: "--font-display-serif",
-  subsets: ["latin"],
-  display: "swap",
-  style: ["normal", "italic"],
-});
-
-const furniture = Archivo({
-  variable: "--font-furniture",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const body = Source_Sans_3({
-  variable: "--font-body",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-/**
- * `metadataBase` is set only when `NEXT_PUBLIC_SITE_URL` exists. The domain is
- * still an open item (PRD 01 §11), and a guessed host is worse than none: it
+ * `metadataBase` is set only when `NEXT_PUBLIC_SITE_URL` exists. A guessed host
  * would bake a wrong absolute URL into every canonical and OG tag.
- *
- * Without it Next.js warns and falls back to `localhost:3000` for OG image URLs,
- * which is correct behaviour for a site that has no domain yet. Set the env var
- * before the first deploy so social previews resolve.
  */
 const base = siteUrl();
 
 export const metadata: Metadata = {
   ...(base ? { metadataBase: new URL(base) } : {}),
   title: {
-    default: `${SITE_NAME} — Local answers, not the brochure`,
+    default: `${SITE_NAME} · Korea travel answers checked by a real local`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Local answers for English-speaking visitors to Seoul and the capital region. Practical questions, answered by editors who live here.",
+    "Transit cards, airport runs, money, phones and neighborhoods for visitors to Korea. Every guide is checked in person by a real local, with the date shown.",
   applicationName: SITE_NAME,
+  openGraph: { type: "website", siteName: SITE_NAME, locale: "en_US" },
+  twitter: { card: "summary_large_image" },
   other: { promise: SITE_PROMISE },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const viewport: Viewport = { themeColor: "#fff8ee", width: "device-width", initialScale: 1 };
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${display.variable} ${furniture.variable} ${body.variable} h-full`}
-      suppressHydrationWarning={false}
-    >
-      <body className="flex min-h-full flex-col">
+    <html lang="en" className={`${body.variable} ${hand.variable} h-full`}>
+      <body className="rk-body-root flex min-h-full flex-col">
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>

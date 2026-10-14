@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SEED_TIPS } from "@/lib/content/seed/tips";
 import { auditArticle } from "@/lib/audit/engine";
 import { CheckCircle2, AlertTriangle, ShieldCheck, Sparkles, ArrowUpRight } from "lucide-react";
+import { tipHref } from "@/lib/ia";
 
 export const metadata = {
   title: "Editorial Audit Command Center | Real Korea Admin",
@@ -41,7 +42,7 @@ export default function AdminAuditPage() {
           </div>
           <div className="flex items-center gap-3">
             <Link
-              href="/tips"
+              href="/getting-around"
               className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-stone-300 bg-stone-900 border border-stone-800 rounded-lg hover:bg-stone-800 transition-colors"
             >
               View Public Site <ArrowUpRight className="w-4 h-4" />
@@ -122,7 +123,7 @@ export default function AdminAuditPage() {
                       </div>
 
                       <h3 className="text-base font-semibold text-stone-100 hover:text-amber-400 transition-colors">
-                        <Link href={`/tips/${tip.slug}`} target="_blank">
+                        <Link href={tipHref(tip.slug)} target="_blank">
                           {tip.title}
                         </Link>
                       </h3>
@@ -149,7 +150,7 @@ export default function AdminAuditPage() {
                       </div>
 
                       <Link
-                        href={`/tips/${tip.slug}`}
+                        href={tipHref(tip.slug)}
                         target="_blank"
                         className="px-3 py-1.5 text-xs font-medium bg-stone-800 hover:bg-stone-700 text-stone-200 rounded-lg transition-colors inline-flex items-center gap-1"
                       >

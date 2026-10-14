@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MediaPlaceholder } from "@/components/site/media-placeholder";
 import { SampleLabel } from "@/components/site/sample-label";
 import type { Place, PriceBand } from "@/lib/content/types";
+import { placeHref } from "@/lib/ia";
 
 /** Price band as filled dots. Unknown renders nothing rather than a guess. */
 function PriceDots({ band }: { band: PriceBand | null }) {
@@ -33,7 +34,7 @@ export function PlaceCard({ place }: { place: Place }) {
   return (
     <article className="heritage-card flex flex-col justify-between border-t-2 border-t-[var(--chili)] p-5">
       <div>
-        <Link href={`/places/p/${place.slug}`} className="group block overflow-hidden border border-[var(--rule)]">
+        <Link href={placeHref(place.slug)} className="group block overflow-hidden border border-[var(--rule)]">
           {firstPhoto ? (
             /* eslint-disable-next-line @next/next/no-img-element */
             <img
@@ -62,7 +63,7 @@ export function PlaceCard({ place }: { place: Place }) {
 
           <h3 className="mt-2 text-[21px] leading-[1.2] font-bold">
             <Link
-              href={`/places/p/${place.slug}`}
+              href={placeHref(place.slug)}
               className="transition-colors hover:text-[var(--chili)]"
             >
               {place.editorialTitle}

@@ -14,7 +14,7 @@ export function siteUrl(): string {
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
       : process.env.VERCEL_URL
         ? `https://${process.env.VERCEL_URL}`
-        : "https://realkorea.com");
+        : "");
   return raw.replace(/\/+$/, "");
 }
 
@@ -25,5 +25,5 @@ export function absoluteUrl(path: string): string {
 }
 
 export function hasSiteUrl(): boolean {
-  return true;
+  return siteUrl() !== "";
 }

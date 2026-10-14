@@ -11,6 +11,7 @@ import {
   readField,
   type ErrorCode,
 } from "@/lib/validation";
+import { placeHref, tipHref, guideHref } from "@/lib/ia";
 
 /**
  * FR-020 — comment intake for Question, Tip, Place, and Guide.
@@ -24,9 +25,9 @@ const HONEYPOT_FIELD = "website";
 
 const TARGET_PATH: Record<CommentTargetType, (slug: string) => string> = {
   question: (slug) => `/ask/${slug}`,
-  tip: (slug) => `/tips/${slug}`,
-  place: (slug) => `/places/p/${slug}`,
-  guide: (slug) => `/guides/${slug}`,
+  tip: (slug) => tipHref(slug),
+  place: (slug) => placeHref(slug),
+  guide: (slug) => guideHref(slug),
 };
 
 function isTargetType(value: string): value is CommentTargetType {

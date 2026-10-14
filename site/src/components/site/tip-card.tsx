@@ -4,6 +4,7 @@ import { MediaPlaceholder } from "@/components/site/media-placeholder";
 import { SampleLabel } from "@/components/site/sample-label";
 import { VerifiedMark } from "@/components/site/verified-mark";
 import type { Neighborhood, Tip, TipTopic } from "@/lib/content/types";
+import { tipHref } from "@/lib/ia";
 
 const TOPIC_LABEL: Record<TipTopic, string> = {
   arrival: "Arrival",
@@ -29,7 +30,7 @@ export function TipCard({
   return (
     <article className="heritage-card flex flex-col justify-between border-t-2 border-t-[var(--amber)] p-5">
       <div>
-        <Link href={`/tips/${tip.slug}`} className="group block overflow-hidden border border-[var(--rule)]">
+        <Link href={tipHref(tip.slug)} className="group block overflow-hidden border border-[var(--rule)]">
           {tip.image ? (
             /* eslint-disable-next-line @next/next/no-img-element */
             <img
@@ -62,7 +63,7 @@ export function TipCard({
 
           <h3 className="mt-3 text-[21px] leading-[1.2] font-bold">
             <Link
-              href={`/tips/${tip.slug}`}
+              href={tipHref(tip.slug)}
               className="transition-colors hover:text-[var(--amber)]"
             >
               {tip.title}

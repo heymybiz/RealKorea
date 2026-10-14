@@ -5,6 +5,7 @@ import type {
   Tip,
 } from "@/lib/content/types";
 import { absoluteUrl } from "@/lib/site-url";
+import { placeHref, tipHref } from "@/lib/ia";
 
 /**
  * PRD 03 §7 — Article for Tip, Guide, and Place; FAQPage on the Ask index for
@@ -63,7 +64,7 @@ export function TipJsonLd({ tip }: { tip: Tip }) {
       data={articleData({
         headline: tip.title,
         description: tip.dek,
-        path: `/tips/${tip.slug}`,
+        path: tipHref(tip.slug),
         published: tip.publishedAt,
         modified: tip.updatedAt ?? tip.lastVerifiedAt,
       })}
@@ -79,7 +80,7 @@ export function PlaceJsonLd({ place }: { place: Place }) {
       data={articleData({
         headline: place.editorialTitle,
         description: place.whyLocal,
-        path: `/places/p/${place.slug}`,
+        path: placeHref(place.slug),
         published: place.publishedAt,
         modified: place.updatedAt ?? place.lastVerifiedAt,
       })}

@@ -1,0 +1,557 @@
+{
+ "sections": [
+  {
+   "id": "getting-around",
+   "label": "Getting Around",
+   "href": "/getting-around",
+   "color": "#9fdcc4"
+  },
+  {
+   "id": "money-phone",
+   "label": "Money & Phone",
+   "href": "/money-phone",
+   "color": "#f6dc8a"
+  },
+  {
+   "id": "arrival",
+   "label": "Arrival",
+   "href": "/arrival",
+   "color": "#a9d4f2"
+  },
+  {
+   "id": "neighborhoods",
+   "label": "Neighborhoods & Day Trips",
+   "href": "/neighborhoods",
+   "color": "#f7bfa0"
+  },
+  {
+   "id": "ask",
+   "label": "Ask a Local",
+   "href": "/ask",
+   "color": "#c9b8ec"
+  },
+  {
+   "id": "about",
+   "label": "About",
+   "href": "/about",
+   "color": "#f4b6c8"
+  }
+ ],
+ "hubs": {
+  "getting-around": [
+   {
+    "id": "transit-cards",
+    "label": "Transit cards",
+    "blurb": "T-money, Climate Card, WOWPASS and where each one stops working."
+   },
+   {
+    "id": "airport-late-night",
+    "label": "Airport & late night",
+    "blurb": "Getting into Seoul from Incheon, and home after the last train."
+   },
+   {
+    "id": "subway-bus",
+    "label": "Subway & bus",
+    "blurb": "Reading the subway and the city bus colours."
+   },
+   {
+    "id": "taxi-apps",
+    "label": "Taxis & map apps",
+    "blurb": "Kakao T, Naver Map and paying the driver."
+   }
+  ],
+  "money-phone": [
+   {
+    "id": "payments-atm",
+    "label": "Payments & ATMs",
+    "blurb": "Cash, cards, exchange, ATMs and tax refunds."
+   }
+  ],
+  "arrival": [
+   {
+    "id": "fixes",
+    "label": "Everyday fixes",
+    "blurb": "Small things that trip visitors up in the first days."
+   }
+  ],
+  "neighborhoods": [
+   {
+    "id": "local-rules",
+    "label": "Local rules & etiquette",
+    "blurb": "House rules locals follow without saying."
+   }
+  ]
+ },
+ "items": [
+  {
+   "type": "tip",
+   "slug": "tmoney-vs-climate-card",
+   "section": "getting-around",
+   "hub": "transit-cards",
+   "old": "/tips/tmoney-vs-climate-card",
+   "new": "/getting-around/transit-cards/tmoney-vs-climate-card"
+  },
+  {
+   "type": "tip",
+   "slug": "climate-card-shinbundang-bus-boundaries",
+   "section": "getting-around",
+   "hub": "transit-cards",
+   "old": "/tips/climate-card-shinbundang-bus-boundaries",
+   "new": "/getting-around/transit-cards/climate-card-shinbundang-bus-boundaries"
+  },
+  {
+   "type": "tip",
+   "slug": "korea-travel-cards-wowpass-namane-tmoney",
+   "section": "getting-around",
+   "hub": "transit-cards",
+   "old": "/tips/korea-travel-cards-wowpass-namane-tmoney",
+   "new": "/getting-around/transit-cards/korea-travel-cards-wowpass-namane-tmoney"
+  },
+  {
+   "type": "tip",
+   "slug": "incheon-late-night-arex-survival",
+   "section": "getting-around",
+   "hub": "airport-late-night",
+   "old": "/tips/incheon-late-night-arex-survival",
+   "new": "/getting-around/airport-late-night/incheon-late-night-arex-survival"
+  },
+  {
+   "type": "tip",
+   "slug": "arex-express-vs-all-stop-transfers",
+   "section": "getting-around",
+   "hub": "airport-late-night",
+   "old": "/tips/arex-express-vs-all-stop-transfers",
+   "new": "/getting-around/airport-late-night/arex-express-vs-all-stop-transfers"
+  },
+  {
+   "type": "tip",
+   "slug": "seoul-bus-color-coding",
+   "section": "getting-around",
+   "hub": "subway-bus",
+   "old": "/tips/seoul-bus-color-coding",
+   "new": "/getting-around/subway-bus/seoul-bus-color-coding"
+  },
+  {
+   "type": "tip",
+   "slug": "kakaot-taxi-foreign-card-guide",
+   "section": "getting-around",
+   "hub": "taxi-apps",
+   "old": "/tips/kakaot-taxi-foreign-card-guide",
+   "new": "/getting-around/taxi-apps/kakaot-taxi-foreign-card-guide"
+  },
+  {
+   "type": "tip",
+   "slug": "naver-map-english-setup",
+   "section": "getting-around",
+   "hub": "taxi-apps",
+   "old": "/tips/naver-map-english-setup",
+   "new": "/getting-around/taxi-apps/naver-map-english-setup"
+  },
+  {
+   "type": "tip",
+   "slug": "currency-exchange-rates-seoul",
+   "section": "money-phone",
+   "hub": "payments-atm",
+   "old": "/tips/currency-exchange-rates-seoul",
+   "new": "/money-phone/payments-atm/currency-exchange-rates-seoul"
+  },
+  {
+   "type": "tip",
+   "slug": "convenience-store-atm-withdrawal",
+   "section": "money-phone",
+   "hub": "payments-atm",
+   "old": "/tips/convenience-store-atm-withdrawal",
+   "new": "/money-phone/payments-atm/convenience-store-atm-withdrawal"
+  },
+  {
+   "type": "tip",
+   "slug": "olive-young-instant-tax-refund",
+   "section": "money-phone",
+   "hub": "payments-atm",
+   "old": "/tips/olive-young-instant-tax-refund",
+   "new": "/money-phone/payments-atm/olive-young-instant-tax-refund"
+  },
+  {
+   "type": "tip",
+   "slug": "tap-water-arisu-safety",
+   "section": "arrival",
+   "hub": "fixes",
+   "old": "/tips/tap-water-arisu-safety",
+   "new": "/arrival/fixes/tap-water-arisu-safety"
+  },
+  {
+   "type": "tip",
+   "slug": "trash-bins-and-t-money-waste",
+   "section": "arrival",
+   "hub": "fixes",
+   "old": "/tips/trash-bins-and-t-money-waste",
+   "new": "/arrival/fixes/trash-bins-and-t-money-waste"
+  },
+  {
+   "type": "tip",
+   "slug": "jimjilbang-sauna-sleepover",
+   "section": "arrival",
+   "hub": "fixes",
+   "old": "/tips/jimjilbang-sauna-sleepover",
+   "new": "/arrival/fixes/jimjilbang-sauna-sleepover"
+  },
+  {
+   "type": "tip",
+   "slug": "korean-bbq-ordering-rules",
+   "section": "neighborhoods",
+   "hub": "local-rules",
+   "old": "/tips/korean-bbq-ordering-rules",
+   "new": "/neighborhoods/local-rules/korean-bbq-ordering-rules"
+  },
+  {
+   "type": "tip",
+   "slug": "pojangmacha-cash-price-rules",
+   "section": "neighborhoods",
+   "hub": "local-rules",
+   "old": "/tips/pojangmacha-cash-price-rules",
+   "new": "/neighborhoods/local-rules/pojangmacha-cash-price-rules"
+  },
+  {
+   "type": "tip",
+   "slug": "bukchon-quiet-hours-curfew",
+   "section": "neighborhoods",
+   "hub": "local-rules",
+   "old": "/tips/bukchon-quiet-hours-curfew",
+   "new": "/neighborhoods/local-rules/bukchon-quiet-hours-curfew"
+  },
+  {
+   "type": "guide",
+   "slug": "seoul-subway-mastery",
+   "section": "getting-around",
+   "hub": "subway-bus",
+   "old": "/guides/seoul-subway-mastery",
+   "new": "/getting-around/subway-bus/seoul-subway-mastery"
+  },
+  {
+   "type": "guide",
+   "slug": "late-night-survival-seoul",
+   "section": "getting-around",
+   "hub": "airport-late-night",
+   "old": "/guides/late-night-survival-seoul",
+   "new": "/getting-around/airport-late-night/late-night-survival-seoul"
+  },
+  {
+   "type": "guide",
+   "slug": "money-cards-and-payments-korea",
+   "section": "money-phone",
+   "hub": "payments-atm",
+   "old": "/guides/money-cards-and-payments-korea",
+   "new": "/money-phone/payments-atm/money-cards-and-payments-korea"
+  },
+  {
+   "type": "guide",
+   "slug": "first-24-hours-after-icn",
+   "section": "arrival",
+   "hub": null,
+   "old": "/guides/first-24-hours-after-icn",
+   "new": "/arrival/first-24-hours"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "jongno",
+   "section": "neighborhoods",
+   "hub": null,
+   "old": "/places/jongno",
+   "new": "/neighborhoods/jongno"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "ikseon-bukchon",
+   "section": "neighborhoods",
+   "hub": null,
+   "old": "/places/ikseon-bukchon",
+   "new": "/neighborhoods/ikseon-bukchon"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "myeongdong",
+   "section": "neighborhoods",
+   "hub": null,
+   "old": "/places/myeongdong",
+   "new": "/neighborhoods/myeongdong"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "hongdae-yeonnam",
+   "section": "neighborhoods",
+   "hub": null,
+   "old": "/places/hongdae-yeonnam",
+   "new": "/neighborhoods/hongdae-yeonnam"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "itaewon-hannam",
+   "section": "neighborhoods",
+   "hub": null,
+   "old": "/places/itaewon-hannam",
+   "new": "/neighborhoods/itaewon-hannam"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "euljiro",
+   "section": "neighborhoods",
+   "hub": null,
+   "old": "/places/euljiro",
+   "new": "/neighborhoods/euljiro"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "seongsu",
+   "section": "neighborhoods",
+   "hub": null,
+   "old": "/places/seongsu",
+   "new": "/neighborhoods/seongsu"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "gangnam-sinsa",
+   "section": "neighborhoods",
+   "hub": null,
+   "old": "/places/gangnam-sinsa",
+   "new": "/neighborhoods/gangnam-sinsa"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "jamsil",
+   "section": "neighborhoods",
+   "hub": null,
+   "old": "/places/jamsil",
+   "new": "/neighborhoods/jamsil"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "suwon",
+   "section": "neighborhoods",
+   "hub": "day-trips",
+   "old": "/places/suwon",
+   "new": "/day-trips/suwon"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "paju",
+   "section": "neighborhoods",
+   "hub": "day-trips",
+   "old": "/places/paju",
+   "new": "/day-trips/paju"
+  },
+  {
+   "type": "neighborhood",
+   "slug": "icn-songdo",
+   "section": "neighborhoods",
+   "hub": "day-trips",
+   "old": "/places/icn-songdo",
+   "new": "/day-trips/icn-songdo"
+  },
+  {
+   "type": "place",
+   "slug": "dongwon-jip-euljiro",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/dongwon-jip-euljiro",
+   "new": "/places/dongwon-jip-euljiro"
+  },
+  {
+   "type": "place",
+   "slug": "sunhee-bindaetteok-gwangjang",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/sunhee-bindaetteok-gwangjang",
+   "new": "/places/sunhee-bindaetteok-gwangjang"
+  },
+  {
+   "type": "place",
+   "slug": "center-coffee-seongsu",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/center-coffee-seongsu",
+   "new": "/places/center-coffee-seongsu"
+  },
+  {
+   "type": "place",
+   "slug": "myeongdong-street-food-trap",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/myeongdong-street-food-trap",
+   "new": "/places/myeongdong-street-food-trap"
+  },
+  {
+   "type": "place",
+   "slug": "tosokchon-samgyetang-seochon",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/tosokchon-samgyetang-seochon",
+   "new": "/places/tosokchon-samgyetang-seochon"
+  },
+  {
+   "type": "place",
+   "slug": "namdaemun-tourist-galchi-trap",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/namdaemun-tourist-galchi-trap",
+   "new": "/places/namdaemun-tourist-galchi-trap"
+  },
+  {
+   "type": "place",
+   "slug": "manjok-ohanhyang-jokbal-cityhall",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/manjok-ohanhyang-jokbal-cityhall",
+   "new": "/places/manjok-ohanhyang-jokbal-cityhall"
+  },
+  {
+   "type": "place",
+   "slug": "daedo-sikdang-wangsimni",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/daedo-sikdang-wangsimni",
+   "new": "/places/daedo-sikdang-wangsimni"
+  },
+  {
+   "type": "place",
+   "slug": "chamsoot-charcoal-kbbq-sinsa",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/chamsoot-charcoal-kbbq-sinsa",
+   "new": "/places/chamsoot-charcoal-kbbq-sinsa"
+  },
+  {
+   "type": "place",
+   "slug": "ikseon-artisan-brewery",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/ikseon-artisan-brewery",
+   "new": "/places/ikseon-artisan-brewery"
+  },
+  {
+   "type": "place",
+   "slug": "eulji-myeonok-pyeongyang-naengmyeon",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/eulji-myeonok-pyeongyang-naengmyeon",
+   "new": "/places/eulji-myeonok-pyeongyang-naengmyeon"
+  },
+  {
+   "type": "place",
+   "slug": "darakhyu-capsule-incheon",
+   "section": "neighborhoods",
+   "hub": "places",
+   "old": "/places/p/darakhyu-capsule-incheon",
+   "new": "/places/darakhyu-capsule-incheon"
+  },
+  {
+   "type": "question",
+   "slug": "does-uber-work-in-seoul",
+   "section": "ask",
+   "hub": null,
+   "old": "/ask/does-uber-work-in-seoul",
+   "new": "/ask/does-uber-work-in-seoul"
+  },
+  {
+   "type": "question",
+   "slug": "tipping-culture-south-korea",
+   "section": "ask",
+   "hub": null,
+   "old": "/ask/tipping-culture-south-korea",
+   "new": "/ask/tipping-culture-south-korea"
+  },
+  {
+   "type": "question",
+   "slug": "can-i-drink-tap-water-in-seoul",
+   "section": "ask",
+   "hub": null,
+   "old": "/ask/can-i-drink-tap-water-in-seoul",
+   "new": "/ask/can-i-drink-tap-water-in-seoul"
+  },
+  {
+   "type": "question",
+   "slug": "apple-pay-on-a-seoul-bus",
+   "section": "ask",
+   "hub": null,
+   "old": "/ask/apple-pay-on-a-seoul-bus",
+   "new": "/ask/apple-pay-on-a-seoul-bus"
+  },
+  {
+   "type": "question",
+   "slug": "table-for-one-refused-kbbq",
+   "section": "ask",
+   "hub": null,
+   "old": "/ask/table-for-one-refused-kbbq",
+   "new": "/ask/table-for-one-refused-kbbq"
+  },
+  {
+   "type": "question",
+   "slug": "luggage-storage-subway-stations",
+   "section": "ask",
+   "hub": null,
+   "old": "/ask/luggage-storage-subway-stations",
+   "new": "/ask/luggage-storage-subway-stations"
+  },
+  {
+   "type": "question",
+   "slug": "climate-card-vs-tmoney-short-trip",
+   "section": "ask",
+   "hub": null,
+   "old": "/ask/climate-card-vs-tmoney-short-trip",
+   "new": "/ask/climate-card-vs-tmoney-short-trip"
+  },
+  {
+   "type": "question",
+   "slug": "pharmacy-convenience-store-medicine",
+   "section": "ask",
+   "hub": null,
+   "old": "/ask/pharmacy-convenience-store-medicine",
+   "new": "/ask/pharmacy-convenience-store-medicine"
+  },
+  {
+   "type": "question",
+   "slug": "tax-refund-immediate-vs-airport",
+   "section": "ask",
+   "hub": null,
+   "old": "/ask/tax-refund-immediate-vs-airport",
+   "new": "/ask/tax-refund-immediate-vs-airport"
+  },
+  {
+   "type": "question",
+   "slug": "kakao-taxi-foreign-credit-card",
+   "section": "ask",
+   "hub": null,
+   "old": "/ask/kakao-taxi-foreign-credit-card",
+   "new": "/ask/kakao-taxi-foreign-credit-card"
+  }
+ ],
+ "staticRedirects": [
+  {
+   "source": "/tips",
+   "destination": "/getting-around"
+  },
+  {
+   "source": "/guides",
+   "destination": "/getting-around"
+  },
+  {
+   "source": "/places",
+   "destination": "/neighborhoods"
+  },
+  {
+   "source": "/eat",
+   "destination": "/neighborhoods"
+  },
+  {
+   "source": "/first-24-hours",
+   "destination": "/arrival/first-24-hours"
+  },
+  {
+   "source": "/shop",
+   "destination": "/"
+  },
+  {
+   "source": "/shop/:slug",
+   "destination": "/"
+  }
+ ]
+}
