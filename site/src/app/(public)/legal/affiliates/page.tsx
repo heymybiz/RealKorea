@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { LegalPage } from "@/components/site/legal-page";
-import { CONTACT_EMAIL, OPERATOR } from "@/lib/site-config";
+import { CONTACT_EMAIL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Affiliate Disclosure",
@@ -19,7 +19,7 @@ export default function AffiliatesPage() {
           heading: "1. What counts as a partner link",
           paragraphs: [
             "Affiliate links: if we link to a booking, eSIM, ticket or similar service and you buy through it, the seller may pay us a small commission. These links are marked rel=\"sponsored\".",
-            `Cozyo: our "where to stay" banners link to Cozyo, a sister site run by the same operator (${OPERATOR.name}). We may benefit if you use it.`,
+            `Cozyo: our "where to stay" banners link to Cozyo, a sister site run by the same team. We may benefit if you use it.`,
             "Ads: we do not show ads today. Ad spaces, if added later, will be labelled \"Advertisement\".",
           ],
         },

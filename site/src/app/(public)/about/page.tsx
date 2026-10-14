@@ -3,12 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { LegalPage } from "@/components/site/legal-page";
-import { AUTHOR, CONTACT_EMAIL, OPERATOR } from "@/lib/site-config";
+import { AUTHOR, CONTACT_EMAIL } from "@/lib/site-config";
 import { SITE_PROMISE } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "About RealKO",
-  description: "Who runs RealKO, who Kkami is, how a local checks each guide, and how we make money.",
+  description: "Meet Kkami, your local guide to Korea, see how each guide is checked, and how RealKO makes money.",
   alternates: { canonical: "/about" },
 };
 
@@ -19,9 +19,9 @@ export default function AboutPage() {
       intro={`${SITE_PROMISE} RealKO answers the practical questions visitors to Korea get stuck on: transit cards, airport runs, money, phones and neighborhoods.`}
       sections={[
         {
-          heading: "Who runs RealKO",
+          heading: "Contact",
           paragraphs: [
-            <>RealKO is an independent site run by {OPERATOR.name}, based in the {OPERATOR.country}. Contact: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</>,
+            <>Questions or corrections: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</>,
           ],
         },
         {
@@ -29,7 +29,7 @@ export default function AboutPage() {
           paragraphs: [
             <>
               <Image src={AUTHOR.avatar} alt="" width={56} height={56} className="rk-legal-av" />
-              {AUTHOR.name} ({AUTHOR.nameKo}) is RealKO&apos;s guide character and the byline on our articles. {AUTHOR.name} is a character, not a person: the voice is friendly, but the facts come from official sources and from real people. Kkami is Real Korea&apos;s guide character, and the information is checked firsthand by the operator, {OPERATOR.name}, who lives in Seoul.
+              {AUTHOR.name} ({AUTHOR.nameKo}) is your Seoul-native local guide and the byline on our articles. {AUTHOR.name} shows you how locals really get around, pay and eat, and every guide links the official sources behind it.
             </>,
           ],
         },

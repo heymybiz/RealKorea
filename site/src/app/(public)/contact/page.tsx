@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { LegalPage } from "@/components/site/legal-page";
-import { CONTACT_EMAIL, OPERATOR } from "@/lib/site-config";
+import { CONTACT_EMAIL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Contact & Corrections",
@@ -16,7 +16,7 @@ export default function ContactPage() {
   return (
     <LegalPage
       title="Contact & Corrections"
-      intro={`RealKO is run by ${OPERATOR.name}. One inbox handles everything.`}
+      intro="One inbox handles everything."
       sections={[
         { heading: "Email", paragraphs: [mail] },
         {

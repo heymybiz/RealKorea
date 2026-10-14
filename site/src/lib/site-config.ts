@@ -25,6 +25,6 @@ export const AUTHOR = {
   name: "Kkami",
   nameKo: "까미",
   role: "Your local friend in Seoul",
-  bio: "Hi, I'm Kkami, RealKO's guide character and your Seoul-native friend. I show you how locals really get around, pay and eat here. Facts get a \"Checked by a local\" badge only after a real person checks them in person.",
+  bio: "Hi, I'm Kkami, your Seoul-native friend and local guide. I show you how locals really get around, pay and eat here. Facts get a \"Checked by a local\" badge only after a real person checks them in person.",
   avatar: "/brand/kkami-avatar.webp",
 } as const;

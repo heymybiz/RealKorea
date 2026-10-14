@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { CookieSettingsButton } from "@/components/site/cookie-consent";
-import { OPERATOR } from "@/lib/site-config";
 import { ARRIVE_NAV, COZYO_URL, FOOTER_NOTE, LEGAL_NAV, PRIMARY_NAV, SITE_NAME, SITE_PROMISE } from "@/lib/nav";
 
 function Column({ title, items }: { title: string; items: readonly { href: string; label: string }[] }) {
@@ -41,7 +40,7 @@ export function Footer() {
       <div className="rk-w rk-fnote">
         <p>{FOOTER_NOTE}</p>
         <p>
-          © {SITE_NAME} · Photo credits are shown next to each photo. <Link href="/legal/image-credits">Image credits</Link> · Operated by {OPERATOR.name} · Fares and rules change; check official sources (<Link href="/legal/terms#disclaimer">disclaimer</Link>) · <CookieSettingsButton />
+          © {SITE_NAME} · Photo credits are shown next to each photo. <Link href="/legal/image-credits">Image credits</Link> · Fares and rules change; check official sources (<Link href="/legal/terms#disclaimer">disclaimer</Link>) · <CookieSettingsButton />
         </p>
       </div>
     </footer>
