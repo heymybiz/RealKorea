@@ -32,6 +32,7 @@ export const metadata: Metadata = {
   openGraph: { type: "website", siteName: SITE_NAME, locale: "en_US" },
   twitter: { card: "summary_large_image" },
   other: { promise: SITE_PROMISE },
+  verification: { google: "I6nBJOTstHEiG6WLIT22GwbRmqTmTYITBNhv1eNMW_E" },
 };
 
 export const viewport: Viewport = { themeColor: "#fff8ee", width: "device-width", initialScale: 1 };
