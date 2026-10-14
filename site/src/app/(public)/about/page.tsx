@@ -29,7 +29,7 @@ export default function AboutPage() {
           paragraphs: [
             <>
               <Image src={AUTHOR.avatar} alt="" width={56} height={56} className="rk-legal-av" />
-              {AUTHOR.name} ({AUTHOR.nameKo}) is RealKO&apos;s guide character and the byline on our articles. {AUTHOR.name} is a character, not a person: the voice is friendly, but the facts come from official sources and from real people.
+              {AUTHOR.name} ({AUTHOR.nameKo}) is RealKO&apos;s guide character and the byline on our articles. {AUTHOR.name} is a character, not a person: the voice is friendly, but the facts come from official sources and from real people. Kkami is Real Korea&apos;s guide character, and the information is checked firsthand by the operator, {OPERATOR.name}, who lives in Seoul.
             </>,
           ],
         },

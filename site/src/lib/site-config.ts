@@ -24,7 +24,7 @@ export const LEGAL_UPDATED = "2026-10-14";
 export const AUTHOR = {
   name: "Kkami",
   nameKo: "까미",
-  role: "RealKO guide",
-  bio: "Kkami is RealKO's guide character. Kkami writes in a friendly local voice; facts get a \"Checked by a local\" badge only after a real person checks them in person.",
+  role: "Your local friend in Seoul",
+  bio: "Hi, I'm Kkami, RealKO's guide character and your Seoul-native friend. I show you how locals really get around, pay and eat here. Facts get a \"Checked by a local\" badge only after a real person checks them in person.",
   avatar: "/brand/kkami-avatar.webp",
 } as const;
