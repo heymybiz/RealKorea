@@ -102,7 +102,8 @@
 .rk-stay .txt { flex: 1; display: flex; flex-direction: column; }
 .rk-stay .k { font-family: var(--font-hand), cursive; color: var(--rk-acc); font-size: 18px; }
 .rk-stay small { color: var(--rk-mute); }
-.rk-stay a { flex: none; background: var(--rk-ink); color: #fff; border-radius: 20px; padding: 8px 16px; font-weight: 800; text-decoration: none; font-size: 14px; }
+.rk-stay > a.rk-stay-cta, .rk-stay > a.rk-stay-cta:visited { flex: none; display: inline-flex; align-items: center; background: #3b2f2a; color: #fffaf2 !important; border-radius: 20px; padding: 8px 16px; font-weight: 800; text-decoration: none; font-size: 14px; line-height: 1.2; }
+.rk-stay > a.rk-stay-cta:hover, .rk-stay > a.rk-stay-cta:focus-visible { background: #b8452f; color: #ffffff !important; }
 .rk-ad { border: 1px dashed #cfc3b3; color: #9a8c80; font-size: 11px; text-align: center; padding: 22px; border-radius: 12px; margin: 28px 0; letter-spacing: 1px; text-transform: uppercase; }
 .rk-band { margin: 24px 0; }
 .rk-band img { width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: 24px; }

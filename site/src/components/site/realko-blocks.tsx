@@ -107,7 +107,7 @@ export function CozyoBanner({ title = "Still deciding where to stay?" }: { title
         <small>Compare Seoul neighborhoods on our sister site, Cozyo.</small>
         <PartnerNotice />
       </div>
-      <a href={COZYO_URL} target="_blank" rel="noopener">
+      <a className="rk-stay-cta" href={COZYO_URL} target="_blank" rel="sponsored noopener">
         Where to stay →
       </a>
     </aside>
