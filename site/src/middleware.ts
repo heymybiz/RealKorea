@@ -69,7 +69,7 @@ export function middleware(request: NextRequest) {
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagmanager.com https://www.google-analytics.com",
     "frame-src 'self' https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com",
-    "img-src 'self' data: blob: https://images.unsplash.com https://cdn.sanity.io https://upload.wikimedia.org https://pagead2.googlesyndication.com https://*.googleusercontent.com",
+    "img-src 'self' data: blob: https://cdn.sanity.io https://upload.wikimedia.org https://pagead2.googlesyndication.com https://*.googleusercontent.com",
     "connect-src 'self' https://*.sanity.io https://pagead2.googlesyndication.com https://www.google-analytics.com",
     "style-src 'self' 'unsafe-inline'",
     "font-src 'self' data:",

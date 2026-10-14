@@ -51,5 +51,37 @@ None used on this branch yet. When added, record file, prompt, date and "Grok ge
 ## Missing (real photo needed)
 - Ticket gates, kiosks, Seongsu street, day-trip destinations.
 
-## Still on Unsplash stock (not changed in this pass)
-- Neighborhood heroes (12) in `seed/neighborhoods.ts` and place photos (12) in `seed/places.ts`.
+
+## Neighborhood and place photos (CC0 / public domain, Wikimedia Commons) — replaced Unsplash stock on 2026-10-14
+Resized to max 1200px WebP; no other changes. **Exact** = shows the actual neighborhood/venue. **Nearby/generic** = no free photo of the venue itself exists on Commons, so the photo shows the nearest station, the surrounding area or the dish, and the alt text says so.
+
+| File | Used by | Subject (alt) | Match | Author | License | Source |
+|---|---|---|---|---|---|---|
+| site/public/photos/places/jongno.webp | neighborhood `jongno` | Gwanghwamun Gate in Jongno, Seoul | Exact | Huntsmanleader | CC0 | https://commons.wikimedia.org/wiki/File:Gwanghwamun_December_2023.jpg |
+| site/public/photos/places/ikseon-bukchon.webp | neighborhood `ikseon-bukchon` | Hanok houses in Bukchon Hanok Village | Exact | Bgag | CC0 | https://commons.wikimedia.org/wiki/File:Bukchon_Hanok_Village_01.jpg |
+| site/public/photos/places/myeongdong.webp | neighborhood `myeongdong` | Shopping street in Myeongdong, Seoul | Exact | lumoplank | CC0 | https://commons.wikimedia.org/wiki/File:Myeongdong,_Seoul_-_Myeongdong3165.jpg |
+| site/public/photos/places/hongdae-yeonnam.webp | neighborhood `hongdae-yeonnam` | Street in Hongdae, Seoul | Exact | lumoplank | CC0 | https://commons.wikimedia.org/wiki/File:Hongdae,_Seoul-_Part_II_-_Hongdae2237.jpg |
+| site/public/photos/places/itaewon-hannam.webp | neighborhood `itaewon-hannam` | A shop in Itaewon-dong, Seoul | Exact | 최광모 | CC0 | https://commons.wikimedia.org/wiki/File:2014%EB%85%84_10%EC%9B%94_15%EC%9D%BC_%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%9A%A9%EC%82%B0%EA%B5%AC_%EC%9D%B4%ED%83%9C%EC%9B%90%EB%8F%99_MMMG(%EB%B0%80%EB%A6%AC%ED%84%B0%EB%A6%AC%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%8C)_DSC03778.JPG |
+| site/public/photos/places/euljiro.webp | neighborhood `euljiro` | Euljiro road near Euljiro 1-ga Station | Exact | DtSeoul | CC0 | https://commons.wikimedia.org/wiki/File:Seoul_CBD_along_Euljiro_near_Euljiro_1-ga_Station.jpg |
+| site/public/photos/places/seongsu.webp | neighborhood `seongsu` | Street in Seongsu-dong, Seoul | Exact | Aspere | CC0 | https://commons.wikimedia.org/wiki/File:%EC%84%B1%EC%88%98%EB%8F%99_260523_02.jpg |
+| site/public/photos/places/gangnam-sinsa.webp | neighborhood `gangnam-sinsa` | Gangnam-daero in Gangnam, Seoul | Exact | Striker9498 | CC0 | https://commons.wikimedia.org/wiki/File:20251011_%EA%B0%95%EB%82%A8%EB%8C%80%EB%A1%9C.jpg |
+| site/public/photos/places/jamsil.webp | neighborhood `jamsil` | Lotte World Tower in Jamsil seen across the Han River | Exact | mauveine.kim | CC0 | https://commons.wikimedia.org/wiki/File:Han_River_and_Lotte_World_Tower.jpg |
+| site/public/photos/places/suwon.webp | neighborhood `suwon` | Hwaseong Fortress in Suwon | Exact | Bernard Gagnon | CC0 | https://commons.wikimedia.org/wiki/File:Hwaseong_Fortress_01.jpg |
+| site/public/photos/places/paju.webp | neighborhood `paju` | Imjingak in Paju | Nearby/generic | Rbtjd0201(talk / Contributions) at the Korean Wikipedia | Public domain | https://commons.wikimedia.org/wiki/File:Imjingak_001.jpg |
+| site/public/photos/places/icn-songdo.webp | neighborhood `icn-songdo` | Songdo Convensia in Songdo, Incheon | Exact | dongil0324 | CC0 | https://commons.wikimedia.org/wiki/File:Songdo_convensia.jpg |
+| site/public/photos/places/dongwon-jip-euljiro.webp | place `dongwon-jip-euljiro` | Euljiro 3-ga Station platform, the nearest station | Nearby/generic | Striker9498 | CC0 | https://commons.wikimedia.org/wiki/File:20260627_3%ED%98%B8%EC%84%A0_%EC%9D%84%EC%A7%80%EB%A1%9C3%EA%B0%80%EC%97%AD_%EC%8A%B9%EA%B0%95%EC%9E%A5.jpg |
+| site/public/photos/places/sunhee-bindaetteok-gwangjang.webp | place `sunhee-bindaetteok-gwangjang` | Pancakes and pan-fried food at Gwangjang Market | Exact | Pfc. Bo Park, 2ID PAO, US Army | Public domain | https://commons.wikimedia.org/wiki/File:Korean_pancakes_and_pan-fried_foods_at_Gwangjang_Market.jpg |
+| site/public/photos/places/center-coffee-seongsu.webp | place `center-coffee-seongsu` | Seoul Forest park, next to the cafe | Nearby/generic | Rachel.zrq | CC0 | https://commons.wikimedia.org/wiki/File:Flowers_in_Seoul_Forest_Park.jpg |
+| site/public/photos/places/myeongdong-street-food-trap.webp | place `myeongdong-street-food-trap` | Myeongdong shopping street at night | Exact | Abasaa | Public domain | https://commons.wikimedia.org/wiki/File:Myeongdong_at_night_03.JPG |
+| site/public/photos/places/tosokchon-samgyetang-seochon.webp | place `tosokchon-samgyetang-seochon` | A bowl of samgyetang (ginseng chicken soup) | Nearby/generic | wizdata | CC0 | https://commons.wikimedia.org/wiki/File:Samgye-tang_2.jpg |
+| site/public/photos/places/namdaemun-tourist-galchi-trap.webp | place `namdaemun-tourist-galchi-trap` | Namdaemun-ro road in central Seoul | Nearby/generic | DtSeoul | CC0 | https://commons.wikimedia.org/wiki/File:Seoul_CBD_near_Ujeonggukro_and_Namdaemunro.jpg |
+| site/public/photos/places/manjok-ohanhyang-jokbal-cityhall.webp | place `manjok-ohanhyang-jokbal-cityhall` | A plate of jokbal (braised pork trotters) | Nearby/generic | wizdata | CC0 | https://commons.wikimedia.org/wiki/File:Jokbal_3.jpg |
+| site/public/photos/places/daedo-sikdang-wangsimni.webp | place `daedo-sikdang-wangsimni` | Ticket gates at Wangsimni Station, the nearest station | Nearby/generic | 안우석 | Public domain | https://commons.wikimedia.org/wiki/File:Korail_Wangsimni_Station_Ticket_Gate.JPG |
+| site/public/photos/places/chamsoot-charcoal-kbbq-sinsa.webp | place `chamsoot-charcoal-kbbq-sinsa` | Street in the Apgujeong–Sinsa area | Nearby/generic | H. Y. Shin 000 | CC0 | https://commons.wikimedia.org/wiki/File:(Apgujeong-Sinsa)_20190312_050416.jpg |
+| site/public/photos/places/ikseon-artisan-brewery.webp | place `ikseon-artisan-brewery` | Jongno 3-ga Station sign, the nearest station | Nearby/generic | Aspere | CC0 | https://commons.wikimedia.org/wiki/File:Line_1_Jongno_3-ga_Station_sign.jpg |
+| site/public/photos/places/eulji-myeonok-pyeongyang-naengmyeon.webp | place `eulji-myeonok-pyeongyang-naengmyeon` | A bowl of naengmyeon (cold noodles) | Nearby/generic | Suohros | CC0 | https://commons.wikimedia.org/wiki/File:Naengmyeon_old_noodle_in_Korea.jpg |
+| site/public/photos/places/darakhyu-capsule-incheon.webp | place `darakhyu-capsule-incheon` | Inside Incheon International Airport | Nearby/generic | Choikwangmo25 | CC0 | https://commons.wikimedia.org/wiki/File:2025-10-14_17.18.56_Incheon_International_Airport.jpg |
+
+## Not replaced
+- `korea-travel-cards-wowpass-namane-tmoney` still uses the public-domain Cashbee card photo: no brand-neutral CC0/PD photo of a Korean transit card or card reader was found on Commons (searched: 교통카드 단말기, card reader bus Korea, contactless card reader, Seoul bus card reader, T-money).
+- No Unsplash image is used anywhere in the site any more; Unsplash was removed from the CSP and from `next.config` image hosts.

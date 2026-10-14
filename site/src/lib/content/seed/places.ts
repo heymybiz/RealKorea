@@ -29,10 +29,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85",
-        alt: "Euljiro industrial alleys at night outside Dongwon Jip",
-        width: 1200,
-        height: 800,
+        src: "/photos/places/dongwon-jip-euljiro.webp",
+        alt: "Euljiro 3-ga Station platform, the nearest station",
+        width: 900,
+        height: 1200,
       },
     ],
     tipBoxes: [
@@ -78,10 +78,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=85",
-        alt: "Hot griddles and sizzling bindaetteok in Gwangjang Market",
+        src: "/photos/places/sunhee-bindaetteok-gwangjang.webp",
+        alt: "Pancakes and pan-fried food at Gwangjang Market",
         width: 1200,
-        height: 800,
+        height: 797,
       },
     ],
     tipBoxes: [
@@ -123,10 +123,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=85",
-        alt: "Barista preparing pour-over coffee in Seongsu atelier",
-        width: 1200,
-        height: 800,
+        src: "/photos/places/center-coffee-seongsu.webp",
+        alt: "Seoul Forest park, next to the cafe",
+        width: 900,
+        height: 1200,
       },
     ],
     tipBoxes: [
@@ -171,10 +171,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85",
-        alt: "Overcrowded tourist food stalls in Myeongdong night street",
+        src: "/photos/places/myeongdong-street-food-trap.webp",
+        alt: "Myeongdong shopping street at night",
         width: 1200,
-        height: 800,
+        height: 900,
       },
     ],
     tipBoxes: [
@@ -216,10 +216,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=1200&q=85",
-        alt: "Traditional hanok courtyard dining room at Tosokchon",
+        src: "/photos/places/tosokchon-samgyetang-seochon.webp",
+        alt: "A bowl of samgyetang (ginseng chicken soup)",
         width: 1200,
-        height: 800,
+        height: 968,
       },
     ],
     tipBoxes: [
@@ -264,10 +264,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85",
-        alt: "Namdaemun Market bustling narrow entrance alleys",
+        src: "/photos/places/namdaemun-tourist-galchi-trap.webp",
+        alt: "Namdaemun-ro road in central Seoul",
         width: 1200,
-        height: 800,
+        height: 676,
       },
     ],
     tipBoxes: [
@@ -309,10 +309,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85",
-        alt: "Glazed braised jokbal slices with garlic cabbage dip",
+        src: "/photos/places/manjok-ohanhyang-jokbal-cityhall.webp",
+        alt: "A plate of jokbal (braised pork trotters)",
         width: 1200,
-        height: 800,
+        height: 958,
       },
     ],
     tipBoxes: [
@@ -354,10 +354,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=85",
-        alt: "Hanwoo prime ribeye sizzling on heavy cast-iron skillet",
+        src: "/photos/places/daedo-sikdang-wangsimni.webp",
+        alt: "Ticket gates at Wangsimni Station, the nearest station",
         width: 1200,
-        height: 800,
+        height: 900,
       },
     ],
     tipBoxes: [
@@ -399,10 +399,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85",
-        alt: "Thick cut samgyeopsal searing over red hot oak charcoal",
+        src: "/photos/places/chamsoot-charcoal-kbbq-sinsa.webp",
+        alt: "Street in the Apgujeong–Sinsa area",
         width: 1200,
-        height: 800,
+        height: 900,
       },
     ],
     tipBoxes: [
@@ -444,10 +444,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?auto=format&fit=crop&w=1200&q=85",
-        alt: "Craft beer taproom inside exposed timber hanok rafters",
+        src: "/photos/places/ikseon-artisan-brewery.webp",
+        alt: "Jongno 3-ga Station sign, the nearest station",
         width: 1200,
-        height: 800,
+        height: 675,
       },
     ],
     tipBoxes: [
@@ -489,10 +489,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85",
-        alt: "Chilled brass bowl of Pyongyang naengmyeon with chili dust",
-        width: 1200,
-        height: 800,
+        src: "/photos/places/eulji-myeonok-pyeongyang-naengmyeon.webp",
+        alt: "A bowl of naengmyeon (cold noodles)",
+        width: 904,
+        height: 1200,
       },
     ],
     tipBoxes: [
@@ -534,10 +534,10 @@ const PLACES_DATA: readonly Place[] = [
     partnerDisclosure: null,
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85",
-        alt: "Modern minimalist capsule room interior at Darakhyu Airport",
+        src: "/photos/places/darakhyu-capsule-incheon.webp",
+        alt: "Inside Incheon International Airport",
         width: 1200,
-        height: 800,
+        height: 900,
       },
     ],
     tipBoxes: [

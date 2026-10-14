@@ -132,7 +132,7 @@ export const SEED_GUIDES: readonly Guide[] = [
       src: "/photos/tips/first-24-hours-after-icn.webp",
       alt: "Outside the terminal at Incheon International Airport",
       width: 1200,
-      height: 800,
+      height: 900,
     },
   },
   {
@@ -220,7 +220,7 @@ export const SEED_GUIDES: readonly Guide[] = [
       src: "/photos/tips/seoul-subway-mastery.webp",
       alt: "Inside a Seoul Metro Line 2 train",
       width: 1200,
-      height: 800,
+      height: 900,
     },
   },
   {
@@ -300,7 +300,7 @@ export const SEED_GUIDES: readonly Guide[] = [
       src: "/photos/tips/money-cards-and-payments-korea.webp",
       alt: "Bank machines in a Korean ATM corner",
       width: 1200,
-      height: 800,
+      height: 900,
     },
   },
   {
@@ -372,7 +372,7 @@ export const SEED_GUIDES: readonly Guide[] = [
       src: "/photos/tips/late-night-survival-seoul.webp",
       alt: "A Seoul park path at night",
       width: 1200,
-      height: 800,
+      height: 900,
     },
   },
 ];

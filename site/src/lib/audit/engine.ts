@@ -92,7 +92,7 @@ export function auditArticle(tip: Tip): ArticleAuditResult {
       category: "media",
       ruleName: "Missing Verified Image",
       message: "Article lacks a high-resolution verified 16:9 documentary plate photograph.",
-      suggestion: "Assign a unique Unsplash stock URL or documentary plate image.",
+      suggestion: "Assign a unique CC0/public-domain photo (record it in docs/image-credits.md).",
     });
     factScore -= 10;
   }
