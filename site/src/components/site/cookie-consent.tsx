@@ -40,6 +40,8 @@ export function CookieConsent({ gaId }: { gaId: string }) {
       ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied",
     });
     const saved = readChoice();
+    // localStorage only exists after hydration, so the stored choice is read here.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setChoice(saved);
     setOpen(saved === null);
     const reopen = () => setOpen(true);
