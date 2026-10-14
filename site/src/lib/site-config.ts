@@ -2,7 +2,7 @@
  * One place for site-wide identity values.
  * The site runs on the Firebase default host until a custom domain is chosen.
  */
-export const SITE_URL_DEFAULT = "https://realkorea-web--realkorea-travel.asia-east1.hosted.app";
+export const SITE_URL_DEFAULT = "https://realkorea--realkorea-travel.us-east4.hosted.app";
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "heymybiz@gmail.com";
 
 /** The person legally responsible for the site (PIPA privacy officer / GDPR controller). */
