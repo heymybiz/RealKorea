@@ -1,3 +1,5 @@
+import { SITE_URL_DEFAULT } from "@/lib/site-config";
+
 /**
  * The domain is still an open item (PRD 01 §11), so there is no hardcoded host
  * anywhere in the app. `NEXT_PUBLIC_SITE_URL` fills it in once it is chosen.
@@ -14,7 +16,7 @@ export function siteUrl(): string {
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
       : process.env.VERCEL_URL
         ? `https://${process.env.VERCEL_URL}`
-        : "");
+        : SITE_URL_DEFAULT);
   return raw.replace(/\/+$/, "");
 }
 

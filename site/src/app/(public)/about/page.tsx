@@ -1,3 +1,4 @@
+import { CONTACT_EMAIL } from "@/lib/site-config";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -137,7 +138,7 @@ export default function AboutPage() {
           >
             Contact & Corrections Desk
           </Link>{" "}
-          or email <span className="font-mono text-amber-300">corrections@realkorea.com</span>.
+          or email <span className="font-mono text-amber-300">{CONTACT_EMAIL}</span>.
         </p>
       </Section>
 

@@ -26,9 +26,9 @@ const color = (id: string) => SECTIONS.find((s) => s.id === id)?.color ?? "#f0e2
 export default async function HomePage() {
   const [tips, questions] = await Promise.all([getTips(), getQuestions()]);
   const latest = [...tips]
-    .sort((a, b) => (b.lastVerifiedAt ?? "").localeCompare(a.lastVerifiedAt ?? ""))
+    .sort((a, b) => (b.updatedAt ?? "").localeCompare(a.updatedAt ?? ""))
     .slice(0, 3);
-  const recentlyChecked = latest.filter((tip) => tip.lastVerifiedAt && !tip.sample);
+  const recentlyChecked = tips.filter((tip) => tip.checkedBy && tip.checkedAt);
 
   return (
     <div className="rk-w rk-page">
@@ -78,7 +78,7 @@ export default async function HomePage() {
               <li key={tip.id} className="rk-card">
                 <h3><Link href={tipHref(tip.slug)}>{tip.title}</Link></h3>
                 {tip.dek ? <p>{tip.dek}</p> : null}
-                <CheckedBadge lastVerifiedAt={tip.lastVerifiedAt} sample={tip.sample} />
+                <CheckedBadge checkedBy={tip.checkedBy} checkedAt={tip.checkedAt} />
               </li>
             ))}
           </ul>
@@ -94,7 +94,7 @@ export default async function HomePage() {
             <li><time dateTime={IA_CHANGED_ON}>{IA_CHANGED_ON}</time> New site layout. Old links redirect to the new addresses.</li>
             {recentlyChecked.map((tip) => (
               <li key={tip.id}>
-                <time dateTime={tip.lastVerifiedAt ?? undefined}>{formatFullDate(tip.lastVerifiedAt)}</time>{" "}
+                <time dateTime={tip.checkedAt ?? undefined}>{formatFullDate(tip.checkedAt ?? null)}</time>{" "}
                 Checked: <Link href={tipHref(tip.slug)}>{tip.title}</Link>
               </li>
             ))}

@@ -129,8 +129,8 @@ export const SEED_GUIDES: readonly Guide[] = [
     ],
     isFirst24Alias: true,
     hero: {
-      src: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85",
-      alt: "Incheon International Airport terminal arrivals escalator view",
+      src: "/photos/tips/first-24-hours-after-icn.webp",
+      alt: "Outside the terminal at Incheon International Airport",
       width: 1200,
       height: 800,
     },
@@ -217,8 +217,8 @@ export const SEED_GUIDES: readonly Guide[] = [
     ],
     isFirst24Alias: false,
     hero: {
-      src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85",
-      alt: "Seoul modern subway train pulling into brightly lit platform",
+      src: "/photos/tips/seoul-subway-mastery.webp",
+      alt: "Inside a Seoul Metro Line 2 train",
       width: 1200,
       height: 800,
     },
@@ -297,8 +297,8 @@ export const SEED_GUIDES: readonly Guide[] = [
     ],
     isFirst24Alias: false,
     hero: {
-      src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85",
-      alt: "Seoul bustling commercial street neon retail signs",
+      src: "/photos/tips/money-cards-and-payments-korea.webp",
+      alt: "Bank machines in a Korean ATM corner",
       width: 1200,
       height: 800,
     },
@@ -369,8 +369,8 @@ export const SEED_GUIDES: readonly Guide[] = [
     ],
     isFirst24Alias: false,
     hero: {
-      src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85",
-      alt: "Late night neon lit alleyways in Euljiro Seoul",
+      src: "/photos/tips/late-night-survival-seoul.webp",
+      alt: "A Seoul park path at night",
       width: 1200,
       height: 800,
     },

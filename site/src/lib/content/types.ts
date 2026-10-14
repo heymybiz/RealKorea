@@ -47,6 +47,9 @@ export type TipBox = {
 };
 
 export type BaseDocument = {
+  /** Set only after a real person checked this page in person. Both are required for the badge. */
+  readonly checkedBy?: string | null;
+  readonly checkedAt?: string | null;
   readonly id: string;
   readonly slug: string;
   readonly status: DocumentStatus;

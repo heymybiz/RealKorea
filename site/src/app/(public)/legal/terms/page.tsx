@@ -1,3 +1,4 @@
+import { CONTACT_EMAIL } from "@/lib/site-config";
 import type { Metadata } from "next";
 
 import { LegalPage } from "@/components/site/legal-page";
@@ -32,7 +33,7 @@ export default function TermsPage() {
           heading: "3. Intellectual Property Rights",
           paragraphs: [
             "All original articles, editorial formatting, proprietary infographics, and code on Real Korea are the intellectual property of Real Korea and protected under the Copyright Act of the Republic of Korea and international copyright treaties.",
-            "You may not scrape, republish, redistribute, or commercially exploit full text articles without prior written authorization from desk@realkorea.com. Brief citations with direct attribution and backlinks are permitted.",
+            `You may not scrape, republish, redistribute, or commercially exploit full text articles without prior written authorization from ${CONTACT_EMAIL}. Brief citations with direct attribution and backlinks are permitted.`,
           ],
         },
         {

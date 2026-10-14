@@ -31,18 +31,18 @@ import { readErrorCode } from "@/lib/validation";
 
 type Query = Record<string, string | string[] | undefined>;
 
-type Card = { href: string; title: string; dek: string | null; kind: string; verified: string | null; sample: boolean };
+type Card = { href: string; title: string; dek: string | null; kind: string; checkedBy?: string | null; checkedAt?: string | null };
 
 async function cardsFor(section: string, hub: string): Promise<Card[]> {
   const [tips, guides] = await Promise.all([getTips(), getGuides()]);
   return itemsIn(section, hub).flatMap((item): Card[] => {
     if (item.type === "tip") {
       const tip = tips.find((t) => t.slug === item.slug);
-      return tip ? [{ href: item.new, title: tip.title, dek: tip.dek, kind: "Fix & how-to", verified: tip.lastVerifiedAt, sample: tip.sample }] : [];
+      return tip ? [{ href: item.new, title: tip.title, dek: tip.dek, kind: "Fix & how-to", checkedBy: tip.checkedBy, checkedAt: tip.checkedAt }] : [];
     }
     if (item.type === "guide") {
       const guide = guides.find((g) => g.slug === item.slug);
-      return guide ? [{ href: item.new, title: guide.title, dek: guide.dek, kind: "Long guide", verified: null, sample: guide.sample }] : [];
+      return guide ? [{ href: item.new, title: guide.title, dek: guide.dek, kind: "Long guide", checkedBy: guide.checkedBy, checkedAt: guide.checkedAt }] : [];
     }
     return [];
   });
@@ -59,7 +59,7 @@ function CardGrid({ cards }: { cards: readonly Card[] }) {
             <Link href={card.href}>{card.title}</Link>
           </h3>
           {card.dek ? <p>{card.dek}</p> : null}
-          <CheckedBadge lastVerifiedAt={card.verified} sample={card.sample} />
+          <CheckedBadge checkedBy={card.checkedBy} checkedAt={card.checkedAt} />
         </li>
       ))}
     </ul>
@@ -183,7 +183,7 @@ export async function ArticlePage({
     return (
       <article className="rk-w rk-page rk-article">
         <Breadcrumb trail={[...trail, { label: guide.title }]} />
-        <CheckedBadge lastVerifiedAt={null} sample={guide.sample} />
+        <CheckedBadge checkedBy={guide.checkedBy} checkedAt={guide.checkedAt} />
         <AuthorBox />
         <GuideArticle guide={guide} />
         <AdSlot placement="article-mid" />
@@ -206,7 +206,7 @@ export async function ArticlePage({
       <Breadcrumb trail={[...trail, { label: tip.title }]} />
       <h1 className="rk-h1">{tip.title}</h1>
       {tip.dek ? <p className="rk-dek">{tip.dek}</p> : null}
-      <CheckedBadge lastVerifiedAt={tip.lastVerifiedAt} sample={tip.sample} />
+      <CheckedBadge checkedBy={tip.checkedBy} checkedAt={tip.checkedAt} />
       <AuthorBox />
 
       {tip.image ? (
@@ -229,7 +229,7 @@ export async function ArticlePage({
 
       <AdSlot placement="article-mid" />
       <CozyoBanner />
-      <WhatChanged entries={changeLog({ lastVerifiedAt: tip.lastVerifiedAt, updatedAt: tip.updatedAt, oldUrl: oldUrlFor("tip", slug) })} />
+      <WhatChanged entries={changeLog({ checkedAt: tip.checkedAt, updatedAt: tip.updatedAt, oldUrl: oldUrlFor("tip", slug) })} />
 
       {relatedQuestions.length > 0 || relatedPlaces.length > 0 ? (
         <section className="rk-related" aria-labelledby="related">

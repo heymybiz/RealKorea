@@ -79,7 +79,7 @@ export default async function NeighborhoodsPage() {
             <li key={place.id} className="rk-card">
               <span className="kind">{area(place.neighborhoodSlug)?.nameEn ?? "Place"}</span>
               <h3><Link href={placeHref(place.slug)}>{place.editorialTitle}</Link></h3>
-              <CheckedBadge lastVerifiedAt={place.lastVerifiedAt} sample={place.sample} />
+              <CheckedBadge checkedBy={place.checkedBy} checkedAt={place.checkedAt} />
             </li>
           ))}
         </ul>
@@ -98,7 +98,7 @@ export default async function NeighborhoodsPage() {
                 <li key={item.slug} className="rk-card">
                   <span className="kind">Local rule</span>
                   <h3><Link href={item.new}>{tip.title}</Link></h3>
-                  <CheckedBadge lastVerifiedAt={tip.lastVerifiedAt} sample={tip.sample} />
+                  <CheckedBadge checkedBy={tip.checkedBy} checkedAt={tip.checkedAt} />
                 </li>
               ) : null;
             })}

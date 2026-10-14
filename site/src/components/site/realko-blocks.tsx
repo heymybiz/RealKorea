@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { COZYO_URL } from "@/lib/nav";
+import { AUTHOR } from "@/lib/site-config";
 import { formatMonthYear } from "@/lib/format";
 
 /**
@@ -9,32 +10,38 @@ import { formatMonthYear } from "@/lib/format";
  * document, and anything still missing is labelled as missing.
  */
 
+/**
+ * Shown only after a real person has checked the page in person. Both fields
+ * must be set explicitly on the document; nothing is inferred from other dates.
+ */
 export function CheckedBadge({
-  lastVerifiedAt,
-  sample,
+  checkedBy,
+  checkedAt,
 }: {
-  lastVerifiedAt: string | null;
-  sample: boolean;
+  checkedBy?: string | null;
+  checkedAt?: string | null;
 }) {
-  const date = formatMonthYear(lastVerifiedAt);
-  if (sample || !date) {
-    return <span className="rk-chk pending">Not yet checked by a local</span>;
-  }
-  return <span className="rk-chk">Checked by a local · {date}</span>;
+  const date = formatMonthYear(checkedAt ?? null);
+  if (!checkedBy || !date) return null;
+  return (
+    <span className="rk-chk" title={`Checked in person by ${checkedBy}`}>
+      Checked by a local · {date}
+    </span>
+  );
 }
 
-/** The real human author. No name or photo exists yet, so the box says so. */
+/** The byline. Kkami is a personified author; the name lives in site-config. */
 export function AuthorBox() {
   return (
     <aside className="rk-author" aria-label="About the author">
-      <div className="av" aria-hidden="true">photo</div>
+      <Image src={AUTHOR.avatar} alt="" width={64} height={64} className="av" />
       <div>
-        <b>Local author profile pending</b>
-        <p>
-          A real local who lives in Seoul checks every guide in person. Their
-          name and own photo go here; we never use an AI face.
-        </p>
-        <Link href="/about">Who is the local →</Link>
+        <b>
+          {AUTHOR.name} <span lang="ko">({AUTHOR.nameKo})</span>
+        </b>
+        <span className="role"> · {AUTHOR.role}</span>
+        <p>{AUTHOR.bio}</p>
+        <Link href="/about">How we check →</Link>
       </div>
     </aside>
   );
@@ -74,7 +81,7 @@ export function WhatChanged({ entries }: { entries: readonly ChangeEntry[] }) {
 }
 
 export function changeLog(input: {
-  lastVerifiedAt?: string | null;
+  checkedAt?: string | null;
   updatedAt?: string | null;
   oldUrl?: string | null;
 }): ChangeEntry[] {
@@ -83,7 +90,7 @@ export function changeLog(input: {
     entries.push({ date: "2026-10-14", text: `Moved to a new address (was ${input.oldUrl}).` });
   }
   if (input.updatedAt) entries.push({ date: input.updatedAt.slice(0, 10), text: "Content updated." });
-  if (input.lastVerifiedAt) entries.push({ date: input.lastVerifiedAt.slice(0, 10), text: "Checked in person by a local." });
+  if (input.checkedAt) entries.push({ date: input.checkedAt.slice(0, 10), text: "Checked in person by a local." });
   return entries;
 }
 

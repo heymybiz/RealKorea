@@ -24,10 +24,10 @@ const AREX_LATE_NIGHT_TIP: Tip = {
   relatedPlaceSlugs: ["dongwon-jip-euljiro"],
   promotedFromQuestionSlug: null,
   image: {
-    src: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85",
-    alt: "Incheon International Airport Terminal 1 Arrivals Hall at Night",
+    src: "/photos/tips/incheon-late-night-arex-survival.webp",
+    alt: "Arrivals level inside Incheon International Airport",
     width: 1200,
-    height: 800,
+    height: 900,
   },
   tipBoxes: [
     {
@@ -110,10 +110,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["dongwon-jip-euljiro"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85",
-      alt: "Seoul subway station platform transit card turnstiles",
+      src: "/photos/tips/tmoney-vs-climate-card.webp",
+      alt: "Ticket gates at Sinseol-dong subway station, Seoul",
       width: 1200,
-      height: 800,
+      height: 900,
     },
     tipBoxes: [
       {
@@ -184,10 +184,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["dongwon-jip-euljiro"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=85",
-      alt: "Traveler checking smartphone navigation while walking in downtown Seoul",
+      src: "/photos/tips/naver-map-english-setup.webp",
+      alt: "Office towers and road signs in central Seoul near Cheonggyecheon-ro",
       width: 1200,
-      height: 800,
+      height: 676,
     },
     tipBoxes: [
       {
@@ -249,10 +249,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["myeongdong-street-food-trap"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1200&q=85",
-      alt: "Currency exchange signs and storefronts along commercial street in Myeongdong",
-      width: 1200,
-      height: 800,
+      src: "/photos/tips/currency-exchange-rates-seoul.webp",
+      alt: "Shopping street in Myeongdong, Seoul",
+      width: 900,
+      height: 1200,
     },
     tipBoxes: [
       {
@@ -314,8 +314,8 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["chamsoot-charcoal-kbbq-sinsa", "dongwon-jip-euljiro"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85",
-      alt: "Sizzling pork belly samgyeopsal grilling over hot hardwood charcoal in a Korean BBQ restaurant",
+      src: "/photos/tips/korean-bbq-ordering-rules.webp",
+      alt: "Grilled samgyeopsal pork belly on a plate",
       width: 1200,
       height: 800,
     },
@@ -379,10 +379,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["myeongdong-street-food-trap"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85",
-      alt: "Beauty cosmetics shelves and skincare products in a modern Seoul boutique",
+      src: "/photos/tips/olive-young-instant-tax-refund.webp",
+      alt: "Myeongdong shopping street at night",
       width: 1200,
-      height: 800,
+      height: 900,
     },
     tipBoxes: [
       {
@@ -444,10 +444,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["dongwon-jip-euljiro"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1569336415962-a4bd9f69c07b?auto=format&fit=crop&w=1200&q=85",
-      alt: "Orange and silver Seoul metered taxis lined up along a central avenue",
-      width: 1200,
-      height: 800,
+      src: "/photos/tips/kakaot-taxi-foreign-card-guide.webp",
+      alt: "Orange taxi on a street in South Korea",
+      width: 900,
+      height: 1200,
     },
     tipBoxes: [
       {
@@ -514,10 +514,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["dongwon-jip-euljiro"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=1200&q=85",
-      alt: "Clean drinking water pouring into a clear glass in a modern Seoul cafe",
-      width: 1200,
-      height: 800,
+      src: "/photos/tips/tap-water-arisu-safety.webp",
+      alt: "A glass of water",
+      width: 820,
+      height: 1200,
     },
     tipBoxes: [
       {
@@ -584,10 +584,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["myeongdong-street-food-trap"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=85",
-      alt: "Commercial bank Global ATM automated kiosk vestibule in central Seoul",
-      width: 1200,
-      height: 800,
+      src: "/photos/tips/convenience-store-atm-withdrawal.webp",
+      alt: "Shinhan Bank ATM booth in Korea",
+      width: 900,
+      height: 1200,
     },
     tipBoxes: [
       {
@@ -649,8 +649,8 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["dongwon-jip-euljiro", "sunhee-bindaetteok-gwangjang"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85",
-      alt: "Glowing orange pojangmacha vinyl street tents at night in central Jongno",
+      src: "/photos/tips/pojangmacha-cash-price-rules.webp",
+      alt: "Street food tent stall at night in Gwacheon, Gyeonggi-do",
       width: 1200,
       height: 800,
     },
@@ -714,10 +714,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["darakhyu-capsule-incheon"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?auto=format&fit=crop&w=1200&q=85",
-      alt: "Heated wooden pine sauna interior in a traditional Korean bathhouse",
+      src: "/photos/tips/jimjilbang-sauna-sleepover.webp",
+      alt: "Inside a Korean jjimjilbang (bathhouse)",
       width: 1200,
-      height: 800,
+      height: 900,
     },
     tipBoxes: [
       {
@@ -775,10 +775,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["dongwon-jip-euljiro"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=1200&q=85",
-      alt: "City bus waiting at a central transit median island platform in Seoul",
-      width: 1200,
-      height: 800,
+      src: "/photos/tips/seoul-bus-color-coding.webp",
+      alt: "Green Seoul branch bus 5522B",
+      width: 900,
+      height: 1200,
     },
     tipBoxes: [
       {
@@ -836,10 +836,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["myeongdong-street-food-trap"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&fit=crop&w=1200&q=85",
-      alt: "Pristine pedestrian sidewalk street corner in downtown Seoul",
+      src: "/photos/tips/trash-bins-and-t-money-waste.webp",
+      alt: "Public recycling station with separate bins",
       width: 1200,
-      height: 800,
+      height: 900,
     },
     tipBoxes: [
       {
@@ -897,8 +897,8 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["tosokchon-samgyetang-seochon", "ikseon-artisan-brewery"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=1200&q=85",
-      alt: "Traditional tiled hanok rooftops and stone alleys in Bukchon Village",
+      src: "/photos/tips/bukchon-quiet-hours-curfew.webp",
+      alt: "Hanok houses in Bukchon Hanok Village",
       width: 1200,
       height: 800,
     },
@@ -958,10 +958,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["darakhyu-capsule-incheon"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1541888946425-d0fbb186f5f7?auto=format&fit=crop&w=1200&q=85",
-      alt: "Airport Railroad Express train platform signage and tracks at Seoul Station",
+      src: "/photos/tips/arex-express-vs-all-stop-transfers.webp",
+      alt: "AREX fare gates at Seoul Station",
       width: 1200,
-      height: 800,
+      height: 900,
     },
     tipBoxes: [
       {
@@ -1028,10 +1028,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["chamsoot-charcoal-kbbq-sinsa"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=85",
-      alt: "Modern Seoul subway turnstile electronic card reader screen",
+      src: "/photos/tips/climate-card-shinbundang-bus-boundaries.webp",
+      alt: "Fare gates at Digital Media City station, Seoul",
       width: 1200,
-      height: 800,
+      height: 900,
     },
     tipBoxes: [
       {
@@ -1098,10 +1098,10 @@ const FULL_16_TIPS: readonly Tip[] = [
     relatedPlaceSlugs: ["sunhee-bindaetteok-gwangjang"],
     promotedFromQuestionSlug: null,
     image: {
-      src: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=85",
-      alt: "Foreign credit cards, T-money card, and Korean won banknotes on counter",
+      src: "/photos/tips/korea-travel-cards-wowpass-namane-tmoney.webp",
+      alt: "A Cashbee transit card used in Korea",
       width: 1200,
-      height: 800,
+      height: 753,
     },
     tipBoxes: [
       {

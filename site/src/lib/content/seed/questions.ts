@@ -1,3 +1,4 @@
+import { CONTACT_EMAIL } from "@/lib/site-config";
 import type { Question } from "@/lib/content/types";
 
 import { SAMPLE_BASE } from "./shared";
@@ -33,7 +34,7 @@ const QUESTIONS_DATA: readonly Question[] = [
         id: "com-uber-1",
         target: { type: "question", slug: "does-uber-work-in-seoul" },
         name: "Seoulite Desk",
-        email: "desk@realkorea.com",
+        email: CONTACT_EMAIL,
         body: "When summoning an Uber taxi, you will receive a regular orange or silver sedan. Look for the yellow license plate matching the 4 digits in your app.",
         createdAt: "2026-08-30T12:00:00Z",
         editorEndorsed: true,
@@ -71,7 +72,7 @@ const QUESTIONS_DATA: readonly Question[] = [
         id: "com-tip-1",
         target: { type: "question", slug: "tipping-culture-south-korea" },
         name: "Editor Min",
-        email: "editor@realkorea.com",
+        email: CONTACT_EMAIL,
         body: "The only exception is rare luxury hotel concierges handling heavy custom logistics, but even there, standard service fees are built into room folios.",
         createdAt: "2026-08-30T14:00:00Z",
         editorEndorsed: true,

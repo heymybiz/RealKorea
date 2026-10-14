@@ -35,7 +35,7 @@ export default async function FirstTwentyFourHoursPage() {
   return (
     <article className="rk-w rk-page rk-article">
       <Breadcrumb trail={[{ href: "/arrival", label: "Arrival" }, { label: "First 24 hours" }]} />
-      <CheckedBadge lastVerifiedAt={null} sample={guide.sample} />
+      <CheckedBadge checkedBy={guide.checkedBy} checkedAt={guide.checkedAt} />
       <AuthorBox />
       <GuideArticle guide={guide} />
       <AdSlot placement="article-mid" />

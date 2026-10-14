@@ -1,3 +1,4 @@
+import { CONTACT_EMAIL } from "@/lib/site-config";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Mail, MapPin, AlertCircle, Clock, ShieldCheck } from "lucide-react";
@@ -36,10 +37,10 @@ export default function ContactPage() {
               For editorial questions, partnerships, and general feedback:
             </p>
             <a
-              href="mailto:desk@realkorea.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="mt-3 inline-block font-mono text-sm font-semibold text-amber-400 hover:underline"
             >
-              desk@realkorea.com
+              {CONTACT_EMAIL}
             </a>
           </div>
 
@@ -52,10 +53,10 @@ export default function ContactPage() {
               Did a transit fare, business hour, or policy change? Let our verification team know:
             </p>
             <a
-              href="mailto:corrections@realkorea.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="mt-3 inline-block font-mono text-sm font-semibold text-rose-400 hover:underline"
             >
-              corrections@realkorea.com
+              {CONTACT_EMAIL}
             </a>
           </div>
         </div>

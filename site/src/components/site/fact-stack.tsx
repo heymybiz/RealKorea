@@ -67,7 +67,7 @@ export function FactStack({
   /** Resolved when `localAlternative` points at another Place. */
   alternativePlace?: { readonly slug: string; readonly title: string } | null;
 }) {
-  const lastVerified = formatMonthYear(place.lastVerifiedAt);
+  const lastVerified = formatMonthYear((place.checkedBy ? (place.checkedAt ?? null) : null));
 
   return (
     <section
@@ -144,7 +144,7 @@ export function FactStack({
 
         <Row label="Last verified">
           {lastVerified ? (
-            <time dateTime={toDateTimeAttribute(place.lastVerifiedAt)}>
+            <time dateTime={toDateTimeAttribute((place.checkedBy ? (place.checkedAt ?? null) : null))}>
               {lastVerified}
             </time>
           ) : (

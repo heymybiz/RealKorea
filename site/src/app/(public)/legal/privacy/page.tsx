@@ -1,3 +1,4 @@
+import { CONTACT_EMAIL } from "@/lib/site-config";
 import type { Metadata } from "next";
 
 import { LegalPage } from "@/components/site/legal-page";
@@ -48,7 +49,7 @@ export default function PrivacyPage() {
           heading: "5. Data Subject Rights (GDPR & Republic of Korea PIPA)",
           paragraphs: [
             "Under the European Union General Data Protection Regulation (GDPR) and the Republic of Korea Personal Information Protection Act (PIPA), you have the right to request access to, correction of, or deletion of any personal information (such as previously submitted comments or questions) held in our records.",
-            "To exercise your rights or ask questions regarding our privacy practices, contact our Data Protection Officer at privacy@realkorea.com or reach the editorial desk directly at desk@realkorea.com. Inquiries are processed within 10 business days.",
+            `To exercise your rights or ask questions regarding our privacy practices, contact our Data Protection Officer at ${CONTACT_EMAIL} or reach the editorial desk directly at ${CONTACT_EMAIL}. Inquiries are processed within 10 business days.`,
           ],
         },
         {

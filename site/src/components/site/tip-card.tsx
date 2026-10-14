@@ -82,7 +82,7 @@ export function TipCard({
         <span className="furniture text-[10px] font-bold text-[var(--amber)]">
           Read answer →
         </span>
-        {tip.editorVerified ? <VerifiedMark label="Verified local" /> : null}
+        {tip.checkedBy && tip.checkedAt ? <VerifiedMark label="Checked by a local" /> : null}
         {tip.sample ? <SampleLabel /> : null}
       </div>
     </article>
