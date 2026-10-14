@@ -21,7 +21,7 @@ let kkami: string | null = null;
 function kkamiDataUrl(): string | null {
   if (kkami !== null) return kkami || null;
   try {
-    const buf = readFileSync(join(process.cwd(), "public/brand/kkami-og.png"));
+    const buf = readFileSync(join(process.cwd(), "src/assets/brand/kkami-og.png"));
     kkami = `data:image/png;base64,${buf.toString("base64")}`;
   } catch {
     kkami = "";

@@ -14,6 +14,8 @@ type IaMap = {
 const ia = JSON.parse(readFileSync(join(process.cwd(), "src/lib/ia-map.json"), "utf8")) as IaMap;
 
 const nextConfig: NextConfig = {
+  // Required for App Hosting; postbuild merges public/ into standalone (adapter skips when NFT pre-creates a partial public/).
+  output: "standalone",
   serverExternalPackages: ["sanity"],
   compiler: {
     styledComponents: true,
